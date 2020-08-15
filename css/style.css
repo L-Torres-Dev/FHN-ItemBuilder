@@ -35,8 +35,6 @@ body {
 
   }
 .stat-bar {
-	border: solid;
-	border-color: white;
 	background-color: transparent;
 	position: absolute;
 	top: 25%;
@@ -61,6 +59,11 @@ body {
 	vertical-align: middle;
 	height: 32px;
 	margin-bottom: 3px;
+}
+.stat-wrapper > p {
+	color: white;
+	opacity: 0%;
+	transition: 0.5s;
 }
 .label-cat {
 	position: absolute;
@@ -362,7 +365,7 @@ body {
 .item-container > div {
 	text-align: center;
 	font-size: 30px;
-	background-color: black;
+	background-color: white;
 	border-style: solid;
 	border-color: rgb(227, 188, 122);;
 	border-width: 1px;
