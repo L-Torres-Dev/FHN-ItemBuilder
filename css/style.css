@@ -670,8 +670,8 @@ label {
 	margin-bottom: 0px;
 }
 .buildValue{
+	transition: 0.5s;
     float: right;
-    padding-right: 5px;
 	font-weight: bold;
 	background-color: #940aa6;
 }

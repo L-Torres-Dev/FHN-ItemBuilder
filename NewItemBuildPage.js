@@ -67,6 +67,8 @@ function updatePage(){
             value = value * 100;
         }   
 
+        buildValues[i].style.width = "75%"
+
         buildValues[i].textContent = value;
 
         if(isPercentageValue){
