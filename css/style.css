@@ -372,6 +372,10 @@ body {
 	-webkit-box-shadow: 10px 10px 16px -9px rgba(0,0,0,1);
 	-moz-box-shadow: 10px 10px 16px -9px rgba(0,0,0,1);
 	box-shadow: 10px 10px 16px -9px rgba(0,0,0,1);
+	
+	-moz-box-shadow:    inset 0 0 7px rgb(227, 188, 122);
+	-webkit-box-shadow: inset 0 0 7px rgb(227, 188, 122);
+	box-shadow:         inset 0 0 7px rgb(227, 188, 122);
 
 }
   
@@ -463,7 +467,6 @@ body {
 	z-index: 1;
 	top: 0;
 	left: 25%;
-	overflow-x: hidden;
 	transition: 0.5s;
   }
   
