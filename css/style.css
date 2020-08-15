@@ -379,16 +379,16 @@ body {
 
 }
 ::placeholder {
-	color: white;
+	color: grey;
 	opacity: 1; /* Firefox */
   }
   
   :-ms-input-placeholder { /* Internet Explorer 10-11 */
-   color: white;
+   color: grey;
   }
   
   ::-ms-input-placeholder { /* Microsoft Edge */
-   color: white;
+   color: grey;
   }
 
 #item-search {
@@ -396,11 +396,10 @@ body {
 	width: 88%;
 	color: white;
 	margin-right: 29px;
-	border: 1px solid rgb(227, 188, 122);
-    border-radius: 5px;
+	border-color: transparent;
+	border-bottom: 1px solid rgb(227, 188, 122);
     height: 20px;
-    padding: 2px 2px 2px 30px;
-    outline: 0;
+    padding: 2px 2px 2px 2px;
 }
 .itemgrid-container {
 	display: grid;
