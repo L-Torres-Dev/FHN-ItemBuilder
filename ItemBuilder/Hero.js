@@ -13,7 +13,7 @@ class Hero{
 //Heroes have a number that corresponds to the numbered image in the Fault api, and a name.
 const Heroes = {
 
-    TwinBlast: [2, "TwinBlast"],
+    TwinBlast: [2, "Twinblast"],
     Gideon: [3, "Gideon"],
     Kwang: [4, "Kwang"],
     Muriel: [5, "Muriel"],
