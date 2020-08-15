@@ -35,12 +35,15 @@ body {
 
   }
 .stat-bar {
+	border: solid;
+	border-color: white;
 	background-color: transparent;
 	position: absolute;
 	top: 25%;
-	width: 45%;
+	width: 40%;
 	margin-left: 105px;
 	height: 18px;
+	transition: 0.5s;
 }
 .stat-bar > label {
 	width: 0;
@@ -70,9 +73,16 @@ body {
 	position: absolute;
 	right: 0;
 	top: 25%;
-	width: 10%;
+	width: 5%;
 	text-align: left;
 	color: white;
+}
+#increment {
+	position: absolute;
+	right: 16%;
+	top: 25%;
+	width: 5%;
+	color: green;
 }
 .scroll-window {
 	margin-top: 10px;
@@ -670,6 +680,7 @@ label {
 	margin-bottom: 0px;
 }
 .buildValue{
+	width: 100%;
 	transition: 0.5s;
     float: right;
 	font-weight: bold;
