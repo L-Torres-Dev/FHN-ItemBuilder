@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Foodeiblog Template">
+    <meta name="keywords" content="Foodeiblog, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FHN Item Builder</title>
+
+
+    <script src="./HeroPortrait.js"></script>
+    <script src ="./ItemBuilder/Utility.js"></script>
+    <script src="./ItemBuilder/APIReader.js"></script>
+    <script src="./ItemBuilder/Aspect.js"></script>
+    <script src="./ItemBuilder/Hero.js"></script>
+    <script src="./ItemBuilder/Item.js"></script>
+    <script src="./ItemBuilder/Inventory.js"></script>
+    <script src="./ItemBuilder/Attribute.js"></script>
+    <script src="./ItemBuilder/ItemBuild.js"></script>
+
+
+    <!-- NEW SCRIPT TAGS (8/12/2020) -->
+    <script src="./ItemRowView.js"></script>
+    <script src="./ItemView.js"></script>
+    <script src="./ItemContainer.js"></script>
+
+    
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Unna:400,700&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <link rel="stylesheet" href="./css/w3.css" type="text/css">
+    
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+    <div class="container">
+        
+            <div class="row">
+                <div id="mySidenav" class="sidenav">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <h1 class="header-hero">HEROES</h1>
+                        <div class="heroselect" data-setbg="">
+                            <div class="grid-container", id="hero-grid"></div>
+                        </div>
+                    </div>
+                  </div>
+                
+                  
+                  <script>
+                  function openNav() {
+                    document.getElementById("mySidenav").style.width = "250px";
+                  }
+                  
+                  function closeNav() {
+                    document.getElementById("mySidenav").style.width = "0";
+                  }
+                  </script>
+            <button class="button" style=" text-align:center;" onclick="openNav()">Heroes</button>
+            <div class="mid-content">
+                <h1 class="header">ITEM BUILDER</h1>
+                <div class="column left">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="categories__item set-bg" data-setbg="">
+                                    <div class="column hero-left">
+                                        <div class="hero-container">
+                                            <img style ="background-color: rgba(0, 0, 0);" id="hero-portrait" src="https://global-uploads.webflow.com/5d44771a95c1f5121689f944/5e7ffb88dc54456d13efd247_FaultLogo_3D-logoonly.svg">
+                                            <div class="hero-block">
+                                              <h4 id="hero-name">No hero Selected</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column hero-right">
+                                        <div class="dropdown" style="margin-bottom: 3px;">
+                                            <button onclick="myFunction()" class="dropbtn">Name</button>
+                                            <div id="myDropdown" class="dropdown-content"></div>
+                                        </div>
+                                        <div class="dropdown">
+                                            <button onclick="myFunction()" class="dropbtn level">Level</button>
+                                            <div id="myDropdown" class="dropdown-content"></div>
+                                        </div>
+                                        <div class="aspects-container">
+                                            <img src="https://uploads-ssl.webflow.com/5e4eab335c128658e8a2b36e/5f1502f0b9588c6633d8a450_imageedit_3_2674987149.png" alt="Nature" style="object-fit: fill; margin-right: 3px;">
+                                            <img src="https://uploads-ssl.webflow.com/5e4eab335c128658e8a2b36e/5f1502f0b9588c6633d8a450_imageedit_3_2674987149.png" alt="Nature" style="object-fit: fill;">
+                                        </div>
+                                        <div class="aspects-button">
+                                            <div style="margin-right: 3px;">
+                                                <div class="aspect-count">
+    
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <div class="aspect-count">
+    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                        </div>
+                        <div class="stat-height" data-setbg="">
+                            <div class="stat-content">
+                                <div style="border-bottom-style: solid; border-width: 1px; border-color: rgb(227, 188, 122);">
+                                <!--To change bar progress, when adding stat, add the percentage as a style: 10power/possible 100 power would
+                                        mean adding a 10% width to id "Health" etc.-->
+                                        <div class="stat-wrapper">
+                                            <label class="label-cat" style="float: left;">Health</label>
+                                            <div class="stat-bar">
+                                                <label class="buildValue" style="height:100%;width:10%;float: left; "id="Health"></label>
+                                                <div style="background-color: transparent; color: green;" id="increment">+25.0</div>
+                                            </div>
+                                            <label class="label-cat-right" id="total-value">0</label>
+                                        </div>
+
+                                        <div class="stat-wrapper">
+                                            <label class="label-cat" style="float: left; margin-top: 0;">Health Regen</label>
+                                            <div class="stat-bar">
+                                                <label class="buildValue" style="height:100%;width:10%;float: left; "id="HealthRegenRate"></label>
+                                                <div style="background-color: transparent; color: green;" id="increment">+25.0</div>
+                                            </div>
+                                            <label class="label-cat-right" id="total-value">0</label>
+                                        </div>
+
+                                </div>
+                                <div style="border-bottom-style: solid; border-width: 1px; border-color: rgb(227, 188, 122);">
+                                        <div class="stat-wrapper">
+                                            <label class="label-cat" style="float: left; margin-top: 0;">Mana</label>
+                                            <div class="stat-bar">
+                                                <label class="buildValue" style="height:100%;width:50%;float: left; "id="Mana"></label>
+                                                <div style="background-color: transparent; color: green;" id="increment">+25.0</div>
+                                            </div>
+                                            <label class="label-cat-right" id="total-value">0</label>
+                                        </div>
+
+                                        <div class="stat-wrapper">
+                                            <label class="label-cat" style="float: left; margin-top: 0;">Mana Regen</label>
+                                            <div class="stat-bar">
+                                                <label class="buildValue" style="height:100%;width:50%;float: left; "id="ManaRegenRate"></label>
+                                                <div style="background-color: transparent; color: green;" id="increment">+25.0</div>
+                                            </div>
+                                            <label class="label-cat-right" id="total-value">0</label>
+                                        </div>
+                                    
+                                </div>
+                                <div style="border-bottom-style: solid; border-width: 1px; border-color: rgb(227, 188, 122);">
+
+                                        <div class="stat-wrapper">
+                                            <label class="label-cat" style="float: left; margin-top: 0;">Phys. Power</label>
+                                            <div class="stat-bar">
+                                                <label class="buildValue" style="height:100%;width:50%;float: left; "id="Physical Power"></label>
+                                                <div style="background-color: transparent; color: green;" id="increment">+25.0</div>
+                                            </div>
+                                            <label class="label-cat-right" id="total-value">0</label>
+                                        </div>
+
+                                        <div class="stat-wrapper">
+                                            <label class="label-cat" style="float: left; margin-top: 0;">Energy Power</label>
+                                            <div class="stat-bar">
+                                                <label class="buildValue" style="height:100%;width:50%;float: left; "id="EnergyPower"></label>
+                                                <div style="background-color: transparent; color: green;" id="increment">+25.0</div>
+                                            </div>
+                                            <label class="label-cat-right" id="total-value">0</label>
+                                        </div>
+
+                            </div>
+                            <div style="border-bottom-style: solid; border-width: 1px; border-color: rgb(227, 188, 122);">
+                                        <div class="stat-wrapper">
+                                            <label class="label-cat" style="float: left; margin-top: 0;">Physical Armor</label>
+                                            <div class="stat-bar">
+                                                <label class="buildValue" style="height:100%;width:50%;float: left; "id="Physical Armor"></label>
+                                                <div style="background-color: transparent; color: green;" id="increment">+25.0</div>
+                                            </div>
+                                            <label class="label-cat-right" id="total-value">0</label>
+                                        </div>
+
+                                        <div class="stat-wrapper">
+                                            <label class="label-cat" style="float: left; margin-top: 0;">Energy Armor</label>
+                                            <div class="stat-bar">
+                                                <label class="buildValue" style="height:100%;width:50%;float: left; "id="Energy Armor"></label>
+                                                <div style="background-color: transparent; color: green;" id="increment">+25.0</div>
+                                            </div>
+                                            <label class="label-cat-right" id="total-value">0</label>
+                                        </div>
+                            </div>
+                            <div style="border-bottom-style: solid; border-width: 1px; border-color: rgb(227, 188, 122);">
+
+                                        <div class="stat-wrapper">
+                                            <label class="label-cat" style="float: left; margin-top: 0;">Physical Pen.</label>
+                                            <div class="stat-bar">
+                                                <label class="buildValue" style="height:100%;width:50%;float: left; "id="Physical Penetration"></label>
+                                                <div style="background-color: transparent; color: green;" id="increment">+25.0</div>
+                                            </div>
+                                            <label class="label-cat-right" id="total-value">0</label>
+                                        </div>
+                                       
+                                        <div class="stat-wrapper">
+                                            <label class="label-cat" style="float: left; margin-top: 0;">Energy Pen.</label>
+                                            <div class="stat-bar">
+                                                <label class="buildValue" style="height:100%;width:50%;float: left; "id="Energy Penetration"></label>
+                                                <div style="background-color: transparent; color: green;" id="increment">+25.0</div>
+                                            </div>
+                                            <label class="label-cat-right" id="total-value">0</label>
+                                        </div>
+                            </div>
+                                        <div class="stat-wrapper">
+                                            <label class="label-cat" style="float: left; margin-top: 0;">Mov.Speed</label>
+                                            <div class="stat-bar">
+                                                <label class="buildValue" style="height:100%;width:50%;float: left; "id="Movement Speed"></label>
+                                                <div style="background-color: transparent; color: green;" id="increment">+25.0</div>
+                                            </div>
+                                            <label class="label-cat-right" id="total-value">0</label>
+                                        </div>
+
+                                        <div class="stat-wrapper">
+                                            <label class="label-cat" style="float: left; margin-top: 0;">CritChance</label>
+                                            <div class="stat-bar">
+                                                <label class="buildValue" style="height:100%;width:50%;float: left; "id="CritChance"></label>
+                                                <div style="background-color: transparent; color: green;" id="increment">+25.0</div>
+                                            </div>
+                                            <label class="label-cat-right" id="total-value">0</label>
+                                        </div>
+                                        
+                                        <div class="stat-wrapper">
+                                            <label class="label-cat" style="float: left; margin-top: 0;">Cooldown</label>
+                                            <div class="stat-bar">
+                                                <label class="buildValue" style="height:100%;width:50%;float: left; "id="Cooldown Reduction"></label>
+                                                <div style="background-color: transparent; color: green;" id="increment">+25.0</div>
+                                            </div>
+                                            <label class="label-cat-right" id="total-value">0</label>
+                                        </div>
+
+                                        <div class="stat-wrapper">
+                                            <label class="label-cat" style="float: left; margin-top: 0;">Lifesteal</label>
+                                            <div class="stat-bar">
+                                                <label class="buildValue" style="height:100%;width:50%;float: left; "id="LifeSteal"></label>
+                                                <div style="background-color: transparent; color: green;" id="increment">+25.0</div>
+                                            </div>
+                                            <label class="label-cat-right" id="total-value">0</label>
+                                        </div>
+
+                                        <div class="stat-wrapper">
+                                            <label class="label-cat" style="float: left; margin-top: 0;">Attack Speed:</label>
+                                            <div class="stat-bar">
+                                                <label class="buildValue" style="height:100%;width:50%;float: left; "id="LifeSteal"></label>
+                                                <div style="background-color: transparent; color: green;" id="increment">+25.0</div>
+                                            </div>
+                                            <label class="label-cat-right" id="total-value">0</label>
+                                        </div>
+
+                                        <div class="stat-wrapper">
+                                            <label class="label-cat" style="float: left; margin-top: 0;">Basic Atk Dmg:</label>
+                                            <div class="stat-bar">
+                                                <label class="buildValue" style="height:100%;width:50%;float: left; "id="LifeSteal"></label>
+                                                <div style="background-color: transparent; color: green;" id="increment">+25.0</div>
+                                            </div>
+                                            <label class="label-cat-right" id="total-value">0</label>
+                                        </div>
+                      
+                            
+         
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column right">
+                    <div class="col-lg-3 col-md-6 col-sm-6" style="padding-left: 0px; padding-right: 15px;">
+                        <div class="ability-height" data-setbg="">
+                                <div class="column abilities-left">
+                                    <div class="heroability-container" style="margin-top: 0px;">
+                                        <div class="heroability-grid">
+                                            <img src="https://api.playfault.com/imagecdn/abilities/Twinblast/P.png">
+                                            <img src="https://api.playfault.com/imagecdn/abilities/Twinblast/RMB.png">
+                                            <img src="https://api.playfault.com/imagecdn/abilities/Twinblast/Q.png">
+                                            <img src="https://api.playfault.com/imagecdn/abilities/Twinblast/E.png">
+                                            <img src="https://api.playfault.com/imagecdn/abilities/Twinblast/R.png">
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            
+                        </div>
+                        <div class="itemview-height" data-setbg="" id="view-Height">
+                                <div class="column item-left" style=" text-align: center; color: white; border-right-style: solid; border-right-width: 1px; border-right-color: white;">Filters
+                                </div>
+                                <div class="column item-right"  style=" text-align: center; color: white;">
+                                    <input type="text", id="item-search"></input>
+                                    <div class="scroll-window" data-setbg="">
+                                        <div class="itemgrid-container", id="item-grid"></div>
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="build-height" data-setbg="">
+                            <div class="col-lg-3 col-md-6 col-sm-6" style="padding: 0px;">
+                                <div class="itembuild-container" style="margin-top: 0px;">
+                                    <div class="item-container">
+                                        <div class="inventory-container" id="item-block 1">
+                                            <img src="" id="img1"></img>
+                                            <div class="item-block"><p id="p1"></p></div>
+                                        </div>
+                                        <div class="inventory-container" id="item-block 2">
+                                            <img src="" id="img2">
+                                            <div class="item-block"><p id="p2"></p></div>
+                                        </div>
+                                        <div class="inventory-container" id="item-block 3">
+                                            <img src="" id="img3">
+                                            <div class="item-block"><p id="p3"></p></div>
+                                        </div>
+                                        <div class="inventory-container" id="item-block 4">
+                                            <img src="" id="img4">
+                                            <div class="item-block"><p id="p4"></p></div>
+                                        </div>
+                                        <div class="inventory-container" id="item-block 5">
+                                            <img src="" id="img5">
+                                            <div class="item-block"><p id="p5"></p></div>
+                                        </div>
+                                        <div class="inventory-container" id="item-block 6">
+                                            <img src="" id="img6">
+                                            <div class="item-block"><p id="p6"></p></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                    <div class="nav" style="color: white;">
+                                        <div class="cost-heading">TOTAL GOLD COST:</div>
+                                        <div class="gold-bar" style="margin-left: 5px;">
+                                            <div class="nav" style="padding-left: 20px; padding-right: 20px;">
+                                                <div class="gold-image">
+                                                    <img src="https://global-uploads.webflow.com/5d44771a95c1f5121689f944/5df063435613cefa7c572859_t_AspectPanel_goldcoinsSTACKED.png">
+                                                </div>
+                                                <div class="gold-bar" style="padding: 3px;">
+                                                    <p style="margin-left: 5px; color: white;">0</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+    <!-- js Files that are NECESSARY to make the webpage load-->
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script>
+
+    <script src="NewItemBuildPage.js"></script>
+    <script src="ItemBuildCaller.js"></script>
+    <!-- JS Script for Tab Opening-->
+    <script>
+        function openNav() {
+        document.getElementById("mySidenav").style.width = "23%";
+        }
+
+        function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+</body>
+
+</html>
