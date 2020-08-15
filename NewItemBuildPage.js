@@ -1,6 +1,11 @@
 var itemView = document.getElementById("item-grid");
 var itemSearch = document.getElementById("item-search");
 var itemBlocks = document.getElementsByClassName("inventory-container");
+var blocks = document.getElementsByClassName("item-block");
+
+for(var block of blocks){
+    block.style.display = "none";
+}
 
 var heroGrid = document.getElementById("hero-grid");
 
@@ -100,6 +105,12 @@ function updatePage(){
         {
             break;
         }
+
+        var blocks = itemBlocks[i].getElementsByClassName("item-block");
+        var block = blocks[0];
+
+        block.style.display = "block";
+
         
         var imageId = "img" + (i + 1).toString();
         var pId = "p" + (i + 1).toString();

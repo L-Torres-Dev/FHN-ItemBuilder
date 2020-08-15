@@ -365,7 +365,7 @@ body {
 .item-container > div {
 	text-align: center;
 	font-size: 30px;
-	background-color: white;
+	background-color: black;
 	border-style: solid;
 	border-color: rgb(227, 188, 122);;
 	border-width: 1px;
