@@ -31,7 +31,7 @@ body {
   
   #mySidenav {  
 	/* This section calls the slideInFromLeft animation we defined above */
-	animation: 1s ease-out 0s 1 slideInFromLeft;
+	animation: 1.5s ease-out 0s 1 slideInFromLeft;
 
   }
 .stat-bar {
@@ -39,7 +39,7 @@ body {
 	position: absolute;
 	top: 25%;
 	width: 40%;
-	margin-left: 105px;
+	margin-left: 100px;
 	height: 18px;
 	transition: 0.5s;
 }
@@ -687,7 +687,7 @@ label {
 	transition: 0.5s;
     float: right;
 	font-weight: bold;
-	background-color: #e3bc7a;
+	background-color: #ad7f35;
 }
 .col-lg-8{
 	padding-left: 0px;
