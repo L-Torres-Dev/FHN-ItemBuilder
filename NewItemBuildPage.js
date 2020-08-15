@@ -56,7 +56,9 @@ function updatePage(){
     var buildValues = document.getElementsByClassName("buildValue");
 
     for(var i = 0; i < buildValues.length;i++){
-        var value = build.attributes[buildValues[i].id].value;
+        var attribute = build.attributes[buildValues[i].id]
+
+        var value = attribute.value;
 
         let isPercentageValue = buildValues[i].id === "Cooldown Reduction"
              || buildValues[i].id ===  "CritChance" || buildValues[i].id === "LifeSteal";
@@ -67,7 +69,14 @@ function updatePage(){
             value = value * 100;
         }   
 
-        buildValues[i].style.width = "75%"
+        var percentage = value / attribute.maxValue * 100;
+
+        var percentageStr = percentage.toString() + "%";
+
+        console.log(percentageStr);
+
+        //Change width
+        buildValues[i].style.width = percentageStr;
 
         buildValues[i].textContent = value;
 

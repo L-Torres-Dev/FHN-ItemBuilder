@@ -61,6 +61,8 @@ class Attribute{
         this.value = (value === undefined)? 0 : value;
         this.rankValue = (rank === undefined)? 0 : rank;
         this.details = (details === undefined)? "" : details;
+
+        this.maxValue = this.determineMaxValue();
     }  
     
     createAttribute(name, value, rank, details) {
@@ -68,5 +70,18 @@ class Attribute{
         this.value = value;
         this.rankValue = rank;
         this.details = details;
+    }
+
+    determineMaxValue(){
+        var isHealthOrMana = this.attributeName === attributeNames.Health ||
+        this.attributeName === attributeNames.Mana;
+
+        if (isHealthOrMana){
+            return 5000;
+        }
+
+        else{
+            return 600;
+        }
     }
 }
