@@ -109,9 +109,7 @@ function updatePage(){
         var blocks = itemBlocks[i].getElementsByClassName("item-block");
         var block = blocks[0];
 
-        block.style.display = "block";
 
-        
         var imageId = "img" + (i + 1).toString();
         var pId = "p" + (i + 1).toString();
 
