@@ -16,7 +16,35 @@ function setItems(items){
     count = 0;
     for (var [key, value] of Object.entries(itemsDictionary)){
         itemsArray[count] = value;
+
+        var itemAttributes = value.attributes;
+
+        for(var i = 0; i < itemAttributes.length; i++){
+            var attribute =itemAttributes[i];
+            var maxValue = attribute.value * 6;
+
+            if(isPercentAttribute(attribute.attributeName)){
+                maxValue *= 100;
+            }
+
+            if(isCooldownReduction(attribute.attributeName)){
+                maxValue = 40;
+            }
+
+            var buildAttribute = build.attributes[attribute.attributeName]
+
+
+
+            if(maxValue > buildAttribute.maxValue){
+                buildAttribute.maxValue = maxValue;
+            }
+        }
+
         count++;
+    }
+
+    for (var [key, value] of Object.entries(build.attributes)){
+        console.log(value.attributeName + " max value: " + value.maxValue);
     }
 
     createItemContainers(itemsArray);

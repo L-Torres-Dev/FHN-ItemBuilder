@@ -62,7 +62,7 @@ class Attribute{
         this.rankValue = (rank === undefined)? 0 : rank;
         this.details = (details === undefined)? "" : details;
 
-        this.maxValue = this.determineMaxValue();
+        this.maxValue = 0;
     }  
     
     createAttribute(name, value, rank, details) {
@@ -84,4 +84,13 @@ class Attribute{
             return 600;
         }
     }
+}
+
+function isPercentAttribute(attributeName){
+    return attributeName === "Cooldown Reduction"
+             || attributeName ===  "CritChance" || attributeName === "LifeSteal";
+}
+
+function isCooldownReduction(attributeName){
+    return attributeName === "Cooldown Reduction";
 }

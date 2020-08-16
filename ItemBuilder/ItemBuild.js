@@ -91,6 +91,13 @@ class ItemBuild{
                 if(itemSameColor){
                     attributes[attribute.attributeName].value += (attribute.rankValue * aspect.favor);
                 }
+
+                if(isCooldownReduction(attribute.attributeName)){
+                    console.log("cooldown: " + attributes[attribute.attributeName].value)
+                    if(attributes[attribute.attributeName].value < -.4){
+                        attributes[attribute.attributeName].value = -.4;
+                    }
+                }
             }
         }
 

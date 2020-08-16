@@ -22,4 +22,14 @@ class Inventory{
     count(){
         return this.items.length;
     }
+
+    totalCost(){
+        var totalCost = 0;
+
+        for(var i = 0; i < this.items.length; i++){
+            totalCost += this.items[i].cost;
+        }
+
+        return totalCost;
+    }
 }

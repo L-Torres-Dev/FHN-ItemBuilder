@@ -60,14 +60,18 @@ function updatePage(){
 
     var buildValues = document.getElementsByClassName("buildValue");
 
+    var goldValue = document.getElementById("costValue");
+
+    var goldcost = build.inventory.totalCost();
+
+    goldValue.textContent = build.inventory.totalCost()
+
     for(var i = 0; i < buildValues.length;i++){
         var attribute = build.attributes[buildValues[i].id]
 
         var value = attribute.value;
 
-        let isPercentageValue = buildValues[i].id === "Cooldown Reduction"
-             || buildValues[i].id ===  "CritChance" || buildValues[i].id === "LifeSteal";
-
+        let isPercentageValue = isPercentAttribute(buildValues[i].id);
 
         if(isPercentageValue){
             value = Math.abs(value);
@@ -76,7 +80,15 @@ function updatePage(){
 
         var percentage = value / attribute.maxValue * 100;
 
-        var percentageStr = percentage.toString() + "%";
+        if(percentage > 100){
+            percentageStr = "100%"
+        }
+
+        else{
+            var percentageStr = percentage.toString() + "%";
+        }
+
+        
 
         console.log(percentageStr);
 
