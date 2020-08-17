@@ -57,7 +57,7 @@
                             <div class="grid-container", id="hero-grid"></div>
                         </div>
                     </div>
-                  </div>
+                </div>
                 
                   
                   <script>
@@ -77,7 +77,7 @@
                         <div class="categories__item set-bg" data-setbg="">
                                     <div class="column hero-left">
                                         <div class="hero-container">
-                                            <img style ="background-color: rgba(0, 0, 0);" id="hero-portrait" src="https://global-uploads.webflow.com/5d44771a95c1f5121689f944/5e7ffb88dc54456d13efd247_FaultLogo_3D-logoonly.svg">
+                                            <img style ="background-color: #0a0a0a;" id="hero-portrait" src="https://global-uploads.webflow.com/5d44771a95c1f5121689f944/5e7ffb88dc54456d13efd247_FaultLogo_3D-logoonly.svg">
                                             <div class="hero-block">
                                               <h4 id="hero-name">No hero Selected</h4>
                                             </div>
@@ -85,8 +85,7 @@
                                     </div>
                                     <div class="column hero-right">
                                         <div class="dropdown" style="margin-bottom: 3px;">
-                                            <button onclick="myFunction()" class="dropbtn">Name</button>
-                                            <div id="myDropdown" class="dropdown-content"></div>
+                                            <input type="text", placeholder="Name Your Build" id="name-build"></input>
                                         </div>
                                         <div class="dropdown">
                                             <button onclick="myFunction()" class="dropbtn level">Level</button>
@@ -112,7 +111,7 @@
                         </div>
                         <div class="stat-height" data-setbg="">
                             <div class="stat-content">
-                                <div style="border-bottom-style: solid; border-width: 1px; border-color: rgb(227, 188, 122);">
+                                <div style="border-bottom-style: solid; border-width: 1px; border-color: rgb(227, 188, 122, 0.55);">
                                 <!--To change bar progress, when adding stat, add the percentage as a style: 10power/possible 100 power would
                                         mean adding a 10% width to id "Health" etc.-->
                                         <div class="stat-wrapper">
@@ -134,7 +133,7 @@
                                         </div>
 
                                 </div>
-                                <div style="border-bottom-style: solid; border-width: 1px; border-color: rgb(227, 188, 122);">
+                                <div style="border-bottom-style: solid; border-width: 1px; border-color: rgb(227, 188, 122, 0.55);">
                                         <div class="stat-wrapper">
                                             <label class="label-cat" style="float: left; margin-top: 0;">Mana</label>
                                             <div class="stat-bar">
@@ -154,7 +153,7 @@
                                         </div>
                                     
                                 </div>
-                                <div style="border-bottom-style: solid; border-width: 1px; border-color: rgb(227, 188, 122);">
+                                <div style="border-bottom-style: solid; border-width: 1px; border-color: rgb(227, 188, 122, 0.55);">
 
                                         <div class="stat-wrapper">
                                             <label class="label-cat" style="float: left; margin-top: 0;">Phys. Power</label>
@@ -175,7 +174,7 @@
                                         </div>
 
                             </div>
-                            <div style="border-bottom-style: solid; border-width: 1px; border-color: rgb(227, 188, 122);">
+                            <div style="border-bottom-style: solid; border-width: 1px; border-color: rgb(227, 188, 122, 0.55);">
                                         <div class="stat-wrapper">
                                             <label class="label-cat" style="float: left; margin-top: 0;">Physical Armor</label>
                                             <div class="stat-bar">
@@ -194,7 +193,7 @@
                                             <label class="label-cat-right" id="total-value">0</label>
                                         </div>
                             </div>
-                            <div style="border-bottom-style: solid; border-width: 1px; border-color: rgb(227, 188, 122);">
+                            <div style="border-bottom-style: solid; border-width: 1px; border-color: rgb(227, 188, 122, 0.55);">
 
                                         <div class="stat-wrapper">
                                             <label class="label-cat" style="float: left; margin-top: 0;">Physical Pen.</label>
@@ -276,7 +275,7 @@
                     </div>
                 </div>
                 <div class="column right">
-                    <div class="col-lg-3 col-md-6 col-sm-6" style="padding-left: 0px; padding-right: 15px;">
+                    <div class="col-lg-3 col-md-6 col-sm-6" style="padding-left: 0px; padding-right: 0px;">
                         <div class="ability-height" data-setbg="">
                                 <div class="column abilities-left">
                                     <div class="heroability-container" style="margin-top: 0px;">
@@ -293,9 +292,150 @@
                             
                         </div>
                         <div class="itemview-height" data-setbg="" id="view-Height">
-                                <div class="column item-left" style=" text-align: center; color: white; border-right-style: solid; border-right-width: 1px; border-right-color: white;">Filters
+                                <div class="column item-right" style="padding-top: 5px;">
+                                    <div class="expand">FILTERS</div>
+                                    <div class="filter-cat-wrapper">
+                                        <div class="filter-wrapper">
+                                            <div class="filter-cat" style="float: left;">OFFENSIVE </div> <div id ="plus-minus" class="filter-cat" style="float: right;">+</div>
+                                        </div>
+                                        <div class="filter-content" id="offensive-filters">
+                                            <div class="filter-row">
+                                                <div class="filter-content-column">
+                                                    <label class="check-container"><p>Energy Power</p>
+                                                        <input type="checkbox" >
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="filter-content-column">
+                                                    <label class="check-container"><p>Physical Power</p>
+                                                        <input type="checkbox" >
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                              </div>
+                                              <div class="filter-row">
+                                                <div class="filter-content-column">
+                                                    <label class="check-container"><p>Critical Chance</p>
+                                                        <input type="checkbox" >
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="filter-content-column">
+                                                    <label class="check-container"><p>Atk Speed</p>
+                                                        <input type="checkbox" >
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                              </div>
+                                              <div class="filter-row">
+                                                <div class="filter-content-column">
+                                                    <label class="check-container"><p>Energy Penetration</p>
+                                                        <input type="checkbox" >
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="filter-content-column">
+                                                    <label class="check-container"><p>Physical Penetration</p>
+                                                        <input type="checkbox" >
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                              </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter-cat-wrapper">
+                                        <div class="filter-wrapper">
+                                            <div class="filter-cat" style="float: left;">DEFENSIVE </div> <div id ="plus-minus" class="filter-cat" style="float: right;">+</div>
+                                        </div>
+                                        <div class="filter-content" id="offensive-filters">
+                                            <div class="filter-row">
+                                                <div class="filter-content-column">
+                                                    <label class="check-container">
+                                                        <p style="margin-top: 10px;">Health</p>
+                                                        <input type="checkbox"  style="margin-top: 0;">
+                                                        <span class="checkmark" style="top: 0;"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="filter-content-column">
+                                                    <label class="check-container"><p>Health Regeneration</p>
+                                                        <input type="checkbox" >
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                              </div>
+                                              <div class="filter-row">
+                                                <div class="filter-content-column">
+                                                    <label class="check-container">
+                                                        <p style="margin-top: 10px;">Mana</p>
+                                                        <input type="checkbox"  style="margin-top: 0;">
+                                                        <span class="checkmark" style="top: 0;"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="filter-content-column">
+                                                    <label class="check-container"><p>Mana Regeneration</p>
+                                                        <input type="checkbox" >
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                              </div>
+                                              <div class="filter-row">
+                                                <div class="filter-content-column">
+                                                    <label class="check-container"><p>Energy Armor</p>
+                                                        <input type="checkbox" >
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="filter-content-column">
+                                                    <label class="check-container"><p>Physical Armor</p>
+                                                        <input type="checkbox" >
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                              </div>
+                                              <div class="filter-row">
+                                                <div class="filter-content-column">
+                                                    <label class="check-container">
+                                                        <p style="margin-top: 10px;">Lifesteal</p>
+                                                        <input type="checkbox"  style="margin-top: 0;">
+                                                        <span class="checkmark" style="top: 0;"></span>
+                                                    </label>
+                                                </div>
+                                              </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter-cat-wrapper">
+                                        <div class="filter-wrapper">
+                                            <div class="filter-cat" style="float: left;">OTHER </div> <div id ="plus-minus" class="filter-cat" style="float: right;">+</div>
+                                        </div>
+                                        <div class="filter-content" id="offensive-filters">
+                                              <div class="filter-row">
+                                                <div class="filter-content-column">
+                                                    <label class="check-container"><p>Movement Speed</p>
+                                                        <input type="checkbox" >
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                                <div class="filter-content-column">
+                                                    <label class="check-container"><p>Cooldown Reduction</p>
+                                                        <input type="checkbox" >
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </div>
+                                              </div>
+                                              <div class="filter-row">
+                                                <div class="filter-content-column">
+                                                    <label class="check-container">
+                                                        <p style="margin-top: 10px;">Consumable</p>
+                                                        <input type="checkbox"  style="margin-top: 0;">
+                                                        <span class="checkmark" style="top: 0;"></span>
+                                                    </label>
+                                                </div>
+                                              </div>
+                                        </div>
+                                    </div>
+                                    
                                 </div>
-                                <div class="column item-right"  style=" text-align: center; color: white;">
+                                <div class="column item-left"  style="color: rgb(177, 176, 176);">
                                     <input type="text", placeholder="Search" id="item-search"></input>
                                     <div class="scroll-window" data-setbg="">
                                         <div class="itemgrid-container", id="item-grid"></div>
@@ -350,6 +490,40 @@
                     </div>
                 </div>
             </div>
+            <div class="right-content">
+                <h1 class="header" style="color: transparent; border-style: none;">DESCRIPTIONS</h1>
+                <div class="column left" style="width: 240px;">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="categories__item set-bg" data-setbg="">
+                <div class="column right" style="width: 100%;">
+                    <div class="col-lg-3 col-md-6 col-sm-6" style="padding-left: 0px;">
+                        <div class="ability-height" data-setbg="">
+                            
+
+                        </div>
+                        <div class="itemview-height" data-setbg="" id="view-Height">
+                            <div style="width: 100%; height: 100%;">
+                                <div style="border: 1px solid white; width: 100%; height: 30%;">
+
+                                </div>
+                                <div style="border: 1px solid white; width: 100%; height: 20%;">
+                                    
+                                </div>
+                                <div style="border: 1px solid white; width: 100%; height: 25%;">
+                                    
+                                </div>
+                                <div style="border: 1px solid white; width: 100%; height: 10%;">
+                                    
+                                </div>
+                                <div style="border: 1px solid white; width: 100%; height: 15%;">
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
             
         </div>
     </div>
@@ -371,6 +545,23 @@
         document.getElementById("mySidenav").style.width = "0";
         }
     </script>
+    <!-- JS Script for Filter Accordian-->
+    <script>
+        var acc = document.getElementsByClassName("filter-wrapper");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+        </script>
 </body>
 
 </html>
