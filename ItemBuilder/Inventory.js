@@ -5,11 +5,17 @@ class Inventory{
 
     addItem(item){
 
-        if(this.items.length < 6){
-            this.items.push(item);
+        if(this.rulesSatisfied(item)){
+            if(this.items.length < 6){
+                this.items.push(item);
+            }
+            else{
+                console.log("ERROR: too many items");
+            }
         }
+
         else{
-            console.log("ERROR: too many items");
+            console.log("rules not satisfied...");
         }
     }
 
@@ -31,5 +37,17 @@ class Inventory{
         }
 
         return totalCost;
+    }
+    
+    rulesSatisfied(item){
+        if(item.isBoots()){
+            for(var i = 0; i < this.items.length; i++){
+                if(this.items[i].isBoots()){
+                    return false;
+                }
+            }
+        }
+
+        return true;
     }
 }

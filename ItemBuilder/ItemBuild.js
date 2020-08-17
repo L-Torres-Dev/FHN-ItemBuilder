@@ -3,8 +3,6 @@ class ItemBuild{
         
         this.attributes = {};
 
-        this.something = "Something"
-
         for(var [key, value] of Object.entries(attributeNames)){
             this.attributes[value] = new Attribute(value);
         }

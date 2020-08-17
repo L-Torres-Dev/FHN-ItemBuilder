@@ -2,6 +2,37 @@ var itemView = document.getElementById("item-grid");
 var itemSearch = document.getElementById("item-search");
 var itemBlocks = document.getElementsByClassName("inventory-container");
 var blocks = document.getElementsByClassName("item-block");
+var acc = document.getElementsByClassName("filter-wrapper");
+var maxValueElements = document.getElementsByClassName("label-cat-right");
+
+function openHeroPanel() {
+    document.getElementById("mySidenav").style.width = "23%";
+    }
+
+function closeHeroPanel() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+for (var i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    console.log(this);
+
+    var toggleSigns = this.getElementsByClassName("plus-minus");
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+
+      toggleSigns[0].textContent = "+";
+
+      console.log("collapse");
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+      toggleSigns[0].textContent = "-";
+      console.log("expand");
+    } 
+  });
+}
 
 for(var block of blocks){
     block.style.display = "none";
@@ -70,6 +101,8 @@ function updatePage(){
         var attribute = build.attributes[buildValues[i].id]
 
         var value = attribute.value;
+
+
 
         let isPercentageValue = isPercentAttribute(buildValues[i].id);
 
@@ -155,6 +188,34 @@ function updatePage(){
                 image.src = baseItemImage;
                 break;
         }
+    }
+
+    for(var i = 0; i < build.hero.attributes.length; i++){
+        console.log("hero attribute: " + build.hero.attributes[i].attributeName);       
+    }
+
+    for(var i = 0; i < maxValueElements.length; i++){
+        var maxValueElement = maxValueElements[i];
+        var buildValue = maxValueElement.previousElementSibling.previousElementSibling.firstChild.nextSibling;
+        var attributeName = buildValue.id;
+
+        let isPercentageValue = isPercentAttribute(attributeName);
+
+        var maxValue = build.attributes[attributeName].maxValue;
+
+        console.log("build attribute: " + attributeName);
+
+        maxValue *= 100;
+        maxValue = Math.round(maxValue);
+        maxValue /= 100
+        
+        maxValueElement.textContent = maxValue;
+
+
+        if(isPercentageValue){
+            maxValueElement.textContent += "%";
+        }
+        //var percentageStr = percentage.toString() + "%";
     }
 }
 

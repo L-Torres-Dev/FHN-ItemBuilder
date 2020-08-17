@@ -11,6 +11,10 @@ class Item{
         this.color = "none"
 
     }
+
+    isBoots(){
+        return bootNames.includes(this.name);
+    }
 }
 
 function printItemInfo(item){
@@ -43,3 +47,13 @@ function printItemInfo(item){
     console.log(`Item Color: ${item.color}`)
     
 }
+
+const bootNames = [
+    "S.I. Boots",
+    "Energy Treads",
+    "Shade's Steps",
+    "Inertia Wraps",
+    "Boots of Haste",
+    "Warlock's Wares",
+    "Boots of the Hunt"
+]
