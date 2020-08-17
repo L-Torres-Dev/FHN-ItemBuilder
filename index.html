@@ -50,7 +50,7 @@
         
             <div class="row">
                 <div id="mySidenav" class="sidenav">
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeHeroPanel()">&times;</a>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <h1 class="header-hero">HEROES</h1>
                         <div class="heroselect" data-setbg="">
@@ -58,18 +58,7 @@
                         </div>
                     </div>
                 </div>
-                
-                  
-                  <script>
-                  function openNav() {
-                    document.getElementById("mySidenav").style.width = "250px";
-                  }
-                  
-                  function closeNav() {
-                    document.getElementById("mySidenav").style.width = "0";
-                  }
-                  </script>
-            <button class="button" style=" text-align:center;" onclick="openNav()">Heroes</button>
+            <button class="button" style=" text-align:center;" onclick="openHeroPanel()">Heroes</button>
             <div class="mid-content">
                 <h1 class="header">ITEM BUILDER</h1>
                 <div class="column left">
@@ -296,7 +285,7 @@
                                     <div class="expand">FILTERS</div>
                                     <div class="filter-cat-wrapper">
                                         <div class="filter-wrapper">
-                                            <div class="filter-cat" style="float: left;">OFFENSIVE </div> <div id ="plus-minus" class="filter-cat" style="float: right;">+</div>
+                                            <div class="filter-cat" style="float: left;">OFFENSIVE </div> <div id ="plus-minus" class="plus-minus" style="float: right;">+</div>
                                         </div>
                                         <div class="filter-content" id="offensive-filters">
                                             <div class="filter-row">
@@ -345,7 +334,7 @@
                                     </div>
                                     <div class="filter-cat-wrapper">
                                         <div class="filter-wrapper">
-                                            <div class="filter-cat" style="float: left;">DEFENSIVE </div> <div id ="plus-minus" class="filter-cat" style="float: right;">+</div>
+                                            <div class="filter-cat" style="float: left;">DEFENSIVE </div> <div id ="plus-minus" class="plus-minus" style="float: right;">+</div>
                                         </div>
                                         <div class="filter-content" id="offensive-filters">
                                             <div class="filter-row">
@@ -405,7 +394,7 @@
                                     </div>
                                     <div class="filter-cat-wrapper">
                                         <div class="filter-wrapper">
-                                            <div class="filter-cat" style="float: left;">OTHER </div> <div id ="plus-minus" class="filter-cat" style="float: right;">+</div>
+                                            <div class="filter-cat" style="float: left;">OTHER </div> <div id ="plus-minus" class="plus-minus" style="float: right;">+</div>
                                         </div>
                                         <div class="filter-content" id="offensive-filters">
                                               <div class="filter-row">
@@ -560,33 +549,7 @@
 
     <script src="NewItemBuildPage.js"></script>
     <script src="ItemBuildCaller.js"></script>
-    <!-- JS Script for Tab Opening-->
-    <script>
-        function openNav() {
-        document.getElementById("mySidenav").style.width = "23%";
-        }
 
-        function closeNav() {
-        document.getElementById("mySidenav").style.width = "0";
-        }
-    </script>
-    <!-- JS Script for Filter Accordian-->
-    <script>
-        var acc = document.getElementsByClassName("filter-wrapper");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.maxHeight) {
-      panel.style.maxHeight = null;
-    } else {
-      panel.style.maxHeight = panel.scrollHeight + "px";
-    } 
-  });
-}
-        </script>
 </body>
 
 </html>
