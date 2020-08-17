@@ -5,6 +5,12 @@ var blocks = document.getElementsByClassName("item-block");
 var acc = document.getElementsByClassName("filter-wrapper");
 var maxValueElements = document.getElementsByClassName("label-cat-right");
 
+var statIncrementors = document.getElementsByClassName("stat-increment");
+
+var currentItem = new Item();
+
+updateStatIncrementors();
+
 function openHeroPanel() {
     document.getElementById("mySidenav").style.width = "23%";
     }
@@ -199,11 +205,6 @@ function updatePage(){
         let isPercentageValue = isPercentAttribute(attributeName);
 
         var maxValue = build.attributes[attributeName].maxValue;
-
-        console.log("build attribute: " + attributeName);
-
-        console.log("LENGTH: " + build.hero.attributes.length);
-
         
         for(var j = 0; j < build.hero.attributes.length; j++){
 
@@ -211,11 +212,7 @@ function updatePage(){
             var theName = heroAttributeNames[heroAttribute.attributeName];
             theName = attributeNames[theName];
 
-
-            console.log(heroAttribute.attributeName);
-            console.log("The Name: " + theName);
             if(theName === attributeName){
-                console.log(true);
                 maxValue += heroAttribute.value;
             }
             //console.log("hero attribute: " + build.hero.attributes[j].attributeName);       
@@ -236,3 +233,20 @@ function updatePage(){
     }
 }
 
+function updateStatIncrementors(){
+
+    let itemName = currentItem.name
+    console.log(itemName);
+    for(var i = 0; i < statIncrementors.length; i++){
+        var incrementor = statIncrementors[i];
+        
+        if(itemName !== "none"){
+            
+        }
+
+        else{
+            incrementor.textContent = 0;
+        }
+        
+    }
+}

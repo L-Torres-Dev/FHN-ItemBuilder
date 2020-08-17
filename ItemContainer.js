@@ -15,6 +15,11 @@ class ItemContainer{
         this.container.addEventListener("dblclick", function(event){
             addItemToBuild(itemName.textContent);
         });
+
+        this.container.addEventListener("click", function(){
+            setCurrentItem(itemsDictionary[itemName]);
+            updateStatIncrementors();
+        });
     }
 
     setName(name){

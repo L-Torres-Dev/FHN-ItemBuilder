@@ -83,3 +83,9 @@ function setAllHeroes(heroes){
 
     heroesDictionary = heroes;
 }
+
+function setCurrentItem(item){
+    currentItem = item;
+
+    updateStatIncrementors();
+}

@@ -1,7 +1,7 @@
 class Item{
     constructor(){
         this.id = 0;
-        this.name = "Random";
+        this.name = "none";
         this.parents = [];
         this.children = [];
         this.attributes = [];
