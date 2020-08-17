@@ -190,9 +190,7 @@ function updatePage(){
         }
     }
 
-    for(var i = 0; i < build.hero.attributes.length; i++){
-        console.log("hero attribute: " + build.hero.attributes[i].attributeName);       
-    }
+    
 
     for(var i = 0; i < maxValueElements.length; i++){
         var maxValueElement = maxValueElements[i];
@@ -204,6 +202,26 @@ function updatePage(){
         var maxValue = build.attributes[attributeName].maxValue;
 
         console.log("build attribute: " + attributeName);
+
+        console.log("LENGTH: " + build.hero.attributes.length);
+
+        
+        for(var j = 0; j < build.hero.attributes.length; j++){
+
+            var heroAttribute = build.hero.attributes[j];
+            var theName = heroAttributeNames[heroAttribute.attributeName];
+            theName = attributeNames[theName];
+
+
+            console.log(heroAttribute.attributeName);
+            console.log("The Name: " + theName);
+            if(theName === attributeName){
+                console.log(true);
+                maxValue += heroAttribute.value;
+            }
+            //console.log("hero attribute: " + build.hero.attributes[j].attributeName);       
+        }
+        
 
         maxValue *= 100;
         maxValue = Math.round(maxValue);
