@@ -1,7 +1,10 @@
 var itemsDictionary;
+var heroesDictionary;
 var itemsArray = [];
 
 var heroPortraits = returnHeroPortraitList();
+
+getAllHeroes(setAllHeroes);
 
 displayHeroPortraits();
 
@@ -43,9 +46,11 @@ function setItems(items){
         count++;
     }
 
+    /*
     for (var [key, value] of Object.entries(build.attributes)){
         console.log(value.attributeName + " max value: " + value.maxValue);
     }
+    */
 
     createItemContainers(itemsArray);
 }
@@ -72,4 +77,9 @@ function setHero(hero){
     build.updateAttributes();
 
     updatePage();
+}
+
+function setAllHeroes(heroes){
+
+    heroesDictionary = heroes;
 }

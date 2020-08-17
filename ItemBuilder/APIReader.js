@@ -42,17 +42,57 @@ function getHeroDetails(heroName, callback){
         }
     };
 
-
     doc.send();
+    
+}
+
+function getAllHeroes(callback){
+  var heroes = {};
+  
+  let theData = Object.entries(Heroes);
+
+  console.log("Trying to Return THE heroes: " + theData[0][1][1]);
+
+  var counter = -1;
+
+  getHero();
+
+  function getFinalHero(hero){
+    heroes[hero.name] = hero;
+    console.log("Getting final hero");
+
+    callback(heroes);
+  }
+
+  function getHero(hero){
+
+    if(hero !== undefined){
+      heroes[hero.name] = hero;
+    }
+
+    
+    counter++;
+
+    if(counter >= theData.length - 1){
+      detailsCallback = getFinalHero;
+    }
+
+    else{
+      var detailsCallback = getHero;
+    }
+    
+    getHeroDetails(theData[counter][1][1], detailsCallback)
+
+  }  
 }
 
 function returnHeroPortraitList(){
 
-  var heroData = Object.entries(Heroes);
+  let heroData = Object.entries(Heroes);
 
   var portraits = [];
   
-  console.log("Trying to Return All heroes: " + heroData[13][1][1]);
+  //console.log("Trying to Return All heroes: " + heroData[13][1][1]);
 
   var baseURL = "https://api.playfault.com/imagecdn/portraits/";
   var fileType = ".jpg"

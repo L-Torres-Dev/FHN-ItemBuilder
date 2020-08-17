@@ -21,7 +21,7 @@ const Heroes = {
     Sevarog: [7, "Sevarog"],
     Murdock: [8, "Murdock"],
     Countess: [9, "Countess"],
-    Bellica: [10, "Lt. Belica"],
+    Bellica: [10, "LtBelica"],
     Greystone: [11, "Greystone"],
     Narbash: [12, "Narbash"],
     Steel: [13, "Steel"],

@@ -57,7 +57,7 @@ function setHeroImage(src, name){
     var image = document.getElementById("hero-portrait");
     var heroText = document.getElementById("hero-name");
 
-    getHeroDetails(name, setHero);
+    setHero(heroesDictionary[name]);
 
     image.src = src;
     heroText.textContent = name;
@@ -81,7 +81,6 @@ function displayHeroPortraits(){
 
         heroImage.addEventListener("click", function(){
             setHeroImage(heroImage.src, heroImage.id);
-            getHeroDetails(heroImage.id, setHero);
         });
 
     }
