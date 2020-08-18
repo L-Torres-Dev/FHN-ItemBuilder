@@ -31,7 +31,7 @@ for (var i = 0; i < acc.length; i++) {
       console.log("collapse");
     } else {
       panel.style.maxHeight = panel.scrollHeight + "px";
-      toggleSigns[0].textContent = "-";
+      toggleSigns[0].textContent = "—";
       console.log("expand");
     } 
   });
@@ -309,10 +309,25 @@ function displayCurrentItemData(){
     divName.textContent = item.name;
 
     //class Name for item Stats: itemstats-text
-    var itemStatsText = itemPopup.getElementsByClassName("itemstats-text");
+    var itemStatsWrapper = itemPopup.getElementsByClassName("itemstats-wrapper")[0];
+
+    while(itemStatsWrapper.firstChild){
+        itemStatsWrapper.removeChild(itemStatsWrapper.firstChild);
+    }
 
     for(var i = 0; i < item.attributes.length; i++){
-        document.createElement("div")
+        let attribute = item.attributes[i];
+
+        var itemStat = document.createElement("div")
+        itemStat.className = "itemstats-text";
+
+        itemStat.textContent = attribute.attributeName + ": " + attribute.value;
+
+        itemStatsWrapper.appendChild(itemStat);
     }
     
+    let description = document.getElementById("item-description");
+
+    description.textContent = "";
+    description.textContent = item.active + "\n" + item.passive;
 }
