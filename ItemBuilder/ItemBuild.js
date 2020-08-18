@@ -134,6 +134,37 @@ class ItemBuild{
         this.roundAttributes(1000);
     }
 
+    returnStatFromHeroLevel(attributeName){
+
+        let levelMod = this.hero.level - 1;
+
+        let attributes = attributesAsDictionary(this.hero.attributes);
+
+        console.log("SOMETHING: " + attributes["health"].attributeName);
+
+        switch(attributeName){
+            case heroAttributeNames.health:
+                let health = attributes["health"].value + (attributes["healthPerLevel"].value * levelMod);
+                return health;
+            case heroAttributeNames.healthRegen:
+                let healthRegen = attributes["healthRegen"].value + attributes["healthRegenPerLevel"].value * levelMod;
+                return healthRegen;
+            case heroAttributeNames.mana:
+                let mana = attributes["mana"].value + attributes["manaPerLevel"].value * levelMod;
+                return mana;
+            case heroAttributeNames.manaRegen:
+                let manaRegen = attributes["manaRegen"].value + attributes["manaRegenPerLevel"].value * levelMod;   
+                return manaRegen;
+            case heroAttributeNames.physicalArmor:
+                let physicalArmor = attributes["physicalArmor"].value + attributesDictionary["physicalArmorPerLevel"].value * levelMod;
+                return physicalArmor;
+            case heroAttributeNames.energyArmor:
+                let energyArmor = attributes["energyArmor"].value + attributesDictionary["energyArmorPerLevel"].value * levelMod;
+                return energyArmor;
+            default:
+                return 0;
+        }
+    }
     
     roundAttributes(precision){
         

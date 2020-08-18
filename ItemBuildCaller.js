@@ -18,51 +18,9 @@ returnAllItems(setItems)
 
 function setItems(items){
     itemsDictionary = items;
+
+    determineMaxValues();
     
-    count = 0;
-    for (var [key, value] of Object.entries(itemsDictionary)){
-        itemsArray[count] = value;
-
-        var itemAttributes = value.attributes;
-
-        for(var i = 0; i < itemAttributes.length; i++){
-            var attribute =itemAttributes[i];
-            var maxValue = attribute.value * 6;
-
-            if(isPercentAttribute(attribute.attributeName)){
-                maxValue *= 100;
-            }
-
-            if(isCooldownReduction(attribute.attributeName)){
-                maxValue = 40;
-            }
-
-            
-
-            var buildAttribute = build.attributes[attribute.attributeName]
-
-
-
-            if(maxValue > buildAttribute.maxValue){
-                buildAttribute.maxValue = maxValue;
-            }
-
-
-            if(isDistributionAttribute(attribute.attributeName)){
-                console.log("RANDOM");
-                buildAttribute.maxValue = 100;
-            }
-        }
-
-        count++;
-    }
-
-    /*
-    for (var [key, value] of Object.entries(build.attributes)){
-        console.log(value.attributeName + " max value: " + value.maxValue);
-    }
-    */
-
     createItemContainers(itemsArray);
 }
 
@@ -96,15 +54,66 @@ function setHero(hero){
 }
 
 function incrementValue(){
-    build.hero.level++;
+    let level = build.hero.level + 1;
 
-    updatePage();
+    build.hero.setLevel(level);
+
+    if(level === build.hero.level){
+        build.updateAttributes();
+        updatePage();
+    }
 }
 
 function decrementValue(){
-    build.hero.level--;
+    let level = build.hero.level - 1;
 
-    updatePage();
+    build.hero.setLevel(level);
+
+    if(level === build.hero.level){
+        build.updateAttributes();
+        updatePage();
+    }
+    
+}
+
+function determineMaxValues(){
+    let count = 0;
+    for (var [key, value] of Object.entries(itemsDictionary)){
+        itemsArray[count] = value;
+
+        var itemAttributes = value.attributes;
+
+        for(var i = 0; i < itemAttributes.length; i++){
+            var attribute = itemAttributes[i];
+            var maxValue = attribute.value * 6;
+
+            if(isPercentAttribute(attribute.attributeName)){
+                maxValue *= 100;
+            }
+
+            if(isCooldownReduction(attribute.attributeName)){
+                maxValue = 40;
+            }
+
+            
+
+            var buildAttribute = build.attributes[attribute.attributeName]
+
+
+
+            if(maxValue > buildAttribute.maxValue){
+                buildAttribute.maxValue = maxValue;
+            }
+
+
+            if(isDistributionAttribute(attribute.attributeName)){
+                console.log("RANDOM");
+                buildAttribute.maxValue = 100;
+            }
+        }
+
+        count++;
+    }
 }
 
 function setAllHeroes(heroes){

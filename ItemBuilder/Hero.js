@@ -8,6 +8,21 @@ class Hero{
         this.aspect2 = new Aspect();
     }
 
+    setLevel(level){
+        if(typeof(level) === "number"){
+            if(level > 18){
+                this.level = 18;
+            }
+    
+            else if(level < 1){
+                this.level = 1;
+            }
+    
+            else{
+                this.level = level;
+            }
+        }
+    }
 }
 
 //Heroes have a number that corresponds to the numbered image in the Fault api, and a name.

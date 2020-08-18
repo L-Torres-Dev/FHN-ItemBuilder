@@ -5,8 +5,27 @@ var blocks = document.getElementsByClassName("item-block");
 var acc = document.getElementsByClassName("filter-wrapper");
 var maxValueElements = document.getElementsByClassName("label-cat-right");
 var itemPopup = document.getElementById("item-popup");
+var levelValue = document.getElementById("level-field");
 
 var statIncrementors = document.getElementsByClassName("stat-increment");
+
+levelValue.addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.keyCode === 13) {
+        // Cancel the default action, if needed
+        event.preventDefault();
+        // Trigger the button element with a click
+        
+
+        let value = Number.parseInt(levelValue.value);
+
+        
+        build.hero.setLevel(value);
+        build.updateAttributes();
+        
+        updatePage();
+    }
+  });
 
 function openHeroPanel() {
     document.getElementById("mySidenav").style.width = "23%";
@@ -90,6 +109,9 @@ function displayHeroPortraits(){
 }
 
 function updatePage(){
+
+    levelValue.value = build.hero.level;
+    console.log("HERO: " + levelValue.value);
 
     var buildValues = document.getElementsByClassName("buildValue");
 
@@ -206,13 +228,13 @@ function updatePage(){
         for(var j = 0; j < build.hero.attributes.length; j++){
 
             var heroAttribute = build.hero.attributes[j];
-            var theName = heroAttributeNames[heroAttribute.attributeName];
-            theName = attributeNames[theName];
+            var heroAttributeName = heroAttributeNames[heroAttribute.attributeName];
+            theName = attributeNames[heroAttributeName];
 
             if(theName === attributeName){
-                maxValue += heroAttribute.value;
+                maxValue += build.returnStatFromHeroLevel(theName);
+
             }
-            //console.log("hero attribute: " + build.hero.attributes[j].attributeName);       
         }
         
 
