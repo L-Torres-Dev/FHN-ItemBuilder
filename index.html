@@ -63,7 +63,7 @@
                     </div>
                 </div>
             <button class="button" style=" text-align:center;" onclick="openHeroPanel()">Heroes</button>
-            <div class="mid-content" id="widget">
+            <div class="mid-content" id="widget" style="background-color: #0a0a0a;">
                 <input type="text", placeholder="Name Your Build" id="name-build" class="header" style="height: 55px; margin-top: 10px; width: 90%;"></input>
                 <div class="column left">
                     <div class="col-lg-3 col-md-6 col-sm-6">
@@ -601,7 +601,7 @@
                         imageName += ".png";
         
                         canvas.toBlob(function(blob) {
-                            saveAs(blob, imageName);
+                            saveAs(blob, "test.png");
                         });
                     }
                 });
