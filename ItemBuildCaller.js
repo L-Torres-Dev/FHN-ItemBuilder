@@ -95,6 +95,18 @@ function setHero(hero){
     updatePage();
 }
 
+function incrementValue(){
+    build.hero.level++;
+
+    updatePage();
+}
+
+function decrementValue(){
+    build.hero.level--;
+
+    updatePage();
+}
+
 function setAllHeroes(heroes){
 
     heroesDictionary = heroes;
