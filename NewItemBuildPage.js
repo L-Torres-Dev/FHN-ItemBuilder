@@ -4,6 +4,7 @@ var itemBlocks = document.getElementsByClassName("inventory-container");
 var blocks = document.getElementsByClassName("item-block");
 var acc = document.getElementsByClassName("filter-wrapper");
 var maxValueElements = document.getElementsByClassName("label-cat-right");
+var itemPopup = document.getElementById("item-popup");
 
 var statIncrementors = document.getElementsByClassName("stat-increment");
 
@@ -277,6 +278,41 @@ function displayCurrentItemData(){
             }
             
         }
+    }
+
+    var img = itemPopup.getElementsByClassName("item-wrapper")[0];
+    
+    switch(item.color){
+        case aspectColors.Blue:
+            img.src = blueItemImage;
+            break;
+        case aspectColors.Black:
+            img.src = purpleItemImage;
+            break;
+        case aspectColors.Red:
+            img.src = redItemImage;
+            break;
+        case aspectColors.Green:
+            img.src = greenItemImage;
+            break;
+        case aspectColors.White:
+            img.src = whiteItemImage;
+            break;
+        default:
+            img.src = baseItemImage;
+            break;
+    }
+
+    
+    var divName = itemPopup.getElementsByClassName("itempop-name")[0];
+
+    divName.textContent = item.name;
+
+    //class Name for item Stats: itemstats-text
+    var itemStatsText = itemPopup.getElementsByClassName("itemstats-text");
+
+    for(var i = 0; i < item.attributes.length; i++){
+        document.createElement("div")
     }
     
 }
