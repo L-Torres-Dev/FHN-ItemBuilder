@@ -259,7 +259,7 @@ function displayCurrentItemData(){
         }
 
         else{
-            incrementor.textContent = 0;
+            incrementor.textContent = "";
         }
         
     }
