@@ -1,6 +1,7 @@
 class Inventory{
     constructor(){
         this.items = [];
+
         }
 
     addItem(item){
@@ -18,6 +19,10 @@ class Inventory{
         if(this.items.length > 0){
             this.items.splice(index, 1);
         }
+    }
+
+    removeAllItems(){
+        this.items = [];
     }
 
     count(){

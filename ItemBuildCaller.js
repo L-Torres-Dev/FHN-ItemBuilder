@@ -31,7 +31,7 @@ function callSearch(search){
 function addItemToBuild(itemName){
     var item = itemsDictionary[itemName];
 
-    console.log("from build calller: " + item.name)
+    console.log("from build caller: " + item.name)
 
     build.addItem(item);
 
@@ -41,6 +41,7 @@ function addItemToBuild(itemName){
     displayCurrentItemData();
 
     updatePage();
+    //console.log(build.inventory.count())
 
 }
 
@@ -95,16 +96,11 @@ function determineMaxValues(){
                 maxValue = 40;
             }
 
-            
-
             var buildAttribute = build.attributes[attribute.attributeName]
-
-
 
             if(maxValue > buildAttribute.maxValue){
                 buildAttribute.maxValue = maxValue;
             }
-
 
             if(isDistributionAttribute(attribute.attributeName)){
                 console.log("RANDOM");
@@ -125,6 +121,13 @@ function setCurrentItem(item){
     currentItem = item;
 
     displayCurrentItemData();
+}
+
+function clearInventory(){
+    build.inventory.removeAllItems();
+
+    build.updateAttributes();
+    updatePage();
 }
 
 function returnItem(itemName){
