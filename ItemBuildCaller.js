@@ -4,6 +4,9 @@ var itemsArray = [];
 
 var heroPortraits = returnHeroPortraitList();
 
+var currentItem = new Item();
+displayCurrentItemData();
+
 getAllHeroes(setAllHeroes);
 
 displayHeroPortraits();
@@ -66,6 +69,9 @@ function addItemToBuild(itemName){
 
     build.updateAttributes();
 
+    currentItem = new Item();
+    displayCurrentItemData();
+
     updatePage();
 
 }
@@ -87,5 +93,13 @@ function setAllHeroes(heroes){
 function setCurrentItem(item){
     currentItem = item;
 
-    updateStatIncrementors();
+    displayCurrentItemData();
+}
+
+function returnItem(itemName){
+    return itemsDictionary[itemName];
+}
+
+function CurrentItem(){
+    return currentItem;
 }
