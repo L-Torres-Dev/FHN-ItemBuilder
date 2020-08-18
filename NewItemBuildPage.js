@@ -6,8 +6,13 @@ var acc = document.getElementsByClassName("filter-wrapper");
 var maxValueElements = document.getElementsByClassName("label-cat-right");
 var itemPopup = document.getElementById("item-popup");
 var levelValue = document.getElementById("level-field");
+var clearButton = document.getElementById("clear-inventory");
 
 var statIncrementors = document.getElementsByClassName("stat-increment");
+
+clearButton.addEventListener("click", function(){
+    clearInventory();
+});
 
 levelValue.addEventListener("keyup", function(event) {
     // Number 13 is the "Enter" key on the keyboard
@@ -26,6 +31,26 @@ levelValue.addEventListener("keyup", function(event) {
         updatePage();
     }
   });
+
+  for(let i = 0; i < itemBlocks.length; i++){
+    itemBlocks[i].addEventListener("dblclick", function(){
+        
+        let inventoryContainer = itemBlocks[i];
+
+        let itemIndex = inventoryContainer.getAttribute("itemIndex")
+
+        let index = Number.parseInt(itemIndex);
+
+        console.log(index);
+
+        build.inventory.removeItem(index);
+        build.updateAttributes();
+        updatePage();
+        
+
+      });
+  }
+  
 
 function openHeroPanel() {
     document.getElementById("mySidenav").style.width = "23%";
@@ -169,28 +194,39 @@ function updatePage(){
 
     for(var i = 0; i < itemBlocks.length; i++){
 
+        var blocks = itemBlocks[i].getElementsByClassName("item-block");
+        var block = blocks[0];
+        block.style.display = "none";
+
+        var imageId = "img" + (i + 1).toString();
+        var pId = "p" + (i + 1).toString();
+
+        var image = document.getElementById(imageId);
+
+        var itemText = document.getElementById(pId);
+
+        
+        image.src = "";
+        itemText.textContent = "";
+        
         console.log("LENGTH: " + build.inventory.items.length);
         if(i >= build.inventory.items.length)
         {
             break;
         }
 
-        var blocks = itemBlocks[i].getElementsByClassName("item-block");
-        var block = blocks[0];
+        
 
+        console.log("ITEM NAME: " + build.inventory.items[i].name);
+        
         block.style.display = "block";
+        
+        let item = build.inventory.items[i];
 
         
-        var imageId = "img" + (i + 1).toString();
-        var pId = "p" + (i + 1).toString();
-
-        item = build.inventory.items[i];
-
-        var image = document.getElementById(imageId);
-
-        var itemText = document.getElementById(pId);
 
         itemText.textContent = item.name;
+
 
         switch(item.color){
             case aspectColors.Blue:
