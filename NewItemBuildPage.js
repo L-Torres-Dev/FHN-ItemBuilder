@@ -7,10 +7,6 @@ var maxValueElements = document.getElementsByClassName("label-cat-right");
 
 var statIncrementors = document.getElementsByClassName("stat-increment");
 
-var currentItem = new Item();
-
-updateStatIncrementors();
-
 function openHeroPanel() {
     document.getElementById("mySidenav").style.width = "23%";
     }
@@ -233,15 +229,33 @@ function updatePage(){
     }
 }
 
-function updateStatIncrementors(){
+function displayCurrentItemData(){
 
-    let itemName = currentItem.name
+    let itemName = CurrentItem().name
     console.log(itemName);
     for(var i = 0; i < statIncrementors.length; i++){
         var incrementor = statIncrementors[i];
+        incrementor.textContent = 0;
+
+        var buildValue = incrementor.previousElementSibling.firstChild.nextSibling;
         
         if(itemName !== "none"){
-            
+            let attributes = CurrentItem().attributes;
+
+            for(var j = 0; j < attributes.length; j++){
+                if(buildValue.id === attributes[j].attributeName){
+
+                    var value = attributes[j].value;
+
+                    value *= 100;
+                    value = Math.round(value);
+                    value /= 100
+
+                    value = Math.abs(value);
+
+                    incrementor.textContent = "+" + attributes[j].value;
+                }
+            }
         }
 
         else{

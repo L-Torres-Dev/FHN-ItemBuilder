@@ -17,8 +17,12 @@ class ItemContainer{
         });
 
         this.container.addEventListener("click", function(){
-            setCurrentItem(itemsDictionary[itemName]);
-            updateStatIncrementors();
+            var item = returnItem(itemName.textContent);
+
+            console.log("ITEM NAME: " + item.name);
+
+            setCurrentItem(item);
+            displayCurrentItemData();
         });
     }
 
