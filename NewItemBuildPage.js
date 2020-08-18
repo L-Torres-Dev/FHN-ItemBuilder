@@ -232,6 +232,7 @@ function updatePage(){
 
 function displayCurrentItemData(){
 
+    var itemView = document.getElementById("view-height");
     let item = CurrentItem();
     let itemName = CurrentItem().name
     console.log(itemName);
@@ -271,12 +272,15 @@ function displayCurrentItemData(){
                         }
                     }
                 }
-                var itemView = document.getElementById("view-height");
+                itemView.style.transition = "1s";
                 itemView.style.opacity = "100%";
             }
     
             else{
                 incrementor.textContent = "";
+                itemView.style.transition = "0s";
+                itemView.style.opacity = "0%";
+                
             }
             
         }
