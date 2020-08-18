@@ -96,6 +96,13 @@ class ItemBuild{
                         attributes[attribute.attributeName].value = -.4;
                     }
                 }
+
+                if(isDistributionAttribute(attribute.attributeName)){
+                    if(attributes[attribute.attributeName].value > 1){
+                        attributes[attribute.attributeName].value = 1;
+                    }
+                    
+                }
             }
         }
 

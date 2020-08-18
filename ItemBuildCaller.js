@@ -48,7 +48,7 @@ function setItems(items){
             }
 
 
-            if(isRandomModifier(attribute.attributeName)){
+            if(isDistributionAttribute(attribute.attributeName)){
                 console.log("RANDOM");
                 buildAttribute.maxValue = 100;
             }

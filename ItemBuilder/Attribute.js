@@ -86,7 +86,7 @@ class Attribute{
     }
 }
 
-function isRandomModifier(attributeName){
+function isDistributionAttribute(attributeName){
     return attributeName ===  "CritChance" 
 }
 
