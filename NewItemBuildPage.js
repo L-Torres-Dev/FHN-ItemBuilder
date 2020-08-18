@@ -231,41 +231,52 @@ function updatePage(){
 
 function displayCurrentItemData(){
 
+    let item = CurrentItem();
     let itemName = CurrentItem().name
     console.log(itemName);
-    for(var i = 0; i < statIncrementors.length; i++){
-        var incrementor = statIncrementors[i];
-        incrementor.textContent = "";
 
-        var buildValue = incrementor.previousElementSibling.firstChild.nextSibling;
-        
-        if(itemName !== "none"){
-            let attributes = CurrentItem().attributes;
+    if(item.name !== "none" && !build.inventory.rulesSatisfied(item)){
+        for(var i = 0; i < statIncrementors.length; i++){
+            incrementor.textContent = "";
+        }
+    }
 
-            for(var j = 0; j < attributes.length; j++){
-                if(buildValue.id === attributes[j].attributeName){
-
-                    var value = attributes[j].value;
-
-                    if(value !== 0){
-                        value *= 100;
-                        value = Math.round(value);
-                        value /= 100
-                        value = Math.abs(value);
-
-                        incrementor.textContent = "+" + value;
-                    }
-
-                    else{
-                        incrementor.textContent = "";
+    else{
+        for(var i = 0; i < statIncrementors.length; i++){
+            var incrementor = statIncrementors[i];
+            incrementor.textContent = "";
+    
+            var buildValue = incrementor.previousElementSibling.firstChild.nextSibling;
+            
+            if(itemName !== "none"){
+                let attributes = CurrentItem().attributes;
+    
+                for(var j = 0; j < attributes.length; j++){
+                    if(buildValue.id === attributes[j].attributeName){
+    
+                        var value = attributes[j].value;
+    
+                        if(value !== 0){
+                            value *= 100;
+                            value = Math.round(value);
+                            value /= 100
+                            value = Math.abs(value);
+    
+                            incrementor.textContent = "+" + value;
+                        }
+    
+                        else{
+                            incrementor.textContent = "";
+                        }
                     }
                 }
             }
+    
+            else{
+                incrementor.textContent = "";
+            }
+            
         }
-
-        else{
-            incrementor.textContent = "";
-        }
-        
     }
+    
 }

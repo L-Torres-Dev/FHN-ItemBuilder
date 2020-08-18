@@ -6,12 +6,7 @@ class Inventory{
     addItem(item){
 
         if(this.rulesSatisfied(item)){
-            if(this.items.length < 6){
-                this.items.push(item);
-            }
-            else{
-                console.log("ERROR: too many items");
-            }
+            this.items.push(item);
         }
 
         else{
@@ -46,6 +41,10 @@ class Inventory{
                     return false;
                 }
             }
+        }
+
+        if(this.items.length >= 6){
+            return false;
         }
 
         return true;
