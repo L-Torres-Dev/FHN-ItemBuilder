@@ -321,7 +321,7 @@ function displayCurrentItemData(){
         var itemStat = document.createElement("div")
         itemStat.className = "itemstats-text";
 
-        itemStat.textContent = attribute.attributeName + ": " + attribute.value;
+        itemStat.textContent = attribute.details;
 
         itemStatsWrapper.appendChild(itemStat);
     }
@@ -330,4 +330,8 @@ function displayCurrentItemData(){
 
     description.textContent = "";
     description.textContent = item.active + "\n" + item.passive;
+
+    var goldbarText = document.getElementById("itempop-goldbar");
+
+    goldbarText.textContent = item.cost;
 }

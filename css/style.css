@@ -116,8 +116,14 @@ body {
 	
 }
 
+.itemstats-text{
+	margin-bottom: 5px;
+}
+
   .gold-bar {
-	  background-color: #0a0a0a;
+	padding: 3px; margin-left: 5px;
+	color: white;
+	background-color: #0a0a0a;
 	height: 100%;
   }
 .scroll-window::-webkit-scrollbar {

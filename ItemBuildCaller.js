@@ -65,6 +65,8 @@ function callSearch(search){
 function addItemToBuild(itemName){
     var item = itemsDictionary[itemName];
 
+    console.log("from build calller: " + item.name)
+
     build.addItem(item);
 
     build.updateAttributes();
