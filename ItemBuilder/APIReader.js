@@ -16,6 +16,7 @@ function getHeroDetails(heroName, callback){
         if(status = 200){
             var response = JSON.parse(doc.responseText);
 
+            
             for(var i in response){
                 if(typeof response[i] === "number"){
 
@@ -30,10 +31,42 @@ function getHeroDetails(heroName, callback){
                     attribute.value = response[i];
 
                     hero.attributes.push(attribute);
-                    
                 }
-              
             }
+
+            let name = response["lmb"]["name"];
+            let description = response["lmb"]["description"];
+            let cooldown = response["lmb"]["cooldown"];
+            let physicalDamage = response["lmb"]["physicalDamage"];
+
+            hero.basicAttack = new Ability(name, description, cooldown, physicalDamage);
+
+            name = response["rmb"]["name"];
+            description = response["rmb"]["description"];
+            cooldown = response["rmb"]["cooldown"];
+
+            hero.abilities[0] = new Ability(name, description, cooldown, physicalDamage);
+
+            name = response["q"]["name"];
+            description = response["q"]["description"];
+            cooldown = response["q"]["cooldown"];
+
+            hero.abilities[1] = new Ability(name, description, cooldown, physicalDamage);
+
+            name = response["e"]["name"];
+            description = response["e"]["description"];
+            cooldown = response["e"]["cooldown"];
+
+            hero.abilities[2] = new Ability(name, description, cooldown, physicalDamage);
+
+            name = response["r"]["name"];
+            description = response["r"]["description"];
+            cooldown = response["r"]["cooldown"];
+
+            hero.abilities[3] = new Ability(name, description, cooldown, physicalDamage);
+
+            console.log(response["lmb"]["description"]);
+
             callback(hero);
             
         }

@@ -51,6 +51,8 @@ function setHero(hero){
 
     build.updateAttributes();
 
+    console.log(build.hero.basicAttack.name);
+
     updatePage();
 }
 

@@ -6,6 +6,9 @@ class Hero{
 
         this.aspect1 = new Aspect();
         this.aspect2 = new Aspect();
+
+        this.basicAttack = new Ability();
+        this.abilities = [];
     }
 
     setLevel(level){
