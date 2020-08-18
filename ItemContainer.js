@@ -1,9 +1,9 @@
-var baseItemImage = "https://global-uploads.webflow.com/5d44771a95c1f5121689f944/5e7ffb88dc54456d13efd247_FaultLogo_3D-logoonly.svg";
-var redItemImage = "https://uploads-ssl.webflow.com/5e4dd70c09d48fd33df2de2f/5f33417f8a25f182a4e6a517_item_red.svg"
-var blueItemImage = "https://uploads-ssl.webflow.com/5e4dd70c09d48fd33df2de2f/5f33417f8a25f114cde6a516_item_blue.svg";
-var greenItemImage = "https://uploads-ssl.webflow.com/5e4dd70c09d48fd33df2de2f/5f33417f01a1dc6c15211569_item_green.svg";
-var purpleItemImage = "https://uploads-ssl.webflow.com/5e4dd70c09d48fd33df2de2f/5f33417fe8e7468b5f73c01f_item_black.svg";
-var whiteItemImage = "https://uploads-ssl.webflow.com/5e4dd70c09d48fd33df2de2f/5f33417f15c71c9b2ba53bad_item_white.svg";
+var baseItemImage = "images/white_item_r.png";
+var redItemImage = "images/red_item_r.png"
+var blueItemImage = "images/blue_item_r.png";
+var greenItemImage = "images/green_item_r.png";
+var purpleItemImage = "images/purple_item_r.png";
+var whiteItemImage = "images/white_item_r.png";
 
 class ItemContainer{
     constructor(container, itemName, image){
