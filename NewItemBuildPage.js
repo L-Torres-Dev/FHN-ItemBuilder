@@ -271,6 +271,8 @@ function displayCurrentItemData(){
                         }
                     }
                 }
+                var itemView = document.getElementById("view-height");
+                itemView.style.opacity = "100%";
             }
     
             else{
@@ -278,6 +280,7 @@ function displayCurrentItemData(){
             }
             
         }
+        
     }
 
     var img = itemPopup.getElementsByClassName("item-wrapper")[0];
@@ -334,4 +337,7 @@ function displayCurrentItemData(){
     var goldbarText = document.getElementById("itempop-goldbar");
 
     goldbarText.textContent = item.cost;
+
+    
+    
 }

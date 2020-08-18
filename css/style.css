@@ -120,6 +120,11 @@ body {
 	margin-bottom: 5px;
 }
 
+#view-height{
+	opacity: 0%;
+	transition: 1s;
+}
+
   .gold-bar {
 	padding: 3px; margin-left: 5px;
 	color: white;
