@@ -76,9 +76,12 @@
                                         <div class="dropdown" style="margin-bottom: 3px;">
                                             <input type="text", placeholder="Name Your Build" id="name-build"></input>
                                         </div>
-                                        <div class="dropdown">
-                                            <button onclick="myFunction()" class="dropbtn level">Level</button>
-                                            <div id="myDropdown" class="dropdown-content"></div>
+                                        <div class="dropdown" style="background-color: #0a0a0a;">
+                                            <form>
+                                                <input class="level-increment-up" type="button" onclick="incrementValue()" value="Increment Value" />
+                                                <input class="level-field" type="text" id="number" value="18"/>
+                                                <input class="level-increment-up" type="button" onclick="incrementValue()" value="Increment Value" />
+                                             </form>
                                         </div>
                                         <div class="aspects-container">
                                             <img src="https://daks2k3a4ib2z.cloudfront.net/5e4dd70c09d48fd33df2de2f/5f32f9537a62ab7b97c63cde_Fault_Aspects-RedC-p-130x130q80.png" alt="Nature" style="object-fit: fill; margin-right: 3px;">

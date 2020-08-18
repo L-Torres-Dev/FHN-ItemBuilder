@@ -85,6 +85,14 @@ body {
 	text-align: left;
 	color: rgb(177, 176, 176);
 }
+.level-field {
+	width: 12%;
+	font-size: 11px;
+}
+.level-increment-up {
+	width: 15%;
+	font-size: 11px;
+}
 .stat-increment {
 	position: absolute;
 	right: 18%;
