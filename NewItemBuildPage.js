@@ -43,12 +43,32 @@ levelValue.addEventListener("keyup", function(event) {
 
         console.log(index);
 
-        build.inventory.removeItem(index);
-        build.updateAttributes();
-        updatePage();
-        
+        let item = build.inventory.items[index];
 
+        if(item !== undefined){
+            build.inventory.removeItem(index);
+            build.updateAttributes();
+            updatePage();
+        }
       });
+
+      itemBlocks[i].addEventListener("click", function(){
+
+        let inventoryContainer = itemBlocks[i];
+
+        let itemIndex = inventoryContainer.getAttribute("itemIndex")
+
+        let index = Number.parseInt(itemIndex);
+
+        let item = build.inventory.items[index];
+
+        if(item !== undefined){
+            setCurrentItem(item);
+            displayCurrentItemData();
+        }
+        
+      })
+        
   }
   
 
