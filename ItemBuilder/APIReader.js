@@ -65,7 +65,10 @@ function getHeroDetails(heroName, callback){
 
             hero.abilities[3] = new Ability(name, description, cooldown, physicalDamage);
 
-            console.log(response["lmb"]["description"]);
+            name = response["p"]["name"];
+            description = response["p"]["description"];
+
+            hero.passive = new Ability(name, description);
 
             callback(hero);
             

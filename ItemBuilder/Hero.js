@@ -3,10 +3,11 @@ class Hero{
         this.level = (level === undefined)? 1 : level;
         this.name = "";
         this.attributes = [];
-
+        
         this.aspect1 = new Aspect();
         this.aspect2 = new Aspect();
 
+        this.passive = new Ability();
         this.basicAttack = new Ability();
         this.abilities = [];
     }
