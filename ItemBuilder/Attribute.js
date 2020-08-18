@@ -86,6 +86,10 @@ class Attribute{
     }
 }
 
+function isRandomModifier(attributeName){
+    return attributeName ===  "CritChance" 
+}
+
 function isPercentAttribute(attributeName){
     return attributeName === "Cooldown Reduction"
              || attributeName ===  "CritChance" || attributeName === "LifeSteal";

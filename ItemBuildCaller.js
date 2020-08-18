@@ -37,12 +37,20 @@ function setItems(items){
                 maxValue = 40;
             }
 
+            
+
             var buildAttribute = build.attributes[attribute.attributeName]
 
 
 
             if(maxValue > buildAttribute.maxValue){
                 buildAttribute.maxValue = maxValue;
+            }
+
+
+            if(isRandomModifier(attribute.attributeName)){
+                console.log("RANDOM");
+                buildAttribute.maxValue = 100;
             }
         }
 
