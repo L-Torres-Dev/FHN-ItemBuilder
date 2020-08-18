@@ -164,7 +164,7 @@ function updatePage(){
 
     var goldcost = build.inventory.totalCost();
 
-    goldValue.textContent = build.inventory.totalCost()
+    goldValue.textContent = goldcost;
 
     for(var i = 0; i < buildValues.length;i++){
         var attribute = build.attributes[buildValues[i].id]
@@ -224,49 +224,44 @@ function updatePage(){
         var image = document.getElementById(imageId);
 
         var itemText = document.getElementById(pId);
-
         
         image.src = "";
         itemText.textContent = "";
         
         console.log("LENGTH: " + build.inventory.items.length);
-        if(i >= build.inventory.items.length)
-        {
-            break;
-        }
 
+        if(i < build.inventory.items.length){
+            console.log("ITEM NAME: " + build.inventory.items[i].name);
         
+            block.style.display = "block";
+            
+            let item = build.inventory.items[i];
 
-        console.log("ITEM NAME: " + build.inventory.items[i].name);
-        
-        block.style.display = "block";
-        
-        let item = build.inventory.items[i];
+            
 
-        
-
-        itemText.textContent = item.name;
+            itemText.textContent = item.name;
 
 
-        switch(item.color){
-            case aspectColors.Blue:
-                image.src = blueItemImage;
-                break;
-            case aspectColors.Black:
-                image.src = purpleItemImage;
-                break;
-            case aspectColors.Red:
-                image.src = redItemImage;
-                break;
-            case aspectColors.Green:
-                image.src = greenItemImage;
-                break;
-            case aspectColors.White:
-                image.src = whiteItemImage;
-                break;
-            default:
-                image.src = baseItemImage;
-                break;
+            switch(item.color){
+                case aspectColors.Blue:
+                    image.src = blueItemImage;
+                    break;
+                case aspectColors.Black:
+                    image.src = purpleItemImage;
+                    break;
+                case aspectColors.Red:
+                    image.src = redItemImage;
+                    break;
+                case aspectColors.Green:
+                    image.src = greenItemImage;
+                    break;
+                case aspectColors.White:
+                    image.src = whiteItemImage;
+                    break;
+                default:
+                    image.src = baseItemImage;
+                    break;
+            }
         }
     }
 
