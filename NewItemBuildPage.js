@@ -32,6 +32,26 @@ levelValue.addEventListener("keyup", function(event) {
     }
   });
 
+  for(let i = 0; i < itemBlocks.length; i++){
+    itemBlocks[i].addEventListener("dblclick", function(){
+        
+        let inventoryContainer = itemBlocks[i];
+
+        let itemIndex = inventoryContainer.getAttribute("itemIndex")
+
+        let index = Number.parseInt(itemIndex);
+
+        console.log(index);
+
+        build.inventory.removeItem(index);
+        build.updateAttributes();
+        updatePage();
+        
+
+      });
+  }
+  
+
 function openHeroPanel() {
     document.getElementById("mySidenav").style.width = "23%";
     }
