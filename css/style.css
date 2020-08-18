@@ -181,7 +181,7 @@ body {
    
   .scroll-window::-webkit-scrollbar-thumb {
 	background-color: rgb(227, 188, 122, 0.55);
-	outline: 1px solid red;
+	outline: 1px solid #841f16;
   }
 .ability-button {
 	width: 33.33%;
@@ -725,7 +725,7 @@ body {
 .heroability-block > p {
 	position: relative;
 	top: 25%;
-	color: red;
+	color: #841f16;
 	line-height: 11px;
 	font-size: 13px;
 	width: 100%;
@@ -979,7 +979,7 @@ label {
 	transition: 0.5s;
     float: right;
 	font-weight: bold;
-	background-color: red;
+	background-color: #841f16;
 }
 .col-lg-8{
 	padding-left: 0px;
