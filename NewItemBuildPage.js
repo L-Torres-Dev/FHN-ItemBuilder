@@ -235,7 +235,7 @@ function displayCurrentItemData(){
     console.log(itemName);
     for(var i = 0; i < statIncrementors.length; i++){
         var incrementor = statIncrementors[i];
-        incrementor.textContent = 0;
+        incrementor.textContent = "";
 
         var buildValue = incrementor.previousElementSibling.firstChild.nextSibling;
         
@@ -247,13 +247,18 @@ function displayCurrentItemData(){
 
                     var value = attributes[j].value;
 
-                    value *= 100;
-                    value = Math.round(value);
-                    value /= 100
+                    if(value !== 0){
+                        value *= 100;
+                        value = Math.round(value);
+                        value /= 100
+                        value = Math.abs(value);
 
-                    value = Math.abs(value);
+                        incrementor.textContent = "+" + value;
+                    }
 
-                    incrementor.textContent = "+" + attributes[j].value;
+                    else{
+                        incrementor.textContent = "";
+                    }
                 }
             }
         }
