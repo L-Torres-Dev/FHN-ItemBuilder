@@ -45,25 +45,25 @@ function getHeroDetails(heroName, callback){
             description = response["rmb"]["description"];
             cooldown = response["rmb"]["cooldown"];
 
-            hero.abilities[0] = new Ability(name, description, cooldown, physicalDamage);
+            hero.rmb = new Ability(name, description, cooldown, physicalDamage);
 
             name = response["q"]["name"];
             description = response["q"]["description"];
             cooldown = response["q"]["cooldown"];
 
-            hero.abilities[1] = new Ability(name, description, cooldown, physicalDamage);
+            hero.q = new Ability(name, description, cooldown, physicalDamage);
 
             name = response["e"]["name"];
             description = response["e"]["description"];
             cooldown = response["e"]["cooldown"];
 
-            hero.abilities[2] = new Ability(name, description, cooldown, physicalDamage);
+            hero.e = new Ability(name, description, cooldown, physicalDamage);
 
             name = response["r"]["name"];
             description = response["r"]["description"];
             cooldown = response["r"]["cooldown"];
 
-            hero.abilities[3] = new Ability(name, description, cooldown, physicalDamage);
+            hero.ult = new Ability(name, description, cooldown, physicalDamage);
 
             name = response["p"]["name"];
             description = response["p"]["description"];

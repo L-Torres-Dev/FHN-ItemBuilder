@@ -9,7 +9,10 @@ class Hero{
 
         this.passive = new Ability();
         this.basicAttack = new Ability();
-        this.abilities = [];
+        this.rmb = new Ability();
+        this.q = new Ability();
+        this.e = new Ability();
+        this.ult = new Ability();
     }
 
     setLevel(level){

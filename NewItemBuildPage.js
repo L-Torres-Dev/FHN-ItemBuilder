@@ -7,6 +7,8 @@ var maxValueElements = document.getElementsByClassName("label-cat-right");
 var itemPopup = document.getElementById("item-popup");
 var levelValue = document.getElementById("level-field");
 var clearButton = document.getElementById("clear-inventory");
+var abilityNameText = document.getElementById("ability-name");
+var abilityDescriptionText = document.getElementById("ability-description");
 
 var statIncrementors = document.getElementsByClassName("stat-increment");
 
