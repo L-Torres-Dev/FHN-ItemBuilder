@@ -725,7 +725,7 @@ body {
 .heroability-block > p {
 	position: relative;
 	top: 25%;
-	color: white;
+	color: red;
 	line-height: 11px;
 	font-size: 13px;
 	width: 100%;
@@ -979,7 +979,7 @@ label {
 	transition: 0.5s;
     float: right;
 	font-weight: bold;
-	background-color: #6635ad;
+	background-color: red;
 }
 .col-lg-8{
 	padding-left: 0px;
