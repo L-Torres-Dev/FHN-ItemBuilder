@@ -86,7 +86,7 @@
                               </div>
                                     <div class="column hero-left">
                                         <div class="hero-container">
-                                            <img onclick="openHeroPanel()" style ="background-color: #0a0a0a;" id="hero-portrait" src="images/fault_logo.png">
+                                            <img onclick="openHeroPanel()" src="./images/black-image.png" id="hero-portrait">
                                             <div class="hero-block">
                                               <h4 id="hero-name">No hero Selected</h4>
                                             </div>
@@ -107,11 +107,11 @@
                                         
                                         <div class="aspects-container" style="position: relative;">
                                             <div id="aspect1" style=" margin-right: 3px;text-align: center; height: 100%;left: 0; position: absolute; bottom: 0; width: 49%; background-color: #0a0a0a; color: rgb(227, 188, 122);">
-                                                <img src="" style="position:relative; height: 60px;">
+                                                <img src="./images/black-image.png" style="position:relative; height: 60px;">
                                                 <div style="width: 100%; position: absolute; bottom: 0; font-size: 0.7vw;">SELECT</div>
                                             </div>
                                             <div id="aspect2" style="text-align: center; height: 100%;right: 0; position: absolute; bottom: 0; width: 49%; background-color: #0a0a0a; color: rgb(227, 188, 122);">
-                                                <img src="" style="position:relative; height: 60px;">
+                                                <img src="./images/black-image.png" style="position:relative; height: 60px;">
                                                 <div style="width: 100%; position: absolute; bottom: 0; font-size: 0.7vw;">SELECT</div>
                                             </div>
                                             
@@ -502,32 +502,32 @@
                                 <div class="itembuild-container" style="margin-top: 0px;">
                                     <div class="item-container">
                                         <div class="inventory-container" id="item-block 1" itemIndex="0">
-                                            <img src="" id="img1"></img>
+                                            <img src="./images/black-image.png" id="img1"></img>
                                             <div class="item-block"><p id="p1"></p></div>
                                         </div>
                                         <div class="inventory-container" id="item-block 2" itemIndex="1">
-                                            <img src="" id="img2">
+                                            <img src="./images/black-image.png" id="img2">
                                             <div class="item-block"><p id="p2"></p></div>
                                         </div>
                                         <div class="inventory-container" id="item-block 3" itemIndex="2">
-                                            <img src="" id="img3">
+                                            <img src="./images/black-image.png" id="img3">
                                             <div class="item-block"><p id="p3"></p></div>
                                         </div>
                                         <div class="inventory-container" id="item-block 4" itemIndex="3">
-                                            <img src="" id="img4">
+                                            <img src="./images/black-image.png" id="img4">
                                             <div class="item-block"><p id="p4"></p></div>
                                         </div>
                                         <div class="inventory-container" id="item-block 5" itemIndex="4">
-                                            <img src="" id="img5">
+                                            <img src="./images/black-image.png" id="img5">
                                             <div class="item-block"><p id="p5"></p></div>
                                         </div>
                                         <div class="inventory-container" id="item-block 6" itemIndex="5">
-                                            <img src="" id="img6">
+                                            <img src="./images/black-image.png" id="img6">
                                             <div class="item-block"><p id="p6"></p></div>
                                         </div>
                                     </div>
                                 </div>
-                                    <div class="nav" style="background-color: #0a0a0a; color: white; margin-top: 5px; margin-right: 5px; float: left;text-align: left; width: 49%; padding-left: 5px;">
+                                    <div class="nav" style=" color: white; margin-top: 5px; margin-right: 5px; float: left;text-align: left; width: 49%; padding-left: 5px;">
                                         <div class="cost-heading" style="display: inline-block; color: rgb(227, 188, 122); font-size: 14px;">TOTAL GOLD COST:</div>
                                         <div class="nav" style="padding-left: 20px; padding-right: 20px; text-align: left;">
                                             <div class="gold-image">
@@ -566,8 +566,8 @@
                                 <div>
                                     <div class="itempop-wrapper" id="item-popup">
                                         <div class="reminder-text">*Double click to add/remove*</div>
-                                        <img class="item-wrapper" src="https://uploads-ssl.webflow.com/5e4dd70c09d48fd33df2de2f/5f33417fe8e7468b5f73c01f_item_black.svg">
-                                        <div class="itempop-name" id="itempop-name" style="border-bottom: 1px white solid;">Photosynthetic Symbiote</div>
+                                        <img class="item-wrapper" src="">
+                                        <div class="itempop-name" id="itempop-name" style="border-bottom: 1px white solid;"></div>
                                         <div class="itemstats-wrapper">
                                             
                                         </div>
@@ -575,7 +575,7 @@
                                         <div  class="itemdesc-text" id="item-description">Bla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla bla</div>
                                         <div class="nav" style="padding-left: 35%; padding-right: 5px;">
                                             <div class="gold-image">
-                                                <img src="https://global-uploads.webflow.com/5d44771a95c1f5121689f944/5df063435613cefa7c572859_t_AspectPanel_goldcoinsSTACKED.png">
+                                                <img src="./images/gold.png">
                                             </div>
                                             <div id="itempop-goldbar" class="gold-bar">
                                                 <p id="popUpCostValue" style="margin-left: 5px; color: white;">0</p>
@@ -604,19 +604,21 @@
     <script src="ItemBuildCaller.js"></script>
     <!--Generate Build Script-->
     <script>
-        $(function() { 
-            $("#btnSave").click(function() { 
-                html2canvas($("#widget"), {
-                    logging: true,
-                    useCORS: true,
-                    onrender: function(canvas) {
-                        theCanvas = canvas;
-                        canvas.toBlob(function(blob) {
-                            saveAs(blob, "faultbuild.png");
-                        });
-                    }
-                });
+       $(function() { 
+        $("#btnSave").click(function() { 
+            html2canvas($("#widget"), {
+                useCorse: true,
+                logging: true,
+                onrendered: function(canvas) {
+                    theCanvas = canvas;
+
+
+                    canvas.toBlob(function(blob) {
+                    saveAs(blob, "Dashboard.png"); 
             });
+                }
+            });
+        });
         }); 
         </script>   
 
