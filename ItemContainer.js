@@ -63,8 +63,6 @@ function newItemContainer(){
     image.src = baseItemImage;
     itemName.textContent = "item Name";
 
-
-
     itemContainer.appendChild(image);
     itemContainer.appendChild(itemBlock);
     itemBlock.appendChild(itemName);

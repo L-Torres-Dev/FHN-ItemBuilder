@@ -129,11 +129,10 @@ levelValue.addEventListener("keyup", function(event) {
 
         let index = Number.parseInt(itemIndex);
 
-        console.log(index);
-
         let item = build.inventory.items[index];
 
         if(item !== undefined){
+            inventoryContainer.style.backgroundColor = "";
             build.inventory.removeItem(index);
             build.updateAttributes();
             updatePage();
@@ -326,6 +325,7 @@ function updatePage(){
         var blocks = itemBlocks[i].getElementsByClassName("item-block");
         var block = blocks[0];
         block.style.display = "none";
+        itemBlocks[i].style.backgroundColor = "";
 
         var imageId = "img" + (i + 1).toString();
         var pId = "p" + (i + 1).toString();
@@ -343,7 +343,10 @@ function updatePage(){
             console.log("ITEM NAME: " + build.inventory.items[i].name);
         
             block.style.display = "block";
-            
+
+            //CHANGE BACKGROUND COLOR HERE (Note for Kodiris)
+            itemBlocks[i].style.backgroundColor = "grey";
+
             let item = build.inventory.items[i];
 
             
