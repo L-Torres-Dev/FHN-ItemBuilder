@@ -661,7 +661,7 @@ body {
 	top: 0;
 	left: 0;
 	background-color: #111;
-	overflow-x: hidden;
+	overflow: hidden;
 	transition: 0.5s;
   }
   .mid-content {
