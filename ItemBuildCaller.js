@@ -85,6 +85,9 @@ function decrementValue(){
 
 function determineMaxValues(){
     let count = 0;
+
+    let movementSpeedFromBoots = 0;
+    let movementSpeedFromItems = 0;
     for (var [key, value] of Object.entries(itemsDictionary)){
         itemsArray[count] = value;
 
@@ -116,10 +119,30 @@ function determineMaxValues(){
                 console.log("RANDOM");
                 buildAttribute.maxValue = 100;
             }
+
+            if(isMovementSpeed(attribute.attributeName)){
+                if(itemsArray[count].isBoots()){
+                    if(attribute.value > movementSpeedFromBoots){
+                        movementSpeedFromBoots = attribute.value;
+                    }
+                }
+
+                else{
+                    let value = attribute.value * 5;
+                    if(value > movementSpeedFromItems){
+                        movementSpeedFromItems = value;
+                    }
+                }
+            }
         }
 
         count++;
     }
+
+    let maxMS = movementSpeedFromItems + movementSpeedFromBoots
+
+    build.attributes[attributeNames.MovementSpeed].maxValue = maxMS;
+
 }
 
 function setAllHeroes(heroes){

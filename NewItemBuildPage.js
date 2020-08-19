@@ -75,11 +75,6 @@ levelValue.addEventListener("keyup", function(event) {
             build.updateAttributes();
         
             updatePage();
-
-
-
-
-            
         }
         
         
@@ -358,8 +353,9 @@ function updatePage(){
             theName = attributeNames[heroAttributeName];
 
             if(theName === attributeName){
+                console.log(theName + ": " + maxValue)
                 maxValue += build.returnStatFromHeroLevel(theName);
-
+                console.log(theName + ": " + maxValue)
             } 
         }
         

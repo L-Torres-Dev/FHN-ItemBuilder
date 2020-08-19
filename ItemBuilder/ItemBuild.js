@@ -112,9 +112,11 @@ class ItemBuild{
                 }
 
             }
+
+
         }
 
-        
+        //Attack Speed
         let heroBasicAttackCD = this.hero.basicAttack.cooldown;
         let heroAttackSpeed = 1 / heroBasicAttackCD;
         let buildAttackSpeed = attributes[attributeNames.AttackSpeed].value;
@@ -167,7 +169,7 @@ class ItemBuild{
 
         let attributes = attributesAsDictionary(this.hero.attributes);
 
-        console.log("SOMETHING: " + attributes["health"].attributeName);
+        console.log("SOMETHING: " + attributeName);
 
         switch(attributeName){
             case heroAttributeNames.health:
@@ -183,14 +185,18 @@ class ItemBuild{
                 let manaRegen = attributes["manaRegen"].value + attributes["manaRegenPerLevel"].value * levelMod;   
                 return manaRegen;
             case heroAttributeNames.physicalArmor:
-                let physicalArmor = attributes["physicalArmor"].value + attributesDictionary["physicalArmorPerLevel"].value * levelMod;
+                let physicalArmor = attributes["physicalArmor"].value + attributes["physicalArmorPerLevel"].value * levelMod;
                 return physicalArmor;
             case heroAttributeNames.energyArmor:
-                let energyArmor = attributes["energyArmor"].value + attributesDictionary["energyArmorPerLevel"].value * levelMod;
+                let energyArmor = attributes["energyArmor"].value + attributes["energyArmorPerLevel"].value * levelMod;
                 return energyArmor;
             case attributeNames.AttackSpeed:
                 let attackSpeed = 1 / this.hero.basicAttack.cooldown;
                 return attackSpeed;
+            case attributeNames.MovementSpeed:
+                let moveSpeed = attributes["movespeed"].value;
+                console.log("MOVEMENT SPEED: " + moveSpeed);
+                return moveSpeed;
             default:
                 return 0;
         }

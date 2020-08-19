@@ -103,3 +103,6 @@ function isCooldownReduction(attributeName){
 function isAttackSpeed(attributeName){
     return attributeName === "Attack Speed";
 }
+function isMovementSpeed(attributeName){
+    return attributeName === attributeNames.MovementSpeed;
+}
