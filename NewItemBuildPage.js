@@ -234,10 +234,6 @@ function updatePage(){
             var percentageStr = percentage.toString() + "%";
         }
 
-        
-
-        console.log(percentageStr);
-
         //Change width
         buildValues[i].style.width = percentageStr;
 
@@ -329,9 +325,16 @@ function updatePage(){
             if(theName === attributeName){
                 maxValue += build.returnStatFromHeroLevel(theName);
 
-            }
+            } 
         }
         
+        if(isAttackSpeed(attributeName)){
+            let heroAttackSpeed = build.returnStatFromHeroLevel(attributeName)
+            let additionalValue = heroAttackSpeed + (maxValue * heroAttackSpeed)
+            let value = additionalValue;
+
+            maxValue = value;
+        }
 
         maxValue *= 100;
         maxValue = Math.round(maxValue);
@@ -343,24 +346,24 @@ function updatePage(){
         if(isPercentageValue){
             maxValueElement.textContent += "%";
         }
-        //var percentageStr = percentage.toString() + "%";
     }
 }
 
 function displayCurrentItemData(){
 
-    var itemView = document.getElementById("view-height");
+    var itemView = document.getElementById("itemview-column");
     let item = CurrentItem();
-    let itemName = CurrentItem().name
-    console.log(itemName);
+    let itemName = item.name
 
     if(item.name !== "none" && !build.inventory.rulesSatisfied(item)){
         for(var i = 0; i < statIncrementors.length; i++){
+            var incrementor = statIncrementors[i];
             incrementor.textContent = "";
         }
     }
 
     else{
+
         for(var i = 0; i < statIncrementors.length; i++){
             var incrementor = statIncrementors[i];
             incrementor.textContent = "";
@@ -368,6 +371,7 @@ function displayCurrentItemData(){
             var buildValue = incrementor.previousElementSibling.firstChild.nextSibling;
             
             if(itemName !== "none"){
+                
                 let attributes = CurrentItem().attributes;
     
                 for(var j = 0; j < attributes.length; j++){
@@ -389,14 +393,17 @@ function displayCurrentItemData(){
                         }
                     }
                 }
+                
                 itemView.style.transition = "1s";
                 itemView.style.opacity = "100%";
+                console.log("Opacity: " + itemView.style.opacity);
             }
     
             else{
                 incrementor.textContent = "";
                 itemView.style.transition = "0s";
                 itemView.style.opacity = "0%";
+                console.log("Opacity: " + itemView.style.opacity);
                 
             }
             
@@ -427,7 +434,6 @@ function displayCurrentItemData(){
             break;
     }
 
-    
     var divName = itemPopup.getElementsByClassName("itempop-name")[0];
 
     divName.textContent = item.name;
@@ -458,8 +464,6 @@ function displayCurrentItemData(){
     var goldbarText = document.getElementById("itempop-goldbar");
 
     goldbarText.textContent = item.cost;
-
-    
     
 }
 

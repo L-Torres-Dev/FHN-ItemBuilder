@@ -102,6 +102,10 @@ function determineMaxValues(){
                 maxValue = 40;
             }
 
+            if(isAttackSpeed(attribute.attributeName)){
+                maxValue /= 100;
+            }
+
             var buildAttribute = build.attributes[attribute.attributeName]
 
             if(maxValue > buildAttribute.maxValue){
@@ -125,7 +129,7 @@ function setAllHeroes(heroes){
 
 function setCurrentItem(item){
     currentItem = item;
-
+    
     displayCurrentItemData();
 }
 

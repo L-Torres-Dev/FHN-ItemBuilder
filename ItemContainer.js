@@ -18,9 +18,8 @@ class ItemContainer{
 
         this.container.addEventListener("click", function(){
             var item = returnItem(itemName.textContent);
-
+            
             setCurrentItem(item);
-            displayCurrentItemData();
         });
     }
 

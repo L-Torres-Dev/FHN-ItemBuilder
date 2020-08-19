@@ -106,9 +106,33 @@ class ItemBuild{
                     }
                     
                 }
+
+                if(isAttackSpeed(attribute.attributeName)){
+                    console.log(attribute.attributeName);
+                }
+
             }
         }
 
+        
+        let heroBasicAttackCD = this.hero.basicAttack.cooldown;
+        let heroAttackSpeed = 1 / heroBasicAttackCD;
+        let buildAttackSpeed = attributes[attributeNames.AttackSpeed].value;
+
+        console.log("HERO AUTO: " + heroAttackSpeed);
+
+        let attackSpeed = buildAttackSpeed / 100;
+
+        console.log("ATTACK SPEED: " + attackSpeed);
+        buildAttackSpeed = heroAttackSpeed + (attackSpeed * heroAttackSpeed);
+
+        console.log("BUILD ATTACK SPEED: " + buildAttackSpeed);
+
+        attributes[attributeNames.AttackSpeed].value = buildAttackSpeed;
+        
+        let theValue = attributes[attributeNames.AttackSpeed].value;
+        console.log("FINAL AUTO: " + theValue);
+        
         for(let i = 0; i < this.hero.attributes.length; i++){
 
             let heroAttributes = this.hero.attributes;
@@ -164,6 +188,9 @@ class ItemBuild{
             case heroAttributeNames.energyArmor:
                 let energyArmor = attributes["energyArmor"].value + attributesDictionary["energyArmorPerLevel"].value * levelMod;
                 return energyArmor;
+            case attributeNames.AttackSpeed:
+                let attackSpeed = 1 / this.hero.basicAttack.cooldown;
+                return attackSpeed;
             default:
                 return 0;
         }

@@ -13,7 +13,8 @@ const attributeNames = {
     PCTCDR: "Cooldown Reduction",
     AttackSpeed: "Attack Speed",
     LifeSteal: "LifeSteal",
-    CritChance: "CritChance"
+    CritChance: "CritChance",
+    BasicAttackDmg: "Basic Atk Dmg"
     
 }
 
@@ -97,4 +98,8 @@ function isPercentAttribute(attributeName){
 
 function isCooldownReduction(attributeName){
     return attributeName === "Cooldown Reduction";
+}
+
+function isAttackSpeed(attributeName){
+    return attributeName === "Attack Speed";
 }
