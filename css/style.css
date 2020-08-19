@@ -20,6 +20,12 @@ body {
 	height: 100%;
 
 }
+
+#abilitydata-container {
+	opacity: 0%;
+	transition: 1s;
+}
+
 .aspect-overlay {
 	height: 150px;
 	width: 0;

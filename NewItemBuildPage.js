@@ -9,8 +9,25 @@ var levelValue = document.getElementById("level-field");
 var clearButton = document.getElementById("clear-inventory");
 var abilityNameText = document.getElementById("ability-name");
 var abilityDescriptionText = document.getElementById("ability-description");
+var abilityContainer = document.getElementById("abilitydata-container");
 
 var statIncrementors = document.getElementsByClassName("stat-increment");
+
+var aspect1Container = document.getElementById("aspect1");
+var aspect2Container = document.getElementById("aspect2");
+var currentAspectContainer = undefined;
+
+aspect1Container.addEventListener("click", function(){
+    openAspectNav();
+
+    currentAspectContainer = aspect1Container;
+});
+
+aspect2Container.addEventListener("click", function(){
+    openAspectNav();
+
+    currentAspectContainer = aspect2Container;
+});
 
 clearButton.addEventListener("click", function(){
     clearInventory();
@@ -419,4 +436,30 @@ function displayCurrentItemData(){
 
     
     
+}
+
+function openAspectNav() {
+    document.getElementById("myNav").style.width = "16%";
+  }
+
+function setAspectRed(){
+    build.hero[currentAspectContainer.id] = aspectColors.Red;
+
+    currentAspectContainer.src = "https://daks2k3a4ib2z.cloudfront.net/5e4dd70c09d48fd33df2de2f/5f32f9537a62ab7b97c63cde_Fault_Aspects-RedC-p-130x130q80.png"
+}
+
+function setAspectBlue(){
+    build.hero[currentAspectContainer.id] = aspectColors.Red;
+}
+
+function setAspectGreen(){
+    build.hero[currentAspectContainer.id] = aspectColors.Green;
+}
+
+function setAspectPurple(){
+    build.hero[currentAspectContainer.id] = aspectColors.Black;
+}
+
+function setAspectWhite(){
+    build.hero[currentAspectContainer.id] = aspectColors.White;
 }

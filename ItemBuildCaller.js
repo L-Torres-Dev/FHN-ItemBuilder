@@ -146,6 +146,7 @@ function CurrentItem(){
 
 function displayPassive(){
     if(build.hero.name === "") return;
+    abilityContainer.style.opacity = "100%"
 
     container = document.getElementById("passive-block");
 
@@ -169,6 +170,7 @@ function displayPassive(){
 
 function displayRMB(){
     if(build.hero.name === "") return;
+    abilityContainer.style.opacity = "100%"
 
     container = document.getElementById("rmb-block");
 
@@ -190,6 +192,7 @@ function displayRMB(){
 }
 function displayQ(){
     if(build.hero.name === "") return;
+    abilityContainer.style.opacity = "100%"
 
     container = document.getElementById("q-block");
 
@@ -211,6 +214,7 @@ function displayQ(){
 }
 function displayE(){
     if(build.hero.name === "") return;
+    abilityContainer.style.opacity = "100%"
 
     container = document.getElementById("e-block");
 
@@ -232,6 +236,7 @@ function displayE(){
 }
 function displayUlt(){
     if(build.hero.name === "") return;
+    abilityContainer.style.opacity = "100%"
 
     container = document.getElementById("r-block");
 

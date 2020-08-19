@@ -73,11 +73,11 @@
                                 <a href="javascript:void(0)" class="closebtn" onclick="closeAspectNav()">&times;</a>
                                 <div class="overlay-content">
                                     <div class="aspectsgrid-container">
-                                        <img id ="red-aspect" src="https://daks2k3a4ib2z.cloudfront.net/5e4dd70c09d48fd33df2de2f/5f32f9537a62ab7b97c63cde_Fault_Aspects-RedC-p-130x130q80.png" alt="Nature" style="object-fit: fill; margin-right: 3px;">
-                                        <img id ="green-aspect"src="https://daks2k3a4ib2z.cloudfront.net/5e4dd70c09d48fd33df2de2f/5f32f95303e6844e46df03ee_Fault_Aspects-GreenC-p-130x130q80.png" alt="Nature" style="object-fit: fill; margin-right: 3px;">
-                                        <img id ="purple-aspect" src="https://daks2k3a4ib2z.cloudfront.net/5e4dd70c09d48fd33df2de2f/5f32f953947c8a2905359015_Fault_Aspects-BlackC-p-130x130q80.png" alt="Nature" style="object-fit: fill; margin-right: 3px;">
-                                        <img id ="blue-aspect" src="https://daks2k3a4ib2z.cloudfront.net/5e4dd70c09d48fd33df2de2f/5f32f95395d6326f556cce8b_Fault_Aspects-BlueC-p-130x130q80.png" alt="Nature" style="object-fit: fill; margin-right: 3px;">
-                                        <img id ="white-aspect" src="https://daks2k3a4ib2z.cloudfront.net/5e4dd70c09d48fd33df2de2f/5f32f953947c8a5904359014_Fault_Aspects-White-p-130x130q80.png" alt="Nature" style="object-fit: fill; margin-right: 3px;">
+                                        <img onclick="setAspectRed()" id ="red-aspect" src="https://daks2k3a4ib2z.cloudfront.net/5e4dd70c09d48fd33df2de2f/5f32f9537a62ab7b97c63cde_Fault_Aspects-RedC-p-130x130q80.png" alt="Nature" style="object-fit: fill; margin-right: 3px;">
+                                        <img onclick="setAspectGreen()" id ="green-aspect"src="https://daks2k3a4ib2z.cloudfront.net/5e4dd70c09d48fd33df2de2f/5f32f95303e6844e46df03ee_Fault_Aspects-GreenC-p-130x130q80.png" alt="Nature" style="object-fit: fill; margin-right: 3px;">
+                                        <img onclick="setAspectPurple()" id ="purple-aspect" src="https://daks2k3a4ib2z.cloudfront.net/5e4dd70c09d48fd33df2de2f/5f32f953947c8a2905359015_Fault_Aspects-BlackC-p-130x130q80.png" alt="Nature" style="object-fit: fill; margin-right: 3px;">
+                                        <img onclick="setAspectBlue()" id ="blue-aspect" src="https://daks2k3a4ib2z.cloudfront.net/5e4dd70c09d48fd33df2de2f/5f32f95395d6326f556cce8b_Fault_Aspects-BlueC-p-130x130q80.png" alt="Nature" style="object-fit: fill; margin-right: 3px;">
+                                        <img onclick="setAspectWhite()" id ="white-aspect" src="https://daks2k3a4ib2z.cloudfront.net/5e4dd70c09d48fd33df2de2f/5f32f953947c8a5904359014_Fault_Aspects-White-p-130x130q80.png" alt="Nature" style="object-fit: fill; margin-right: 3px;">
                                     
                                     </div>
                                     
@@ -106,10 +106,10 @@
                                         </div>
                                         
                                         <div class="aspects-container" style="position: relative;">
-                                            <div onclick="openAspectNav()" src="images/white_item_r.png" style=" margin-right: 3px;text-align: center; height: 100%;left: 0; position: absolute; bottom: 0; width: 49%; background-color: #0a0a0a; color: rgb(227, 188, 122);">
+                                            <div id="aspect1" src="images/white_item_r.png" style=" margin-right: 3px;text-align: center; height: 100%;left: 0; position: absolute; bottom: 0; width: 49%; background-color: #0a0a0a; color: rgb(227, 188, 122);">
                                                 <div style="width: 100%; position: absolute; bottom: 0; font-size: 0.7vw;">SELECT</div>
                                             </div>
-                                            <div onclick="openAspectNav()" src="images/white_item_r.png" style="text-align: center; height: 100%;right: 0; position: absolute; bottom: 0; width: 49%; background-color: #0a0a0a; color: rgb(227, 188, 122);">
+                                            <div id="aspect2" src="images/white_item_r.png" style="text-align: center; height: 100%;right: 0; position: absolute; bottom: 0; width: 49%; background-color: #0a0a0a; color: rgb(227, 188, 122);">
                                                 <div style="width: 100%; position: absolute; bottom: 0; font-size: 0.7vw;">SELECT</div>
                                             </div>
                                             
@@ -304,31 +304,31 @@
                                     <div class="heroability-container" style="margin-top: 0px; text-align: center;">
                                         <div class="heroability-grid">
                                             
-                                            <div class="itemblock-container" id="passive-block" onmouseover="displayPassive()">
+                                            <div class="itemblock-container" id="passive-block" onclick="displayPassive()">
                                                 <img src="./images/black-image.png">
                                                 <div class="heroability-block">
                                                     <p style="color: #841f16;">P</p>
                                                 </div>
                                             </div>
-                                            <div class="itemblock-container" id="rmb-block" onmouseover="displayRMB()">
+                                            <div class="itemblock-container" id="rmb-block" onclick="displayRMB()">
                                                 <img src="./images/black-image.png">
                                                 <div class="heroability-block">
                                                     <p style="color: #841f16;">RMB</p>
                                                 </div>
                                             </div>
-                                            <div class="itemblock-container" id="q-block" onmouseover="displayQ()">
+                                            <div class="itemblock-container" id="q-block" onclick="displayQ()">
                                                 <img src="./images/black-image.png">
                                                 <div class="heroability-block">
                                                     <p style="color: #841f16;">Q</p>
                                                 </div>
                                             </div>
-                                            <div class="itemblock-container" id="e-block" onmouseover="displayE()">
+                                            <div class="itemblock-container" id="e-block" onclick="displayE()">
                                                 <img src="./images/black-image.png">
                                                 <div class="heroability-block">
                                                     <p style="color: #841f16;">E</p>
                                                 </div>
                                             </div>
-                                            <div class="itemblock-container" id="r-block" onmouseover="displayUlt()">
+                                            <div class="itemblock-container" id="r-block" onclick="displayUlt()">
                                                 <img src="./images/black-image.png">
                                                 <div class="heroability-block">
                                                     <p style="color: #841f16;">R</p>
@@ -546,7 +546,7 @@
             <div class="right-content">
                 <h1 class="header" style="color: transparent; border-style: none;">DESCRIPTIONS</h1>
                 <div class="column left" style="width: 300px;">
-                    <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="col-lg-3 col-md-6 col-sm-6" id="abilitydata-container">
                         <div class="categories__item set-bg" data-setbg="">
                 <div class="column right" style="width: 100%;">
                     <div class="col-lg-3 col-md-6 col-sm-6" style="padding-left: 0px;">
@@ -634,9 +634,7 @@
 
         <!--Aspect pop up script-->
         <script>
-            function openAspectNav() {
-              document.getElementById("myNav").style.width = "16%";
-            }
+            
             
             function closeAspectNav() {
               document.getElementById("myNav").style.width = "0%";
