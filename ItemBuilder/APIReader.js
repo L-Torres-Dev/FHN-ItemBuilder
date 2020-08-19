@@ -137,10 +137,11 @@ function returnHeroPortraitList(){
   for(var i = 0; i < heroData.length; i++){
     var heroNumber = heroData[i][1][0];
     var heroName = heroData[i][1][1];
+    var color = heroData[i][1][2]
 
     var fullURL = baseURL + heroNumber.toString() + fileType;
     
-    var portrait = new HeroPortrait(fullURL, heroName);
+    var portrait = new HeroPortrait(fullURL, heroName, color);
 
     portraits.push(portrait);
   }

@@ -14,6 +14,8 @@ var filterContainer = document.getElementById("filter-container");
 
 var statIncrementors = document.getElementsByClassName("stat-increment");
 
+var heroColor;
+
 var aspect1Container = document.getElementById("aspect1");
 var aspect2Container = document.getElementById("aspect2");
 var currentAspectContainer = undefined;
@@ -183,15 +185,37 @@ function displayHeroPortraits(){
         heroImage.src = heroPortraits[i].portrait;
         heroImage.id = heroPortraits[i].name;
 
+        let color = heroPortraits[i].color;
+
         heroDiv.appendChild(heroImage);
 
         heroGrid.appendChild(heroDiv);
 
         heroImage.addEventListener("click", function(){
             setHeroImage(heroImage.src, heroImage.id);
+            heroColor = color
+
+            setHeroStyling();
         });
 
     }
+}
+
+function setHeroStyling(){
+    let buildValues = document.getElementsByClassName("buildValue");
+    let heroAbilities = document.getElementsByClassName("heroability-block");
+    let abilityName = document.getElementById("ability-name");
+
+    for(var i = 0; i < buildValues.length; i++){
+        buildValues[i].style.backgroundColor = heroColor;
+    }
+
+    for(var i = 0; i < heroAbilities.length; i++){
+        console.log(heroAbilities[i].firstChild);
+        heroAbilities[i].firstChild.nextSibling.style.color = heroColor;
+    }
+
+    abilityName.style.color = heroColor;
 }
 
 function updatePage(){

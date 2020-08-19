@@ -35,18 +35,18 @@ class Hero{
 //Heroes have a number that corresponds to the numbered image in the Fault api, and a name.
 const Heroes = {
 
-    TwinBlast: [2, "Twinblast"],
-    Gideon: [3, "Gideon"],
-    Kwang: [4, "Kwang"],
-    Muriel: [5, "Muriel"],
-    Khaimera: [6, "Khaimera"],
-    Sevarog: [7, "Sevarog"],
-    Murdock: [8, "Murdock"],
-    Countess: [9, "Countess"],
-    Bellica: [10, "LtBelica"],
-    Greystone: [11, "Greystone"],
-    Narbash: [12, "Narbash"],
-    Steel: [13, "Steel"],
-    Boris: [14, "Boris"],
-    Sparrow: [15, "Sparrow"]
+    TwinBlast: [2, "Twinblast", "#841f16"],
+    Gideon: [3, "Gideon", "#6635ad"],
+    Kwang: [4, "Kwang", "#963967"],
+    Muriel: [5, "Muriel", "#7c6e80"],
+    Khaimera: [6, "Khaimera", "#156569"],
+    Sevarog: [7, "Sevarog", "#809807"],
+    Murdock: [8, "Murdock", "#2a4471"],
+    Countess: [9, "Countess", "#7d1129"],
+    Bellica: [10, "LtBelica", "#163d85"],
+    Greystone: [11, "Greystone", "#7e6332"],
+    Narbash: [12, "Narbash", "#777940"],
+    Steel: [13, "Steel", "#822102"],
+    Boris: [14, "Boris", "#6e6b4a"],
+    Sparrow: [15, "Sparrow", "#5e7a57"]
 }
