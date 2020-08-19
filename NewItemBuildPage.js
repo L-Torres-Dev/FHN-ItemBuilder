@@ -554,7 +554,7 @@ function setAspectRed(){
     build.hero[currentAspectContainer.id].color = aspectColors.Red;
 
     let image = currentAspectContainer.getElementsByTagName("img")[0];
-    image.src = "./images/red-aspect/png";
+    image.src = "./images/red-aspect.png";
 
     var selectText = currentAspectContainer.getElementsByTagName("div")[0];
     selectText.style.display = "none";
@@ -568,7 +568,7 @@ function setAspectBlue(){
     build.hero[currentAspectContainer.id].color = aspectColors.Blue;
 
     let image = currentAspectContainer.getElementsByTagName("img")[0];
-    image.src = "./images/blue-aspect/png";
+    image.src = "./images/blue-aspect.png";
 
     var selectText = currentAspectContainer.getElementsByTagName("div")[0];
     selectText.style.display = "none";
@@ -580,7 +580,7 @@ function setAspectGreen(){
     build.hero[currentAspectContainer.id].color = aspectColors.Green;
 
     let image = currentAspectContainer.getElementsByTagName("img")[0];
-    image.src = "./images/green-aspect/png";
+    image.src = "./images/green-aspect.png";
 
     var selectText = currentAspectContainer.getElementsByTagName("div")[0];
     selectText.style.display = "none";
@@ -592,7 +592,7 @@ function setAspectPurple(){
     build.hero[currentAspectContainer.id].color = aspectColors.Black;
 
     let image = currentAspectContainer.getElementsByTagName("img")[0];
-    image.src = "./images/purple-aspect/png";
+    image.src = "./images/purple-aspect.png";
 
     var selectText = currentAspectContainer.getElementsByTagName("div")[0];
     selectText.style.display = "none";
@@ -604,7 +604,7 @@ function setAspectWhite(){
     build.hero[currentAspectContainer.id].color = aspectColors.White;
 
     let image = currentAspectContainer.getElementsByTagName("img")[0];
-    image.src = "./images/white-aspect/png";
+    image.src = "./images/white-aspect.png";
 
     var selectText = currentAspectContainer.getElementsByTagName("div")[0];
     selectText.style.display = "none";
