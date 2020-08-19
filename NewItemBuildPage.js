@@ -160,7 +160,7 @@ levelValue.addEventListener("keyup", function(event) {
   
 
 function openHeroPanel() {
-    document.getElementById("mySidenav").style.width = "23%";
+    document.getElementById("mySidenav").style.width = "450px";
     }
 
 function closeHeroPanel() {
@@ -174,10 +174,12 @@ for (var i = 0; i < acc.length; i++) {
     console.log(this);
 
     var toggleSigns = this.getElementsByClassName("plus-minus");
+    var cat = this.getElementsByClassName("filter-cat");
     if (panel.style.maxHeight) {
       panel.style.maxHeight = null;
-
+        
       toggleSigns[0].textContent = "+";
+      cat.style.borderBottom = "1px solid rgb(227, 188, 122)";
 
       console.log("collapse");
     } else {
@@ -349,7 +351,7 @@ function updatePage(){
             block.style.display = "block";
 
             //CHANGE BACKGROUND COLOR HERE (Note for Kodiris)
-            itemBlocks[i].style.backgroundColor = "grey";
+            itemBlocks[i].style.backgroundColor = "rgb(24, 24, 24)";
 
             let item = build.inventory.items[i];
 
