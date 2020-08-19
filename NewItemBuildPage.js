@@ -54,7 +54,7 @@ levelValue.addEventListener("keyup", function(event) {
         }
       });
 
-      itemBlocks[i].addEventListener("click", function(){
+      itemBlocks[i].addEventListener("mouseover", function(){
 
         let inventoryContainer = itemBlocks[i];
 
