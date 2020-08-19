@@ -177,6 +177,9 @@ function updatePage(){
     levelValue.value = build.hero.level;
     console.log("HERO: " + levelValue.value);
 
+    document.getElementById("favor1").value = build.hero.aspect1.favor;
+    document.getElementById("favor2").value = build.hero.aspect2.favor;
+
     var buildValues = document.getElementsByClassName("buildValue");
 
     var goldValue = document.getElementById("costValue");
@@ -442,24 +445,96 @@ function openAspectNav() {
     document.getElementById("myNav").style.width = "16%";
   }
 
-function setAspectRed(){
-    build.hero[currentAspectContainer.id] = aspectColors.Red;
+function closeAspectNav() {
+    document.getElementById("myNav").style.width = "0%";
+  }
 
-    currentAspectContainer.src = "https://daks2k3a4ib2z.cloudfront.net/5e4dd70c09d48fd33df2de2f/5f32f9537a62ab7b97c63cde_Fault_Aspects-RedC-p-130x130q80.png"
+function setAspectRed(){
+    build.hero[currentAspectContainer.id].color = aspectColors.Red;
+
+    let image = currentAspectContainer.getElementsByTagName("img")[0];
+    image.src = "https://daks2k3a4ib2z.cloudfront.net/5e4dd70c09d48fd33df2de2f/5f32f9537a62ab7b97c63cde_Fault_Aspects-RedC-p-130x130q80.png";
+
+    var selectText = currentAspectContainer.getElementsByTagName("div")[0];
+    selectText.style.display = "none";
+
+    console.log(build.hero[currentAspectContainer.id].color);
+
+    closeAspectNav();
 }
 
 function setAspectBlue(){
-    build.hero[currentAspectContainer.id] = aspectColors.Red;
+    build.hero[currentAspectContainer.id].color = aspectColors.Red;
+
+    let image = currentAspectContainer.getElementsByTagName("img")[0];
+    image.src = "https://daks2k3a4ib2z.cloudfront.net/5e4dd70c09d48fd33df2de2f/5f32f95395d6326f556cce8b_Fault_Aspects-BlueC-p-130x130q80.png";
+
+    var selectText = currentAspectContainer.getElementsByTagName("div")[0];
+    selectText.style.display = "none";
+
+    closeAspectNav();
 }
 
 function setAspectGreen(){
-    build.hero[currentAspectContainer.id] = aspectColors.Green;
+    build.hero[currentAspectContainer.id].color = aspectColors.Green;
+
+    let image = currentAspectContainer.getElementsByTagName("img")[0];
+    image.src = "https://daks2k3a4ib2z.cloudfront.net/5e4dd70c09d48fd33df2de2f/5f32f95303e6844e46df03ee_Fault_Aspects-GreenC-p-130x130q80.png";
+
+    var selectText = currentAspectContainer.getElementsByTagName("div")[0];
+    selectText.style.display = "none";
+
+    closeAspectNav();
 }
 
 function setAspectPurple(){
-    build.hero[currentAspectContainer.id] = aspectColors.Black;
+    build.hero[currentAspectContainer.id].color = aspectColors.Black;
+
+    let image = currentAspectContainer.getElementsByTagName("img")[0];
+    image.src = "https://daks2k3a4ib2z.cloudfront.net/5e4dd70c09d48fd33df2de2f/5f32f953947c8a2905359015_Fault_Aspects-BlackC-p-130x130q80.png";
+
+    var selectText = currentAspectContainer.getElementsByTagName("div")[0];
+    selectText.style.display = "none";
+
+    closeAspectNav();
 }
 
 function setAspectWhite(){
-    build.hero[currentAspectContainer.id] = aspectColors.White;
+    build.hero[currentAspectContainer.id].color = aspectColors.White;
+
+    let image = currentAspectContainer.getElementsByTagName("img")[0];
+    image.src = "https://daks2k3a4ib2z.cloudfront.net/5e4dd70c09d48fd33df2de2f/5f32f953947c8a5904359014_Fault_Aspects-White-p-130x130q80.png";
+
+    var selectText = currentAspectContainer.getElementsByTagName("div")[0];
+    selectText.style.display = "none";
+
+    closeAspectNav();
+}
+
+function incrementFavor1(){
+    build.hero.aspect1.favor++;
+
+    build.updateAttributes();
+    updatePage();   
+}
+
+function decrementFavor1(){
+    build.hero.aspect1.favor--;
+    
+    build.updateAttributes();
+    updatePage();
+}
+
+function incrementFavor2(){
+    build.hero.aspect2.favor++;
+    
+    build.updateAttributes();
+    updatePage();
+}
+
+function decrementFavor2(){
+    build.hero.aspect2.favor--;
+    
+    build.updateAttributes();
+    updatePage();
 }

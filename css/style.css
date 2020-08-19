@@ -149,6 +149,17 @@ body {
 	background-color: transparent;
 	color: rgb(177, 176, 176);
 }
+
+.favor-field {
+	text-align: center;
+	width: 25%;
+	font-size: 12px;
+	height: 20px;
+	border: transparent;
+	background-color: transparent;
+	color: rgb(177, 176, 176);
+}
+
 .level-increment {
 	width: 15%;
 	font-size: 11px;
