@@ -67,17 +67,15 @@ class ItemBuild{
             
             let item = this.inventory.items[i];
 
-            let itemSameColor = false;
-            let aspect = null;
+            let itemSameColor1 = false;
+            let itemSameColor2 = false;
 
             if(item.color === this.hero.aspect1.color ){
-                itemSameColor = true;
-                aspect = this.hero.aspect1;
+                itemSameColor1 = true;
             }
 
-            else if(item.color === this.hero.aspect2.color){
-                itemSameColor = true;
-                aspect = this.hero.aspect2;
+            if(item.color === this.hero.aspect2.color){
+                itemSameColor2 = true;
             }
 
             for(let j = 0; j < item.attributes.length; j++){
@@ -86,8 +84,13 @@ class ItemBuild{
 
                 attributes[attribute.attributeName].value += attribute.value;
 
-                if(itemSameColor){
-                    attributes[attribute.attributeName].value += (attribute.rankValue * aspect.favor);
+                if(itemSameColor1){
+                    attributes[attribute.attributeName].value += (attribute.rankValue * this.hero.aspect1.favor);
+                    
+                }
+
+                if(itemSameColor2){
+                    attributes[attribute.attributeName].value += (attribute.rankValue * this.hero.aspect2.favor);
                 }
 
                 if(isCooldownReduction(attribute.attributeName)){

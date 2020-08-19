@@ -527,6 +527,8 @@ function decrementFavor1(){
 
 function incrementFavor2(){
     build.hero.aspect2.favor++;
+
+    console.log(build.hero.aspect2.favor);
     
     build.updateAttributes();
     updatePage();
