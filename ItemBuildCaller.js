@@ -145,6 +145,7 @@ function CurrentItem(){
 }
 
 function displayPassive(){
+    if(build.hero.name === "") return;
 
     container = document.getElementById("passive-block");
 
@@ -167,6 +168,8 @@ function displayPassive(){
 }
 
 function displayRMB(){
+    if(build.hero.name === "") return;
+
     container = document.getElementById("rmb-block");
 
     let image = container.getElementsByTagName("img")[0];
@@ -186,6 +189,7 @@ function displayRMB(){
     abilityDescriptionText.textContent = build.hero.rmb.description;
 }
 function displayQ(){
+    if(build.hero.name === "") return;
 
     container = document.getElementById("q-block");
 
@@ -206,6 +210,7 @@ function displayQ(){
     abilityDescriptionText.textContent = build.hero.q.description;
 }
 function displayE(){
+    if(build.hero.name === "") return;
 
     container = document.getElementById("e-block");
 
@@ -226,6 +231,7 @@ function displayE(){
     abilityDescriptionText.textContent = build.hero.e.description;
 }
 function displayUlt(){
+    if(build.hero.name === "") return;
 
     container = document.getElementById("r-block");
 
