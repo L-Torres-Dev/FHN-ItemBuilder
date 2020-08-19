@@ -118,14 +118,14 @@
                                             <div style="margin-right: 3px;">
                                                     <div style="width: 100%; text-align: center; line-height: 8px; background-color: #0a0a0a; padding: 3px;">
                                                         <input class="level-increment" style="float: left;" type="button" onclick="incrementValue()" value="—" />
-                                                        <input class="level-field" type="text" id="number" style="height: 15px;" value="1"/>
+                                                        <input class="level-field" type="text" id="number" style="height: 15px;" value="0"/>
                                                         <input class="level-increment" style="float: right;" type="button" onclick="incrementValue()" value="+" />
                                                     </div>
                                             </div>
                                             <div>
                                                 <div style="width: 100%; text-align: center; line-height: 8px; background-color: #0a0a0a; padding: 3px;">
                                                     <input class="level-increment" style="float: left;" type="button" onclick="incrementValue()" value="—" />
-                                                    <input class="level-field" type="text" id="number" style="height: 15px;" value="1"/>
+                                                    <input class="level-field" type="text" id="number" style="height: 15px;" value="0"/>
                                                     <input class="level-increment" style="float: right;" type="button" onclick="incrementValue()" value="+" />
                                                 </div>
                                             </div>
@@ -556,13 +556,15 @@
                             <div style="border-bottom: solid 1px white; width: 100%; height: 70%; font-size: 18px; color: rgb(177, 176, 176)">
                                 Overdrive
                             </div>-->
+                            
                             <div id="ability-name" style="border-bottom: 1px white solid; width: 100%; height: 30%; padding: 6px; color: #841f16;">Overdrive</div>
-                            <div id="ability-description" style=" width: 100%; height: 30%; font-size: 11px; color: rgb(177, 176, 176); padding-top: 5px;">Landing basic attacks stacks 0.8/1.3/1.7/2.1% movement speed, to a maximum of 10 stacks. Stacks last 2 seconds.</div>
+                            <div class="scroll-window" id="ability-description" style=" width: 100%; font-size: 11px; color: rgb(177, 176, 176); padding-top: 5px;">Landing basic attacks stacks 0.8/1.3/1.7/2.1% movement speed, to a maximum of 10 stacks. Stacks last 2 seconds.</div>
                         </div>
-                        <div class="itemview-height" data-setbg="" id="view-height" style="padding-top: 20%">
+                        <div class="itemview-height" data-setbg="" id="view-height" style="padding-top: 15%">
                             <div style="width: 100%; height: 100%;">
                                 <div>
                                     <div class="itempop-wrapper" id="item-popup">
+                                        <div class="reminder-text">*Double click to add/remove*</div>
                                         <img class="item-wrapper" src="https://uploads-ssl.webflow.com/5e4dd70c09d48fd33df2de2f/5f33417fe8e7468b5f73c01f_item_black.svg">
                                         <div class="itempop-name" id="itempop-name" style="border-bottom: 1px white solid;">Photosynthetic Symbiote</div>
                                         <div class="itemstats-wrapper">

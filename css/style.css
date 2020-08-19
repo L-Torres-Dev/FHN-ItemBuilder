@@ -230,7 +230,6 @@ body {
    
   .scroll-window::-webkit-scrollbar-thumb {
 	background-color: rgb(227, 188, 122, 0.55);
-	outline: 1px solid #841f16;
   }
 .ability-button {
 	width: 33.33%;
@@ -967,7 +966,12 @@ body {
 .second-column{
 	width: 900px;
 }
-
+#ability-description {
+	height: 300px;
+	overflow: auto;
+	padding-left: 5px;
+	padding-right: 5px;
+}
 .herobutton{
 	width: 50%;
 }
@@ -1236,7 +1240,11 @@ label {
 	animation: loader 0.8s linear infinite;
 	-webkit-animation: loader 0.8s linear infinite;
 }
-
+.reminder-text {
+	font-size: 0.6vw;
+	color: rgb(177, 176, 176);
+	margin-bottom: 10px;
+}
 @keyframes loader {
 	0% {
 		-webkit-transform: rotate(0deg);
