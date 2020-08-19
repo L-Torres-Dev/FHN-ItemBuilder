@@ -583,16 +583,7 @@ body {
     height: 20px;
     padding: 2px 2px 2px 2px;
 }
-#item-search {
-	background-color: #0a0a0a;
-	width: 49%;
-	color: white;
-	margin-right: 29px;
-	border-color: transparent;
-	border-bottom: 1px solid rgb(227, 188, 122);
-    height: 20px;
-    padding: 2px 2px 2px 2px;
-}
+
 .aspectsgrid-container {
 	display: grid;
 	grid-template-columns: 70px 70px 70px;
@@ -4469,3 +4460,23 @@ label {
 		line-height: 100px;
 	}
 }
+.itemsearch-animated {
+	width: 60%;
+	box-sizing: border-box;
+	border: none;
+	color: rgb(177, 176, 176);
+	border-bottom: 1px solid rgba(227, 188, 122);
+	border-radius: 2px;
+	font-size: 16px;
+	background-color: transparent;
+	background-position: 10px 10px; 
+	background-repeat: no-repeat;
+	padding: 5px 5px 5px 5px;
+	-webkit-transition: width 0.4s ease-in-out;
+	transition: width 0.4s ease-in-out;
+	height: 20px;
+  }
+  
+  .itemsearch-animated:focus {
+	width: 90%;
+  }

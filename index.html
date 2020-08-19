@@ -487,7 +487,10 @@
                                     
                                 </div>
                                 <div class="column item-left"  style="color: rgb(177, 176, 176);">
-                                    <input type="text", placeholder="Search" id="item-search"></input>
+                                    <form autocomplete="off">
+                                        <img style="width: 15px; height: 15px;" src="./images/search.png">
+                                        <input class="itemsearch-animated" placeholder="Search Items" id="item-search" type="text" name="search">
+                                    </form>
                                     <div class="scroll-window" data-setbg="">
                                         <div class="itemgrid-container", id="item-grid"></div>
                                     </div>
