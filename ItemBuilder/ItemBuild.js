@@ -108,7 +108,9 @@ class ItemBuild{
                 }
 
                 if(isAttackSpeed(attribute.attributeName)){
-                    console.log(attribute.attributeName);
+                    if(attributes[attribute.attributeName].value > 250){
+                        attributes[attribute.attributeName].value = 250;
+                    }
                 }
 
             }

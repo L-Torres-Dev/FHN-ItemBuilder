@@ -283,8 +283,11 @@ function updatePage(){
 
         var value = attribute.value;
 
-
-
+        if(isAttackSpeed(attribute.attributeName)){
+            if(value > 2.5){
+                value = 2.5;
+            }
+        }
         let isPercentageValue = isPercentAttribute(buildValues[i].id);
 
         if(isPercentageValue){
@@ -293,6 +296,7 @@ function updatePage(){
         }   
 
         var percentage = value / attribute.maxValue * 100;
+
 
         if(percentage > 100){
             percentageStr = "100%"
@@ -402,11 +406,7 @@ function updatePage(){
         }
         
         if(isAttackSpeed(attributeName)){
-            let heroAttackSpeed = build.returnStatFromHeroLevel(attributeName)
-            let additionalValue = heroAttackSpeed + (maxValue * heroAttackSpeed)
-            let value = additionalValue;
-
-            maxValue = value;
+            maxValue = 2.5;
         }
 
         maxValue *= 100;
