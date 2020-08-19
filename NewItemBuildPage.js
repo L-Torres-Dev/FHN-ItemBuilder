@@ -52,15 +52,37 @@ levelValue.addEventListener("keyup", function(event) {
         // Cancel the default action, if needed
         event.preventDefault();
         // Trigger the button element with a click
-        
 
         let value = Number.parseInt(levelValue.value);
+        
+        let isNaN = Number.isNaN(value);
+        console.log("VALUE: " + isNaN);
+        if(isNaN){
+            levelValue.value = "";
 
+            levelValue.value = "1";
+            value = 1;
+
+            build.hero.setLevel(value);
+            build.updateAttributes();
         
-        build.hero.setLevel(value);
-        build.updateAttributes();
+            updatePage();
+        }
+
+        else{
+            console.log("LEVEL VALUE");
+            build.hero.setLevel(value);
+            build.updateAttributes();
         
-        updatePage();
+            updatePage();
+
+
+
+
+            
+        }
+        
+        
     }
   });
 
@@ -143,17 +165,6 @@ var view = new ItemView(itemView);
 
 itemSearch.addEventListener("input", function(){
     callFilter();
-    /*
-    var theSearch = callSearch(itemSearch.value)
-
-    //view.display(theSearch);
-
-    var filters = [];
-    filters[0] = attributeNames.ZapPower;
-
-    var theFilter = filterItems(filters, theSearch);
-
-    view.display(theFilter);*/
 });
 
 function createItemContainers(itemsArray){
