@@ -464,7 +464,7 @@ function setAspectRed(){
 }
 
 function setAspectBlue(){
-    build.hero[currentAspectContainer.id].color = aspectColors.Red;
+    build.hero[currentAspectContainer.id].color = aspectColors.Blue;
 
     let image = currentAspectContainer.getElementsByTagName("img")[0];
     image.src = "https://daks2k3a4ib2z.cloudfront.net/5e4dd70c09d48fd33df2de2f/5f32f95395d6326f556cce8b_Fault_Aspects-BlueC-p-130x130q80.png";
