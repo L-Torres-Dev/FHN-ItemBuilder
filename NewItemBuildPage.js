@@ -10,12 +10,23 @@ var clearButton = document.getElementById("clear-inventory");
 var abilityNameText = document.getElementById("ability-name");
 var abilityDescriptionText = document.getElementById("ability-description");
 var abilityContainer = document.getElementById("abilitydata-container");
+var filterContainer = document.getElementById("filter-container");
 
 var statIncrementors = document.getElementsByClassName("stat-increment");
 
 var aspect1Container = document.getElementById("aspect1");
 var aspect2Container = document.getElementById("aspect2");
 var currentAspectContainer = undefined;
+
+var checkBoxes = filterContainer.getElementsByClassName("checkmark");
+
+for(var i = 0; i < checkBoxes.length; i++){
+    var checkBox = checkBoxes[i].previousElementSibling;
+
+    checkBox.addEventListener("click", function(){
+        callFilter();
+    });
+}
 
 aspect1Container.addEventListener("click", function(){
     openAspectNav();
@@ -129,7 +140,18 @@ var heroGrid = document.getElementById("hero-grid");
 var view = new ItemView(itemView);
 
 itemSearch.addEventListener("input", function(){
-    view.display(callSearch(itemSearch.value));
+    callFilter();
+    /*
+    var theSearch = callSearch(itemSearch.value)
+
+    //view.display(theSearch);
+
+    var filters = [];
+    filters[0] = attributeNames.ZapPower;
+
+    var theFilter = filterItems(filters, theSearch);
+
+    view.display(theFilter);*/
 });
 
 function createItemContainers(itemsArray){
@@ -539,4 +561,25 @@ function decrementFavor2(){
     
     build.updateAttributes();
     updatePage();
+}
+
+function callFilter(){
+    var theSearch = callSearch(itemSearch.value)
+
+    var filters = [];
+    
+    var checkBoxes = filterContainer.getElementsByClassName("checkmark");
+
+    for(var i = 0; i< checkBoxes.length; i++){
+        var checkBox = checkBoxes[i].previousElementSibling;
+        if(checkBox.checked){
+            let attribute = checkBox.getAttribute("attribute")
+
+            filters.push(attributeNames[attribute]);
+        }
+    }
+
+    var theFilter = filterItems(filters, theSearch);
+
+    view.display(theFilter);
 }

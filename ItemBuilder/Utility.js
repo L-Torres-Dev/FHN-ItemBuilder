@@ -20,3 +20,32 @@ function searchItems(search, items){
     return searchResults;
     
 }
+
+function filterItems(filters, items){
+    var filteredItems = [];
+
+    for(var i = 0; i < items.length; i++){
+
+        var itemIsInFilter = true;
+        var item = items[i];
+        var attributes = attributesAsDictionary(item.attributes);
+
+        for(var j = 0; j < filters.length; j++){
+
+            var filter = filters[j];
+
+            if(attributes[filter] === undefined){
+                itemIsInFilter = false;
+            }
+        }
+
+        if(itemIsInFilter){
+            filteredItems.push(item);
+        }
+    }
+    
+
+    filteredItems.sort(function(a, b){return (a.name.toLowerCase() > b.name.toLowerCase()) ? 1 : -1})
+    
+    return filteredItems;
+}
