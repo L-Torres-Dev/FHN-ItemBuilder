@@ -11,6 +11,8 @@ var abilityNameText = document.getElementById("ability-name");
 var abilityDescriptionText = document.getElementById("ability-description");
 var abilityContainer = document.getElementById("abilitydata-container");
 var filterContainer = document.getElementById("filter-container");
+var favorField1 = document.getElementById("favor1");
+var favorField2 = document.getElementById("favor2");
 
 var statIncrementors = document.getElementsByClassName("stat-increment");
 
@@ -44,6 +46,43 @@ aspect2Container.addEventListener("click", function(){
 
 clearButton.addEventListener("click", function(){
     clearInventory();
+});
+
+favorField1.addEventListener("keyup", function(event) {
+    if(event.keyCode !== 13) return;
+    let value = Number.parseInt(favorField1.value);
+    
+    if(Number.isNaN(value)){
+        favorField1.value = "1";
+        value = 1;
+    }
+    else{
+        build.hero.aspect1.favor = value;
+    }
+    build.updateAttributes();
+        
+    updatePage();
+
+    
+});
+
+favorField2.addEventListener("keyup", function(event) {
+    if(event.keyCode !== 13) return;
+    let value = Number.parseInt(favorField2.value);
+    
+    if(Number.isNaN(value)){
+        favorField2.value = "1";
+        value = 1;
+    }
+    else{
+        build.hero.aspect2.favor = value;
+    }
+
+    build.updateAttributes();
+        
+    updatePage();
+
+    
 });
 
 levelValue.addEventListener("keyup", function(event) {
