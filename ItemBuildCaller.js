@@ -141,28 +141,23 @@ function CurrentItem(){
 }
 
 function displayPassive(){
-    console.log("passive");
     abilityNameText.textContent = build.hero.passive.name;
     abilityDescriptionText.textContent = build.hero.passive.description;
 }
 
 function displayRMB(){
-    console.log("RMB");
     abilityNameText.textContent = build.hero.rmb.name;
     abilityDescriptionText.textContent = build.hero.rmb.description;
 }
 function displayQ(){
-    console.log("Q");
     abilityNameText.textContent = build.hero.q.name;
     abilityDescriptionText.textContent = build.hero.q.description;
 }
 function displayE(){
-    console.log("E");
     abilityNameText.textContent = build.hero.e.name;
     abilityDescriptionText.textContent = build.hero.e.description;
 }
 function displayUlt(){
-    console.log("Ult");
     abilityNameText.textContent = build.hero.ult.name;
     abilityDescriptionText.textContent = build.hero.ult.description;
 }
