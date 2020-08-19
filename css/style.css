@@ -516,7 +516,6 @@ body {
 	width: 90%;
 	object-fit: contain;
 	background-color: #0a0a0a;
-	border: 1px rgb(177, 176, 176, 0.55) solid;
   }
   .item-container {
 	display: grid;
@@ -526,6 +525,11 @@ body {
 	width: 100%;
 	height: 100%;
   }
+
+.itemblock-container > img{
+	border: 1px solid rgb(177, 176, 176);
+	
+}
 
 .item-container > div {
 	text-align: center;
