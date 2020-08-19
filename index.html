@@ -611,16 +611,8 @@
                     useCORS: true,
                     onrender: function(canvas) {
                         theCanvas = canvas;
-                       
-                        var buildNameText = document.getElementById("name-build");
-
-                        var imageName = buildNameText.textContent;
-                        imageName = imageName.replace(" ", "");
-
-                        imageName += ".png";
-        
                         canvas.toBlob(function(blob) {
-                            saveAs(blob, "test.png");
+                            saveAs(blob, "faultbuild.png");
                         });
                     }
                 });
