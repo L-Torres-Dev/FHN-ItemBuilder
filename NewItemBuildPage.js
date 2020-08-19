@@ -554,7 +554,7 @@ function setAspectRed(){
     build.hero[currentAspectContainer.id].color = aspectColors.Red;
 
     let image = currentAspectContainer.getElementsByTagName("img")[0];
-    image.src = "https://daks2k3a4ib2z.cloudfront.net/5e4dd70c09d48fd33df2de2f/5f32f9537a62ab7b97c63cde_Fault_Aspects-RedC-p-130x130q80.png";
+    image.src = "./images/red-aspect/png";
 
     var selectText = currentAspectContainer.getElementsByTagName("div")[0];
     selectText.style.display = "none";
@@ -568,7 +568,7 @@ function setAspectBlue(){
     build.hero[currentAspectContainer.id].color = aspectColors.Blue;
 
     let image = currentAspectContainer.getElementsByTagName("img")[0];
-    image.src = "https://daks2k3a4ib2z.cloudfront.net/5e4dd70c09d48fd33df2de2f/5f32f95395d6326f556cce8b_Fault_Aspects-BlueC-p-130x130q80.png";
+    image.src = "./images/blue-aspect/png";
 
     var selectText = currentAspectContainer.getElementsByTagName("div")[0];
     selectText.style.display = "none";
@@ -580,7 +580,7 @@ function setAspectGreen(){
     build.hero[currentAspectContainer.id].color = aspectColors.Green;
 
     let image = currentAspectContainer.getElementsByTagName("img")[0];
-    image.src = "https://daks2k3a4ib2z.cloudfront.net/5e4dd70c09d48fd33df2de2f/5f32f95303e6844e46df03ee_Fault_Aspects-GreenC-p-130x130q80.png";
+    image.src = "./images/green-aspect/png";
 
     var selectText = currentAspectContainer.getElementsByTagName("div")[0];
     selectText.style.display = "none";
@@ -592,7 +592,7 @@ function setAspectPurple(){
     build.hero[currentAspectContainer.id].color = aspectColors.Black;
 
     let image = currentAspectContainer.getElementsByTagName("img")[0];
-    image.src = "https://daks2k3a4ib2z.cloudfront.net/5e4dd70c09d48fd33df2de2f/5f32f953947c8a2905359015_Fault_Aspects-BlackC-p-130x130q80.png";
+    image.src = "./images/purple-aspect/png";
 
     var selectText = currentAspectContainer.getElementsByTagName("div")[0];
     selectText.style.display = "none";
@@ -604,7 +604,7 @@ function setAspectWhite(){
     build.hero[currentAspectContainer.id].color = aspectColors.White;
 
     let image = currentAspectContainer.getElementsByTagName("img")[0];
-    image.src = "https://daks2k3a4ib2z.cloudfront.net/5e4dd70c09d48fd33df2de2f/5f32f953947c8a5904359014_Fault_Aspects-White-p-130x130q80.png";
+    image.src = "./images/white-aspect/png";
 
     var selectText = currentAspectContainer.getElementsByTagName("div")[0];
     selectText.style.display = "none";
