@@ -56,15 +56,15 @@
             <div class="row">
                 <div id="mySidenav" class="sidenav">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeHeroPanel()">&times;</a>
-                    <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="col-lg-3 col-md-6 col-sm-6 test">
                         <h1 class="header-hero">HEROES</h1>
                         <div class="heroselect" data-setbg="">
                             <div class="grid-container", id="hero-grid"></div>
                         </div>
                     </div>
                 </div>
-            <button class="button" style=" text-align:center;" onclick="openHeroPanel()">Heroes</button>
-            <div class="mid-content" id="widget" style="background-color: #131313;">
+           
+            <div class="mid-content" id="widget">
                 <input type="text", placeholder="Name Your Build" id="name-build" class="header" style="height: 55px; margin-top: 10px; width: 90%;"></input>
                 <div class="column left">
                     <div class="col-lg-3 col-md-6 col-sm-6">
@@ -73,11 +73,11 @@
                                 <a href="javascript:void(0)" class="closebtn" onclick="closeAspectNav()">&times;</a>
                                 <div class="overlay-content">
                                     <div class="aspectsgrid-container">
-                                        <img onclick="setAspectRed()" id ="red-aspect" src="https://daks2k3a4ib2z.cloudfront.net/5e4dd70c09d48fd33df2de2f/5f32f9537a62ab7b97c63cde_Fault_Aspects-RedC-p-130x130q80.png" alt="Nature" style="object-fit: fill; margin-right: 3px;">
-                                        <img onclick="setAspectGreen()" id ="green-aspect"src="https://daks2k3a4ib2z.cloudfront.net/5e4dd70c09d48fd33df2de2f/5f32f95303e6844e46df03ee_Fault_Aspects-GreenC-p-130x130q80.png" alt="Nature" style="object-fit: fill; margin-right: 3px;">
-                                        <img onclick="setAspectPurple()" id ="purple-aspect" src="https://daks2k3a4ib2z.cloudfront.net/5e4dd70c09d48fd33df2de2f/5f32f953947c8a2905359015_Fault_Aspects-BlackC-p-130x130q80.png" alt="Nature" style="object-fit: fill; margin-right: 3px;">
-                                        <img onclick="setAspectBlue()" id ="blue-aspect" src="https://daks2k3a4ib2z.cloudfront.net/5e4dd70c09d48fd33df2de2f/5f32f95395d6326f556cce8b_Fault_Aspects-BlueC-p-130x130q80.png" alt="Nature" style="object-fit: fill; margin-right: 3px;">
-                                        <img onclick="setAspectWhite()" id ="white-aspect" src="https://daks2k3a4ib2z.cloudfront.net/5e4dd70c09d48fd33df2de2f/5f32f953947c8a5904359014_Fault_Aspects-White-p-130x130q80.png" alt="Nature" style="object-fit: fill; margin-right: 3px;">
+                                        <img onclick="setAspectRed()" id ="red-aspect" src="./images/red-aspect.png" alt="Nature" style="object-fit: fill; margin-right: 3px; cursor: pointer;">
+                                        <img onclick="setAspectGreen()" id ="green-aspect"src="./images/green-aspect.png" alt="Nature" style="object-fit: fill; margin-right: 3px; cursor: pointer;">
+                                        <img onclick="setAspectPurple()" id ="purple-aspect" src="./images/purple-aspect.png" alt="Nature" style="object-fit: fill; margin-right: 3px; cursor: pointer;">
+                                        <img onclick="setAspectBlue()" id ="blue-aspect" src="./images/blue-aspect.png" alt="Nature" style="object-fit: fill; margin-right: 3px; cursor: pointer;">
+                                        <img onclick="setAspectWhite()" id ="white-aspect" src="./images/white-aspect.png" alt="Nature" style="object-fit: fill; margin-right: 3px; cursor: pointer;">
                                     
                                     </div>
                                     
@@ -86,7 +86,7 @@
                               </div>
                                     <div class="column hero-left">
                                         <div class="hero-container">
-                                            <img style ="background-color: #0a0a0a;" id="hero-portrait" src="images/fault_logo.png">
+                                            <img onclick="openHeroPanel()" src="./images/black-image.png" id="hero-portrait">
                                             <div class="hero-block">
                                               <h4 id="hero-name">No hero Selected</h4>
                                             </div>
@@ -107,11 +107,11 @@
                                         
                                         <div class="aspects-container" style="position: relative;">
                                             <div id="aspect1" style=" margin-right: 3px;text-align: center; height: 100%;left: 0; position: absolute; bottom: 0; width: 49%; background-color: #0a0a0a; color: rgb(227, 188, 122);">
-                                                <img src="" style="position:relative; height: 60px;">
+                                                <img src="./images/black-image.png" style="position:relative; height: 60px;">
                                                 <div style="width: 100%; position: absolute; bottom: 0; font-size: 0.7vw;">SELECT</div>
                                             </div>
                                             <div id="aspect2" style="text-align: center; height: 100%;right: 0; position: absolute; bottom: 0; width: 49%; background-color: #0a0a0a; color: rgb(227, 188, 122);">
-                                                <img src="" style="position:relative; height: 60px;">
+                                                <img src="./images/black-image.png" style="position:relative; height: 60px;">
                                                 <div style="width: 100%; position: absolute; bottom: 0; font-size: 0.7vw;">SELECT</div>
                                             </div>
                                             
@@ -127,7 +127,7 @@
                                             <div>
                                                 <div style="width: 100%; text-align: center; line-height: 8px; background-color: #0a0a0a; padding: 3px;">
                                                     <input class="level-increment" style="float: left;" type="button" onclick="decrementFavor2()" value="—" />
-                                                    <input class="favor-field" type="text" id="favor2" style="height: 15px;" value="0"/>
+                                                    <input class="favor-field" type="text" id="favor2" style="height: 15px;" value="1"/>
                                                     <input class="level-increment" style="float: right;" type="button" onclick="incrementFavor2()" value="+" />
                                                 </div>
                                             </div>
@@ -136,6 +136,7 @@
                         </div>
                         <div class="stat-height" data-setbg="">
                             <div class="stat-content">
+                                <div class="expand" style="width: 50%; margin-bottom: 10px;">STATS</div>
                                 <div style="border-bottom-style: solid; border-width: 1px; border-color: rgb(227, 188, 122, 0.55);">
                                 <!--To change bar progress, when adding stat, add the percentage as a style: 10power/possible 100 power would
                                         mean adding a 10% width to id "Health" etc.-->
@@ -238,6 +239,28 @@
                                             <label class="label-cat-right" id="total-value">0</label>
                                         </div>
                             </div>
+
+                            <div style="border-bottom-style: solid; border-width: 1px; border-color: rgb(227, 188, 122, 0.55);">
+
+                            <div class="stat-wrapper">
+                                <label class="label-cat" style="float: left; margin-top: 0;">Attack Per Sec:</label>
+                                <div class="stat-bar">
+                                    <label class="buildValue" style="height:100%;float: left; "id="Attack Speed"></label>
+                                    </div>
+                                <div class="stat-increment">+25</div>
+                                <label class="label-cat-right" id="total-value">0</label>
+                            </div>
+
+                            <div class="stat-wrapper">
+                                <label class="label-cat" style="float: left; margin-top: 0;">Basic Atk Dmg:</label>
+                                <div class="stat-bar">
+                                    <label class="buildValue" style="height:100%;float: left; "id="Basic Atk Dmg"></label>
+                                    </div>
+                                <div class="stat-increment">+25</div>
+                                <label class="label-cat-right" id="total-value">0</label>
+                            </div>
+                            </div>
+
                                         <div class="stat-wrapper">
                                             <label class="label-cat" style="float: left; margin-top: 0;">Mov.Speed</label>
                                             <div class="stat-bar">
@@ -273,28 +296,6 @@
                                             <div class="stat-increment">+25</div>
                                             <label class="label-cat-right" id="total-value">0</label>
                                         </div>
-
-                                        <div class="stat-wrapper">
-                                            <label class="label-cat" style="float: left; margin-top: 0;">Attack Speed:</label>
-                                            <div class="stat-bar">
-                                                <label class="buildValue" style="height:100%;float: left; "id="Attack Speed"></label>
-                                                </div>
-                                            <div class="stat-increment">+25</div>
-                                            <label class="label-cat-right" id="total-value">0</label>
-                                        </div>
-
-                                        <div class="stat-wrapper">
-                                            <label class="label-cat" style="float: left; margin-top: 0;">Basic Atk Dmg:</label>
-                                            <div class="stat-bar">
-                                                <label class="buildValue" style="height:100%;float: left; "id="Basic Atk Dmg"></label>
-                                                </div>
-                                            <div class="stat-increment">+25</div>
-                                            <label class="label-cat-right" id="total-value">0</label>
-                                        </div>
-                      
-                            
-         
-
                             </div>
                         </div>
                     </div>
@@ -309,31 +310,31 @@
                                             <div class="abilityblock-container" id="passive-block" onclick="displayPassive()">
                                                 <img src="./images/black-image.png">
                                                 <div class="heroability-block">
-                                                    <p style="color: #841f16;">P</p>
+                                                    <p style="color: rgb(177, 176, 176);">P</p>
                                                 </div>
                                             </div>
                                             <div class="abilityblock-container" id="rmb-block" onclick="displayRMB()">
                                                 <img src="./images/black-image.png">
                                                 <div class="heroability-block">
-                                                    <p style="color: #841f16;">RMB</p>
+                                                    <p style="color: rgb(177, 176, 176);">RMB</p>
                                                 </div>
                                             </div>
                                             <div class="abilityblock-container" id="q-block" onclick="displayQ()">
                                                 <img src="./images/black-image.png">
                                                 <div class="heroability-block">
-                                                    <p style="color: #841f16;">Q</p>
+                                                    <p style="color: rgb(177, 176, 176);">Q</p>
                                                 </div>
                                             </div>
                                             <div class="abilityblock-container" id="e-block" onclick="displayE()">
                                                 <img src="./images/black-image.png">
                                                 <div class="heroability-block">
-                                                    <p style="color: #841f16;">E</p>
+                                                    <p style="color: rgb(177, 176, 176);">E</p>
                                                 </div>
                                             </div>
                                             <div class="abilityblock-container" id="r-block" onclick="displayUlt()">
                                                 <img src="./images/black-image.png">
                                                 <div class="heroability-block">
-                                                    <p style="color: #841f16;">R</p>
+                                                    <p style="color: rgb(177, 176, 176);">R</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -347,7 +348,7 @@
                                     <div class="expand">FILTERS</div>
                                     <div class="filter-cat-wrapper">
                                         <div class="filter-wrapper">
-                                            <div class="filter-cat" style="float: left;">OFFENSIVE </div> <div id ="plus-minus" class="plus-minus" style="float: right;">+</div>
+                                            <div class="filter-cat" style="float: left; margin-top: 5px;">OFFENSIVE </div> <div id ="plus-minus" class="plus-minus" style="float: right;">+</div>
                                         </div>
                                         <div class="filter-content" id="offensive-filters">
                                             <div class="filter-row">
@@ -372,7 +373,7 @@
                                                     </label>
                                                 </div>
                                                 <div class="filter-content-column">
-                                                    <label class="check-container"><p>Atk Speed</p>
+                                                    <label class="check-container"><p>Attack /Sec</p>
                                                         <input type="checkbox" attribute="AttackSpeed">
                                                         <span class="checkmark"></span>
                                                     </label>
@@ -501,39 +502,39 @@
                                 <div class="itembuild-container" style="margin-top: 0px;">
                                     <div class="item-container">
                                         <div class="inventory-container" id="item-block 1" itemIndex="0">
-                                            <img src="" id="img1"></img>
+                                            <img src="./images/black-image.png" id="img1"></img>
                                             <div class="item-block"><p id="p1"></p></div>
                                         </div>
                                         <div class="inventory-container" id="item-block 2" itemIndex="1">
-                                            <img src="" id="img2">
+                                            <img src="./images/black-image.png" id="img2">
                                             <div class="item-block"><p id="p2"></p></div>
                                         </div>
                                         <div class="inventory-container" id="item-block 3" itemIndex="2">
-                                            <img src="" id="img3">
+                                            <img src="./images/black-image.png" id="img3">
                                             <div class="item-block"><p id="p3"></p></div>
                                         </div>
                                         <div class="inventory-container" id="item-block 4" itemIndex="3">
-                                            <img src="" id="img4">
+                                            <img src="./images/black-image.png" id="img4">
                                             <div class="item-block"><p id="p4"></p></div>
                                         </div>
                                         <div class="inventory-container" id="item-block 5" itemIndex="4">
-                                            <img src="" id="img5">
+                                            <img src="./images/black-image.png" id="img5">
                                             <div class="item-block"><p id="p5"></p></div>
                                         </div>
                                         <div class="inventory-container" id="item-block 6" itemIndex="5">
-                                            <img src="" id="img6">
+                                            <img src="./images/black-image.png" id="img6">
                                             <div class="item-block"><p id="p6"></p></div>
                                         </div>
                                     </div>
                                 </div>
-                                    <div class="nav" style="background-color: #0a0a0a; color: white; margin-top: 5px; margin-right: 5px; float: left;text-align: left; width: 49%; padding-left: 5px;">
-                                        <div class="cost-heading" style="display: inline-block; font-size: 0.8vw;">TOTAL GOLD COST:</div>
+                                    <div class="nav" style=" background-color: #0a0a0a;color: white; margin-top: 5px; margin-right: 5px; float: left;text-align: left; width: 49%; padding-left: 5px;">
+                                        <div class="cost-heading" style="display: inline-block; color: rgb(227, 188, 122); font-size: 14px;">TOTAL GOLD COST:</div>
                                         <div class="nav" style="padding-left: 20px; padding-right: 20px; text-align: left;">
                                             <div class="gold-image">
-                                                <img src="https://global-uploads.webflow.com/5d44771a95c1f5121689f944/5df063435613cefa7c572859_t_AspectPanel_goldcoinsSTACKED.png">
+                                                <img src="./images/gold.png">
                                             </div>
                                             <div class="gold-bar" style="padding: 3px;">
-                                                <p id="costValue" style="margin-left: 5px; color: white;">0</p>
+                                                <p id="costValue" style="margin-left: 5px; color: rgb(177, 176, 176);">0</p>
                                             </div>
                                         </div>
                                     </div>
@@ -556,22 +557,17 @@
                 <div class="column right" style="width: 100%;">
                     <div class="col-lg-3 col-md-6 col-sm-6" style="padding-left: 0px;">
                         <div class="ability-height" data-setbg="" style="text-align: center; display: flex; flex-direction: column;">
-                            <!---
-                            <div style="border-bottom: solid 1px white; width: 100%; height: 30%; font-size: 18px; color: #6635ad;">Overdrive</div>
-                            <div style="border-bottom: solid 1px white; width: 100%; height: 70%; font-size: 18px; color: rgb(177, 176, 176)">
-                                Overdrive
-                            </div>-->
-                            
-                            <div id="ability-name" style="border-bottom: 1px white solid; width: 100%; height: 30%; padding: 6px; color: #841f16;">Overdrive</div>
-                            <div class="scroll-window" id="ability-description" style=" width: 100%; font-size: 11px; color: rgb(177, 176, 176); padding-top: 5px;">Landing basic attacks stacks 0.8/1.3/1.7/2.1% movement speed, to a maximum of 10 stacks. Stacks last 2 seconds.</div>
+
+                            <div id="ability-name" style="border-bottom: 1px rgb(227, 188, 122) solid; width: 93%; height: 30%; margin: 10px; margin-bottom: 0px; color: rgb(177, 176, 176);">Overdrive</div>
+                            <div class="scroll-window" id="ability-description" style=" width: 100%; font-size: 11px; color: rgb(177, 176, 176); padding-bottom: 5px;">Landing basic attacks stacks 0.8/1.3/1.7/2.1% movement speed, to a maximum of 10 stacks. Stacks last 2 seconds.</div>
                         </div>
                         <div class="itemview-height" data-setbg="" id="itemview-column" style="padding-top: 15%">
                             <div style="width: 100%; height: 100%;">
                                 <div>
                                     <div class="itempop-wrapper" id="item-popup">
                                         <div class="reminder-text">*Double click to add/remove*</div>
-                                        <img class="item-wrapper" src="https://uploads-ssl.webflow.com/5e4dd70c09d48fd33df2de2f/5f33417fe8e7468b5f73c01f_item_black.svg">
-                                        <div class="itempop-name" id="itempop-name" style="border-bottom: 1px white solid;">Photosynthetic Symbiote</div>
+                                        <img class="item-wrapper" src="">
+                                        <div class="itempop-name" id="itempop-name" style="border-bottom: 1px white solid;"></div>
                                         <div class="itemstats-wrapper">
                                             
                                         </div>
@@ -579,7 +575,7 @@
                                         <div  class="itemdesc-text" id="item-description">Bla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla bla</div>
                                         <div class="nav" style="padding-left: 35%; padding-right: 5px;">
                                             <div class="gold-image">
-                                                <img src="https://global-uploads.webflow.com/5d44771a95c1f5121689f944/5df063435613cefa7c572859_t_AspectPanel_goldcoinsSTACKED.png">
+                                                <img src="./images/gold.png">
                                             </div>
                                             <div id="itempop-goldbar" class="gold-bar">
                                                 <p id="popUpCostValue" style="margin-left: 5px; color: white;">0</p>
@@ -608,27 +604,21 @@
     <script src="ItemBuildCaller.js"></script>
     <!--Generate Build Script-->
     <script>
-        $(function() { 
-            $("#btnSave").click(function() { 
-                html2canvas($("#widget"), {
-                    logging: true,
-                    useCORS: true,
-                    onrender: function(canvas) {
-                        theCanvas = canvas;
-                       
-                        var buildNameText = document.getElementById("name-build");
+       $(function() { 
+        $("#btnSave").click(function() { 
+            html2canvas($("#widget"), {
+                useCORS: true,
+                logging: true,
+                onrendered: function(canvas) {
+                    theCanvas = canvas;
 
-                        var imageName = buildNameText.textContent;
-                        imageName = imageName.replace(" ", "");
 
-                        imageName += ".png";
-        
-                        canvas.toBlob(function(blob) {
-                            saveAs(blob, "test.png");
-                        });
-                    }
-                });
+                    canvas.toBlob(function(blob) {
+                    saveAs(blob, "Dashboard.png"); 
             });
+                }
+            });
+        });
         }); 
         </script>   
 

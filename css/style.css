@@ -9,6 +9,28 @@ body {
 	font-family: "Nunito Sans", sans-serif;
 	-webkit-font-smoothing: antialiased;
 }
+
+@media screen and (min-width: 500px) {
+    .mid-content {
+		width: 960px;
+		left: -500px;
+	}
+	.sidenav {
+		width: 450px;
+		
+	}
+}
+@media screen and (min-width: 300px) {
+    .mid-content {
+		width: 960px;
+		left: -500px;
+	}
+	.sidenav {
+		width: 450px;
+		
+	}
+}
+
 #hero-name {
 	top: 25%;
 	font-size: 14px;
@@ -121,7 +143,7 @@ body {
 	height: 32px;
 }
 .stat-wrapper > p {
-	color: white;
+	color: rgb(177, 176, 176);
 	opacity: 0%;
 	transition: 0.5s;
 }
@@ -130,7 +152,7 @@ body {
 	top: 25%;
 	width: 35%;
 	text-align: left;
-	color: white;
+	color:rgb(177, 176, 176);
 }
 .label-cat-right {
 	position: absolute;
@@ -237,7 +259,7 @@ body {
 
   .gold-bar {
 	padding: 3px; margin-left: 5px;
-	color: white;
+	color: rgb(177, 176, 176);
 	background-color: #0a0a0a;
 	height: 100%;
   }
@@ -257,7 +279,7 @@ body {
 	height: 99%;
 	background-color: rgba(0, 0, 0, 0.25);
 	border-style: none;
-	color: white;
+	color: rgb(177, 176, 176);
 	font-size: 20px;
 	padding: 12px;
 	-webkit-box-shadow: 10px 10px 16px -9px #0a0a0a;
@@ -353,23 +375,23 @@ body {
 	font-size: 30px;
 }
 .itemstats-text {
-	color: white;
+	color: rgb(177, 176, 176);
 	font-size: 11px;
 	line-height: 12px;
 }
 .itemdesc-text {
-	color: white;
+	color: rgb(177, 176, 176);
 	font-size: 11px;
 	line-height: 12px;
 	margin-top: 15px;
 	padding-bottom: 5px;
-	border-bottom: 1px solid white;
+	border-bottom: 1px solid rgb(177, 176, 176);
 }
 .prereq-heading {
 	margin-top: 15px;
 	font-size: 12px;
-	color: white;
-	border-bottom: 1px white solid;
+	color: rgb(177, 176, 176);
+	border-bottom: 1px rgb(177, 176, 176) solid;
 	margin-bottom: 5px;
 }
 .item-wrapper {
@@ -461,7 +483,7 @@ body {
 }
 .dropbtn {
 	background-color: #0a0a0a;
-	color: white;
+	color: rgb(177, 176, 176);
 	padding: 5px;
 	font-size: 10px;
 	cursor: pointer;
@@ -471,7 +493,7 @@ body {
 
   
   .dropbtn:hover, .dropbtn:focus {
-	background-color: white;
+	background-color: rgb(177, 176, 176);
   }
   
   .dropdown {
@@ -496,7 +518,12 @@ body {
 	text-decoration: none;
 	display: block;
   }
-  
+#aspect1 {
+	cursor: pointer;
+}
+#aspect2 {
+	cursor: pointer;
+}
 
   
   .show {display: block;}
@@ -508,6 +535,7 @@ body {
 	-webkit-box-shadow: 10px 10px 16px -9px #0a0a0a;
 	-moz-box-shadow: 10px 10px 16px -9px #0a0a0a;
 	box-shadow: 10px 10px 16px -9px #0a0a0a;
+	cursor: pointer;
   }
 .heroability-grid {
 	margin: 10px;
@@ -580,7 +608,7 @@ body {
   #name-build {
 	background-color: transparent;
 	width: 100%;
-	color: white;
+	color: rgb(177, 176, 176);
 	margin-right: 29px;
 	border-color: transparent;
 	border-bottom: 1px solid rgb(227, 188, 122);
@@ -620,7 +648,7 @@ body {
 	background-color: #181818;
 	height: 100%;
 	width: 100%;
-
+	cursor: pointer;
   }
 .grid-container {
 	position: relative;
@@ -636,7 +664,7 @@ body {
 .grid-container > div {
 	text-align: center;
 	font-size: 30px;
-	
+	cursor: pointer;
   }
 .grid-container > div > img {
 	width: 100%;
@@ -668,9 +696,9 @@ body {
 }
 .sidenav {
 	height: 100%;
-	width: 25%;
+
 	position: fixed;
-	z-index: 1;
+	z-index: 2;
 	top: 0;
 	left: 0;
 	background-color: #111;
@@ -679,7 +707,7 @@ body {
   }
   .mid-content {
 	height: 100%;
-	width: 50%;
+	width: 960px;
 	position: fixed;
 	z-index: 1;
 	top: 0;
@@ -765,10 +793,10 @@ body {
 	text-align: center;
 	vertical-align: middle;
 	background-color: #0a0a0a;
-	color: white;
+	color: rgb(177, 176, 176);
 }
 .hero-block > p {
-	color: white;
+	color: rgb(177, 176, 176);
 }
 .item-block {
 	position: absolute;
@@ -779,11 +807,11 @@ body {
 	text-align: center;
 	vertical-align: middle;
 	background-color: rgb(24, 24, 24);
-	color: white;
+	color: rgb(177, 176, 176);
 
 }
 .item-block > p {
-	color: white;
+	color: rgb(177, 176, 176);
 	line-height: 11px;
 	font-size: 11px;
 	margin-bottom: 0px;
@@ -796,7 +824,7 @@ body {
 	height: 20%;
 	text-align: center;
 	vertical-align: middle;
-	color: white;
+	color: rgb(177, 176, 176);
 }
 .heroability-block > p {
 	position: relative;
@@ -819,6 +847,7 @@ body {
 	position: relative;
 	height: 100%;
 	width: 100%;
+	cursor: pointer;
   }
  
 
@@ -827,6 +856,7 @@ body {
 	font-family: Arial;
 	height: 100%;
 	width: 100%;
+	cursor: pointer;
 }
 
 .column {
@@ -866,7 +896,7 @@ body {
 	display: block;
 	position: relative;
 	padding-left: 20px;
-	margin-bottom: 12px;
+	margin-bottom: 0px;
 	cursor: pointer;
 	font-size: 22px;
 	-webkit-user-select: none;
@@ -897,7 +927,7 @@ body {
   
   /* On mouse-over, add a rgb(177, 176, 176) background color */
   .check-container:hover input ~ .checkmark {
-	background-color: #0a0a0a;
+	background-color: rgb(177, 176, 176);
   }
   
   /* When the checkbox is checked, add a blue background */
@@ -938,11 +968,13 @@ body {
 }
 .filter-cat {
 	display: inline; /* the default for span */
-	color: rgb(207, 213, 211);
+	color: rgb(177, 176, 176);
+	font-size: 12px;
+	border: none;
   }
 .plus-minus {
 	display: inline; /* the default for span */
-	color: rgb(207, 213, 211);
+	color: rgb(227, 188, 122);
   }
 .filter-wrapper {
 	width: 100%;
@@ -1084,7 +1116,7 @@ h4,
 h5,
 h6 {
 	margin: 0;
-	color: white;
+	color: rgb(177, 176, 176);
 	font-weight: 400;
 	font-family: "Unna", serif;
 }
@@ -1100,7 +1132,7 @@ h2 {
 
 h3 {
 	font-size: 30px;
-	color: white;
+	color: rgb(177, 176, 176);
 	text-align: center;
 }
 
@@ -1195,16 +1227,16 @@ ol {
 
 }
 
-.text-white h1,
-.text-white h2,
-.text-white h3,
-.text-white h4,
-.text-white h5,
-.text-white h6,
-.text-white p,
-.text-white span,
-.text-white li,
-.text-white a {
+.text-rgb(177, 176, 176) h1,
+.text-rgb(177, 176, 176) h2,
+.text-rgb(177, 176, 176) h3,
+.text-rgb(177, 176, 176) h4,
+.text-rgb(177, 176, 176) h5,
+.text-rgb(177, 176, 176) h6,
+.text-rgb(177, 176, 176) p,
+.text-rgb(177, 176, 176) span,
+.text-rgb(177, 176, 176) li,
+.text-rgb(177, 176, 176) a {
 	color: #fff;
 }
 
@@ -1244,7 +1276,7 @@ ol {
 }
 label {
 	width: 15%;
-	color: white;
+	color: rgb(177, 176, 176);
 }
 .loader {
 	width: 40px;
@@ -2068,7 +2100,7 @@ label {
 	-ms-flex-pack: center;
 	justify-content: center;
 	border-style: solid;
-	border-color: white;
+	border-color: rgb(177, 176, 176);
 	padding-top: 10px;
 	padding-left: 20px;
 	padding-right: 20px;
@@ -2091,7 +2123,7 @@ label {
 	-ms-flex-pack: right;
 	justify-content: right;
 	border-style: solid;
-	border-color: white;
+	border-color: rgb(177, 176, 176);
 	padding-top: 10px;
 }
 .categories__itemview {
@@ -2106,7 +2138,7 @@ label {
 	-ms-flex-pack: center;
 	justify-content: center;
 	border-style: solid;
-	border-color: white;
+	border-color: rgb(177, 176, 176);
 	padding-top: 10px;
 }
 
@@ -2155,7 +2187,7 @@ label {
 .categories__post__item.categories__post__item--large .categories__post__item__pic {
 	height: 533px;
 	border-style: solid;
-	border-color: white;
+	border-color: rgb(177, 176, 176);
 	padding-left: 20px;
 	padding-right: 20px;
 
