@@ -8,7 +8,7 @@ const aspectColors = {
 
 class Aspect{
     constructor() {
-        this.color = aspectColors.Blue;
+        this.color = "";
         this.favor = 0;
         this.name = "";
 
