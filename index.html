@@ -120,14 +120,14 @@
                                             <div style="margin-right: 3px;">
                                                     <div style="width: 100%; text-align: center; line-height: 8px; background-color: #0a0a0a; padding: 3px;">
                                                         <input class="level-increment" style="float: left;" type="button" onclick="decrementFavor1()" value="—" />
-                                                        <input class="favor-field" type="text" id="favor1" style="height: 15px;" value="0"/>
+                                                        <input class="favor-field" type="text" id="favor1" style="height: 15px;" value="1"/>
                                                         <input class="level-increment" style="float: right;" type="button" onclick="incrementFavor1()" value="+" />
                                                     </div>
                                             </div>
                                             <div>
                                                 <div style="width: 100%; text-align: center; line-height: 8px; background-color: #0a0a0a; padding: 3px;">
                                                     <input class="level-increment" style="float: left;" type="button" onclick="decrementFavor2()" value="—" />
-                                                    <input class="favor-field" type="text" id="favor2" style="height: 15px;" value="0"/>
+                                                    <input class="favor-field" type="text" id="favor2" style="height: 15px;" value="1"/>
                                                     <input class="level-increment" style="float: right;" type="button" onclick="incrementFavor2()" value="+" />
                                                 </div>
                                             </div>
@@ -136,11 +136,7 @@
                         </div>
                         <div class="stat-height" data-setbg="">
                             <div class="stat-content">
-                                <div class="expand" style="width: 100%; margin-bottom: 5px;">
-                                    <div style="width: 35%;">NAME</div>
-                                    <div style="width: 55%;">STATS</div>
-                                    <div>MAX</div>
-                                </div>
+                                <div class="expand" style="width: 50%; margin-bottom: 10px;">STATS</div>
                                 <div style="border-bottom-style: solid; border-width: 1px; border-color: rgb(227, 188, 122, 0.55);">
                                 <!--To change bar progress, when adding stat, add the percentage as a style: 10power/possible 100 power would
                                         mean adding a 10% width to id "Health" etc.-->
@@ -256,15 +252,6 @@
                             </div>
 
                             <div class="stat-wrapper">
-                                <label class="label-cat" style="float: left; margin-top: 0;">Attack Speed %:</label>
-                                <div class="stat-bar">
-                                    <label class="buildValue" style="height:100%;float: left; "id="Attack Speed Percent"></label>
-                                    </div>
-                                <div class="stat-increment">+25</div>
-                                <label class="label-cat-right" id="total-value">0</label>
-                            </div>
-
-                            <div class="stat-wrapper">
                                 <label class="label-cat" style="float: left; margin-top: 0;">Basic Atk Dmg:</label>
                                 <div class="stat-bar">
                                     <label class="buildValue" style="height:100%;float: left; "id="Basic Atk Dmg"></label>
@@ -323,31 +310,31 @@
                                             <div class="abilityblock-container" id="passive-block" onclick="displayPassive()">
                                                 <img src="./images/black-image.png">
                                                 <div class="heroability-block">
-                                                    <p style="color: #eeeeee;">P</p>
+                                                    <p style="color: rgb(177, 176, 176);">P</p>
                                                 </div>
                                             </div>
                                             <div class="abilityblock-container" id="rmb-block" onclick="displayRMB()">
                                                 <img src="./images/black-image.png">
                                                 <div class="heroability-block">
-                                                    <p style="color: #eeeeee;">RMB</p>
+                                                    <p style="color: rgb(177, 176, 176);">RMB</p>
                                                 </div>
                                             </div>
                                             <div class="abilityblock-container" id="q-block" onclick="displayQ()">
                                                 <img src="./images/black-image.png">
                                                 <div class="heroability-block">
-                                                    <p style="color: #eeeeee;">Q</p>
+                                                    <p style="color: rgb(177, 176, 176);">Q</p>
                                                 </div>
                                             </div>
                                             <div class="abilityblock-container" id="e-block" onclick="displayE()">
                                                 <img src="./images/black-image.png">
                                                 <div class="heroability-block">
-                                                    <p style="color: #eeeeee;">E</p>
+                                                    <p style="color: rgb(177, 176, 176);">E</p>
                                                 </div>
                                             </div>
                                             <div class="abilityblock-container" id="r-block" onclick="displayUlt()">
                                                 <img src="./images/black-image.png">
                                                 <div class="heroability-block">
-                                                    <p style="color: #eeeeee;">R</p>
+                                                    <p style="color: rgb(177, 176, 176);">R</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -500,7 +487,7 @@
                                     </div>
                                     
                                 </div>
-                                <div class="column item-left"  style="color: #eeeeee;">
+                                <div class="column item-left"  style="color: rgb(177, 176, 176);">
                                     <form autocomplete="off">
                                         <img style="width: 15px; height: 15px;" src="./images/search.png">
                                         <input class="itemsearch-animated" placeholder="Search Items" id="item-search" type="text" name="search">
@@ -547,11 +534,11 @@
                                                 <img src="./images/gold.png">
                                             </div>
                                             <div class="gold-bar" style="padding: 3px;">
-                                                <p id="costValue" style="margin-left: 5px; color: #eeeeee;">0</p>
+                                                <p id="costValue" style="margin-left: 5px; color: rgb(177, 176, 176);">0</p>
                                             </div>
                                         </div>
                                     </div>
-                                    <input type="button" class="gen-build" id="clear-inventory" style="float: right; margin-top: 5px; width: 49%;" value="RESET ITEMS"/>
+                                    <input type="button" class="gen-build" id="clear-inventory" style="float: right; margin-top: 5px; width: 49%;" value="RESET"/>
 
                                     </div>
                                     
@@ -571,8 +558,8 @@
                     <div class="col-lg-3 col-md-6 col-sm-6" style="padding-left: 0px;">
                         <div class="ability-height" data-setbg="" style="text-align: center; display: flex; flex-direction: column;">
 
-                            <div id="ability-name" style="border-bottom: 1px rgb(227, 188, 122) solid; width: 93%; height: 30%; margin: 10px; margin-bottom: 0px; color: #eeeeee;"></div>
-                            <div class="scroll-window" id="ability-description" style=" width: 100%; font-size: 11px; color: #eeeeee; padding-bottom: 5px;"></div>
+                            <div id="ability-name" style="border-bottom: 1px rgb(227, 188, 122) solid; width: 93%; height: 30%; margin: 10px; margin-bottom: 0px; color: rgb(177, 176, 176);">Overdrive</div>
+                            <div class="scroll-window" id="ability-description" style=" width: 100%; font-size: 11px; color: rgb(177, 176, 176); padding-bottom: 5px;">Landing basic attacks stacks 0.8/1.3/1.7/2.1% movement speed, to a maximum of 10 stacks. Stacks last 2 seconds.</div>
                         </div>
                         <div class="itemview-height" data-setbg="" id="itemview-column" style="padding-top: 15%">
                             <div style="width: 100%; height: 100%;">
@@ -585,7 +572,7 @@
                                             
                                         </div>
                                         
-                                        <div  class="itemdesc-text" id="item-description"></div>
+                                        <div  class="itemdesc-text" id="item-description">Bla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla blaBla bla</div>
                                         <div class="nav" style="padding-left: 35%; padding-right: 5px;">
                                             <div class="gold-image">
                                                 <img src="./images/gold.png">
