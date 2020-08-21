@@ -572,8 +572,6 @@ function setAspectRed(){
 
     console.log(build.hero[currentAspectContainer.id].color);
 
-    build.updateAttributes();
-    updatePage()
     closeAspectNav();
 }
 
@@ -586,8 +584,6 @@ function setAspectBlue(){
     var selectText = currentAspectContainer.getElementsByTagName("div")[0];
     selectText.style.display = "none";
 
-    build.updateAttributes();
-    updatePage()
     closeAspectNav();
 }
 
@@ -600,8 +596,6 @@ function setAspectGreen(){
     var selectText = currentAspectContainer.getElementsByTagName("div")[0];
     selectText.style.display = "none";
 
-    build.updateAttributes();
-    updatePage()
     closeAspectNav();
 }
 
@@ -614,8 +608,6 @@ function setAspectPurple(){
     var selectText = currentAspectContainer.getElementsByTagName("div")[0];
     selectText.style.display = "none";
 
-    build.updateAttributes();
-    updatePage()
     closeAspectNav();
 }
 
@@ -628,8 +620,6 @@ function setAspectWhite(){
     var selectText = currentAspectContainer.getElementsByTagName("div")[0];
     selectText.style.display = "none";
 
-    build.updateAttributes();
-    updatePage()
     closeAspectNav();
 }
 
