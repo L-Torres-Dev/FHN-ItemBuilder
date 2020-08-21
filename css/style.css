@@ -8,6 +8,7 @@ body {
 	height: 100%;
 	font-family: "Nunito Sans", sans-serif;
 	-webkit-font-smoothing: antialiased;
+	background-image: url("https://uploads-ssl.webflow.com/5e4dd70c09d48fd33df2de2f/5e4decb8be89042f1fa054de_y.jpg");
 }
 
 @media screen and (min-width: 500px) {
@@ -108,9 +109,10 @@ body {
 .expand {
 	text-align: left;
 	font-size: 10px;
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 	border-bottom: solid 1px rgb(227, 188, 122);
 	width: 90%;
+	display: flex;
 }
   #mySidenav {  
 	/* This section calls the slideInFromLeft animation we defined above */
@@ -143,7 +145,7 @@ body {
 	height: 32px;
 }
 .stat-wrapper > p {
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 	opacity: 0%;
 	transition: 0.5s;
 }
@@ -152,7 +154,7 @@ body {
 	top: 25%;
 	width: 35%;
 	text-align: left;
-	color:rgb(177, 176, 176);
+	color:#eeeeee;
 }
 .label-cat-right {
 	position: absolute;
@@ -160,7 +162,7 @@ body {
 	top: 25%;
 	width: 5%;
 	text-align: left;
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 }
 .level-field {
 	text-align: center;
@@ -169,7 +171,7 @@ body {
 	height: 20px;
 	border: transparent;
 	background-color: transparent;
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 }
 
 .favor-field {
@@ -179,7 +181,7 @@ body {
 	height: 20px;
 	border: transparent;
 	background-color: transparent;
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 }
 
 .level-increment {
@@ -259,7 +261,7 @@ body {
 
   .gold-bar {
 	padding: 3px; margin-left: 5px;
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 	background-color: #0a0a0a;
 	height: 100%;
   }
@@ -279,7 +281,7 @@ body {
 	height: 99%;
 	background-color: rgba(0, 0, 0, 0.25);
 	border-style: none;
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 	font-size: 20px;
 	padding: 12px;
 	-webkit-box-shadow: 10px 10px 16px -9px #0a0a0a;
@@ -375,36 +377,36 @@ body {
 	font-size: 30px;
 }
 .itemstats-text {
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 	font-size: 11px;
 	line-height: 12px;
 }
 .itemdesc-text {
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 	font-size: 11px;
 	line-height: 12px;
 	margin-top: 15px;
 	padding-bottom: 5px;
-	border-bottom: 1px solid rgb(177, 176, 176);
+	border-bottom: 1px solid #eeeeee;
 }
 .prereq-heading {
 	margin-top: 15px;
 	font-size: 12px;
-	color: rgb(177, 176, 176);
-	border-bottom: 1px rgb(177, 176, 176) solid;
+	color: #eeeeee;
+	border-bottom: 1px #eeeeee solid;
 	margin-bottom: 5px;
 }
 .item-wrapper {
 	width: 90px;
 	height: 90px;
 	background-color: rgb(24,24,24);
-	border: 1px solid rgb(177, 176, 176);
+	border: 1px solid #eeeeee;
 }
 .itempop-wrapper {
 	text-align: center;
 }
 .itempop-name {
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 	margin-bottom: 5px;
 }
 .heroselect-container {
@@ -483,7 +485,7 @@ body {
 }
 .dropbtn {
 	background-color: #0a0a0a;
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 	padding: 5px;
 	font-size: 10px;
 	cursor: pointer;
@@ -493,7 +495,7 @@ body {
 
   
   .dropbtn:hover, .dropbtn:focus {
-	background-color: rgb(177, 176, 176);
+	background-color: #eeeeee;
   }
   
   .dropdown {
@@ -550,7 +552,7 @@ body {
 	background-color: #0a0a0a;
 }
 .level-title {
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 	width: 30%;
 	float: left;
 	margin-right: 5px;
@@ -594,21 +596,21 @@ body {
 
 }
 ::placeholder {
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 	opacity: 1; /* Firefox */
   }
   
   :-ms-input-placeholder { /* Internet Explorer 10-11 */
-   color: rgb(177, 176, 176);
+   color: #eeeeee;
   }
   
   ::-ms-input-placeholder { /* Microsoft Edge */
-   color: rgb(177, 176, 176);
+   color: #eeeeee;
   }
   #name-build {
 	background-color: transparent;
 	width: 100%;
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 	margin-right: 29px;
 	border-color: transparent;
 	border-bottom: 1px solid rgb(227, 188, 122);
@@ -793,10 +795,10 @@ body {
 	text-align: center;
 	vertical-align: middle;
 	background-color: #0a0a0a;
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 }
 .hero-block > p {
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 }
 .item-block {
 	position: absolute;
@@ -807,11 +809,11 @@ body {
 	text-align: center;
 	vertical-align: middle;
 	background-color: rgb(24, 24, 24);
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 
 }
 .item-block > p {
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 	line-height: 11px;
 	font-size: 11px;
 	margin-bottom: 0px;
@@ -824,7 +826,7 @@ body {
 	height: 20%;
 	text-align: center;
 	vertical-align: middle;
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 }
 .heroability-block > p {
 	position: relative;
@@ -849,6 +851,9 @@ body {
 	width: 100%;
 	cursor: pointer;
   }
+.abilityblock-container > img {
+	margin-top: 10px;
+}
  
 
 .inventory-container{
@@ -925,9 +930,9 @@ body {
 	border: solid 1px rgb(227, 188, 122, 0.55);
   }
   
-  /* On mouse-over, add a rgb(177, 176, 176) background color */
+  /* On mouse-over, add a #eeeeee background color */
   .check-container:hover input ~ .checkmark {
-	background-color: rgb(177, 176, 176);
+	background-color: #eeeeee;
   }
   
   /* When the checkbox is checked, add a blue background */
@@ -968,7 +973,7 @@ body {
 }
 .filter-cat {
 	display: inline; /* the default for span */
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 	font-size: 12px;
 	border: none;
   }
@@ -1001,7 +1006,7 @@ body {
 }
 .filter-content-column > p {
 	font-size: 11px;
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 	text-align: left;
 }
 .filter-row:after {
@@ -1027,12 +1032,12 @@ body {
 }
 .ability-height{
 	margin-bottom: 5px;
-	height: 110px;
+	height: 130px;
 	display: flex;
 	background-color: #0a0a0a;
 }
 .itemview-height{
-	height: 450px;
+	height: 440px;
 	display: flex;
 	background-color: #0a0a0a;
 	padding: 10px;
@@ -1049,7 +1054,7 @@ body {
 	height: 20px;
 }
 .build-height{
-	height: 100px;
+	height: 90px;
 	display: flex;
 	margin-top: 10px;
 }
@@ -1100,6 +1105,7 @@ label {
     float: right;
 	font-weight: bold;
 	background-color: #841f16;
+	color: #eeeeee;
 }
 .col-lg-8{
 	padding-left: 0px;
@@ -1116,7 +1122,7 @@ h4,
 h5,
 h6 {
 	margin: 0;
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 	font-weight: 400;
 	font-family: "Unna", serif;
 }
@@ -1132,7 +1138,7 @@ h2 {
 
 h3 {
 	font-size: 30px;
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 	text-align: center;
 }
 
@@ -1151,7 +1157,7 @@ h6 {
 p {
 	font-size: 14px;
 	font-family: "Nunito Sans", sans-serif;
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 	font-weight: 400;
 	margin: 0 0 15px 0;
 }
@@ -1227,16 +1233,16 @@ ol {
 
 }
 
-.text-rgb(177, 176, 176) h1,
-.text-rgb(177, 176, 176) h2,
-.text-rgb(177, 176, 176) h3,
-.text-rgb(177, 176, 176) h4,
-.text-rgb(177, 176, 176) h5,
-.text-rgb(177, 176, 176) h6,
-.text-rgb(177, 176, 176) p,
-.text-rgb(177, 176, 176) span,
-.text-rgb(177, 176, 176) li,
-.text-rgb(177, 176, 176) a {
+.text-#eeeeee h1,
+.text-#eeeeee h2,
+.text-#eeeeee h3,
+.text-#eeeeee h4,
+.text-#eeeeee h5,
+.text-#eeeeee h6,
+.text-#eeeeee p,
+.text-#eeeeee span,
+.text-#eeeeee li,
+.text-#eeeeee a {
 	color: #fff;
 }
 
@@ -1276,7 +1282,7 @@ ol {
 }
 label {
 	width: 15%;
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 }
 .loader {
 	width: 40px;
@@ -1292,7 +1298,7 @@ label {
 }
 .reminder-text {
 	font-size: 0.6vw;
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 	margin-bottom: 10px;
 }
 @keyframes loader {
@@ -2100,7 +2106,7 @@ label {
 	-ms-flex-pack: center;
 	justify-content: center;
 	border-style: solid;
-	border-color: rgb(177, 176, 176);
+	border-color: #eeeeee;
 	padding-top: 10px;
 	padding-left: 20px;
 	padding-right: 20px;
@@ -2123,7 +2129,7 @@ label {
 	-ms-flex-pack: right;
 	justify-content: right;
 	border-style: solid;
-	border-color: rgb(177, 176, 176);
+	border-color: #eeeeee;
 	padding-top: 10px;
 }
 .categories__itemview {
@@ -2138,7 +2144,7 @@ label {
 	-ms-flex-pack: center;
 	justify-content: center;
 	border-style: solid;
-	border-color: rgb(177, 176, 176);
+	border-color: #eeeeee;
 	padding-top: 10px;
 }
 
@@ -2187,7 +2193,7 @@ label {
 .categories__post__item.categories__post__item--large .categories__post__item__pic {
 	height: 533px;
 	border-style: solid;
-	border-color: rgb(177, 176, 176);
+	border-color: #eeeeee;
 	padding-left: 20px;
 	padding-right: 20px;
 
@@ -2561,7 +2567,7 @@ label {
 .categories__pagination a {
 	display: inline-block;
 	background: #f2f2f2;
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 	font-size: 16px;
 	font-weight: 600;
 	text-transform: uppercase;
@@ -2597,7 +2603,7 @@ label {
 
 .sidebar__about__item h6 {
 	font-size: 15px;
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 	font-family: "Nunito Sans", sans-serif;
 }
 
@@ -2770,7 +2776,7 @@ label {
 }
 
 .sidebar__item__categories ul li a {
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 	font-size: 15px;
 	font-weight: 600;
 	padding-bottom: 6px;
@@ -3101,7 +3107,7 @@ label {
 .single-post__recipe__details__indegradients ul li {
 	list-style: none;
 	font-size: 15px;
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 	line-height: 30px;
 	position: relative;
 	padding-left: 20px;
@@ -3134,7 +3140,7 @@ label {
 .single-post__recipe__details__direction ul li {
 	list-style: none;
 	font-size: 15px;
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 	line-height: 30px;
 	position: relative;
 	padding-left: 20px;
@@ -3233,7 +3239,7 @@ label {
 .single-post__tags a {
 	display: inline-block;
 	font-size: 13px;
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 	background: #f2f2f2;
 	padding: 8px 16px 6px;
 	letter-spacing: 1px;
@@ -3266,7 +3272,7 @@ label {
 .single-post__previous h6 span,
 .single-post__next h6 span {
 	font-size: 23px;
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 	position: relative;
 	top: 4px;
 }
@@ -3455,7 +3461,7 @@ label {
 
 .single-post__comment__item__text ul li a {
 	font-size: 18px;
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 	-webkit-transition: all, 0.3s;
 	-o-transition: all, 0.3s;
 	transition: all, 0.3s;
@@ -3479,14 +3485,14 @@ label {
 	background: transparent;
 	border: 1px solid #e1e1e1;
 	font-size: 14px;
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 	padding-left: 20px;
 	margin-bottom: 20px;
 	margin-right: 16px;
 }
 
 .single-post__leave__comment form .input-list input:last-child {
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 }
 
 .single-post__leave__comment form textarea {
@@ -3495,7 +3501,7 @@ label {
 	background: transparent;
 	border: 1px solid #e1e1e1;
 	font-size: 14px;
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 	padding-top: 12px;
 	padding-left: 20px;
 	margin-bottom: 14px;
@@ -3503,7 +3509,7 @@ label {
 }
 
 .single-post__leave__comment form textarea:last-child {
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 }
 
 .single-post__leave__comment form button {
@@ -3666,7 +3672,7 @@ label {
 
 .footer__copyright {
 	font-size: 15px;
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 	border-top: 1px solid #e1e1e1;
 	text-align: center;
 	padding: 30px 0 25px;
@@ -3726,7 +3732,7 @@ label {
 .about__right__text ul li {
 	list-style: none;
 	font-size: 15px;
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 	line-height: 30px;
 	position: relative;
 	padding-left: 20px;
@@ -3738,7 +3744,7 @@ label {
 	top: 13px;
 	height: 3px;
 	width: 3px;
-	background: rgb(177, 176, 176);
+	background: #eeeeee;
 	content: "";
 }
 
@@ -3749,7 +3755,7 @@ label {
 .about__right__text .about__right__text__social a {
 	display: inline-block;
 	font-size: 14px;
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 	background: #ebebeb;
 	height: 46px;
 	width: 46px;
@@ -3806,7 +3812,7 @@ label {
 .contact__widget ul li span {
 	display: inline-block;
 	font-size: 14px;
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 }
 
 .contact__form .contact__form__title h2 {
@@ -3825,13 +3831,13 @@ label {
 	background: transparent;
 	border: 1px solid #e1e1e1;
 	font-size: 14px;
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 	padding-left: 20px;
 	margin-bottom: 20px;
 }
 
 .contact__form form input:last-child {
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 }
 
 .contact__form form textarea {
@@ -3840,7 +3846,7 @@ label {
 	background: transparent;
 	border: 1px solid #e1e1e1;
 	font-size: 14px;
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 	padding-top: 12px;
 	padding-left: 20px;
 	margin-bottom: 14px;
@@ -3848,7 +3854,7 @@ label {
 }
 
 .contact__form form textarea:last-child {
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 }
 
 .contact__form form button {
@@ -3941,19 +3947,19 @@ label {
 	background: transparent;
 	border: 1px solid #e1e1e1;
 	font-size: 14px;
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 	padding-left: 20px;
 	margin-bottom: 20px;
 }
 
 .signin__form__text form input:last-child {
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 }
 
 .signin__form__text form label {
 	position: relative;
 	font-size: 15px;
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 	padding-left: 20px;
 	margin-bottom: 30px;
 	display: block;
@@ -4216,7 +4222,7 @@ label {
 .typography__text__list ul li {
 	list-style: none;
 	font-size: 15px;
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 	line-height: 30px;
 	position: relative;
 	padding-left: 24px;
@@ -4500,7 +4506,7 @@ label {
 	width: 60%;
 	box-sizing: border-box;
 	border: none;
-	color: rgb(177, 176, 176);
+	color: #eeeeee;
 	border-bottom: 1px solid rgba(227, 188, 122);
 	border-radius: 2px;
 	font-size: 16px;
