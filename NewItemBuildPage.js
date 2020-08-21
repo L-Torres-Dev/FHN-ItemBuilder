@@ -278,6 +278,8 @@ function setHeroStyling(){
 function updatePage(){
 
     levelValue.value = build.hero.level;
+    SetAspect1();
+    SetAspect2();
     console.log("HERO: " + levelValue.value);
 
     document.getElementById("favor1").value = build.hero.aspect1.favor;
@@ -575,6 +577,57 @@ function setAspectRed(){
     build.updateAttributes();
     updatePage()
     closeAspectNav();
+}
+
+function SetAspect1(){
+    let image = aspect1Container.getElementsByTagName("img")[0];
+
+    switch (build.hero.aspect1.color){
+        case aspectColors.Blue:
+            image.src = "./images/blue-aspect.png";
+            break;
+        case aspectColors.Red:
+            image.src = "./images/red-aspect.png";
+            break;
+        case aspectColors.Green:
+            image.src = "./images/green-aspect.png";
+            break;
+        case aspectColors.White:
+            image.src = "./images/red-aspect.png";
+            break;
+        case aspectColors.Black:
+            image.src = "./images/purple-aspect.png";
+            break;
+        default:
+            image.src = "";
+            var selectText = aspect1Container.getElementsByTagName("div")[0];
+            selectText.style.display = "block";
+    }
+}
+function SetAspect2(){
+    let image = aspect2Container.getElementsByTagName("img")[0];
+
+    switch (build.hero.aspect2.color){
+        case aspectColors.Blue:
+            image.src = "./images/blue-aspect.png";
+            break;
+        case aspectColors.Red:
+            image.src = "./images/red-aspect.png";
+            break;
+        case aspectColors.Green:
+            image.src = "./images/green-aspect.png";
+            break;
+        case aspectColors.White:
+            image.src = "./images/red-aspect.png";
+            break;
+        case aspectColors.Black:
+            image.src = "./images/purple-aspect.png";
+            break;
+        default:
+            image.src = "";
+            var selectText = aspect2Container.getElementsByTagName("div")[0];
+            selectText.style.display = "block";
+    }
 }
 
 function setAspectBlue(){
