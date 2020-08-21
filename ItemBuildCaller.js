@@ -47,6 +47,7 @@ function addItemToBuild(itemName){
 
 function setHero(hero){
 
+    
     build.hero = hero;
 
     build.updateAttributes();
