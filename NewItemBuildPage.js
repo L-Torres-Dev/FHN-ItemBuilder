@@ -325,6 +325,8 @@ function updatePage(){
         //Change width
         buildValues[i].style.width = percentageStr;
 
+        value = (Math.round(value * 100)) / 100;
+
         buildValues[i].textContent = value;
 
         if(isPercentageValue){
