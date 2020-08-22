@@ -838,6 +838,22 @@ body {
 	display: table;
 	clear: both;
   }
+.hero-button {
+	position: absolute;
+    left: -125px;
+	top: 50vh;
+	z-index: 2;
+	border: solid 1px rgb(227, 188, 122);
+	background-color: #0a0a0a;
+	height: 30px;
+	width: 15%;
+	color: #eeeeee;
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-o-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+}
 .hero-block {
 	position: absolute;
 	bottom: 0px;
