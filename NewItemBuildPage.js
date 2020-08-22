@@ -20,6 +20,8 @@ var heroColor;
 
 var aspect1Container = document.getElementById("aspect1");
 var aspect2Container = document.getElementById("aspect2");
+
+var aspectX = document.getElementById("");
 var currentAspectContainer = undefined;
 
 var checkBoxes = filterContainer.getElementsByClassName("checkmark");
