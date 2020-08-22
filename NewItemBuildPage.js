@@ -21,7 +21,9 @@ var heroColor;
 var aspect1Container = document.getElementById("aspect1");
 var aspect2Container = document.getElementById("aspect2");
 
-var aspectX = document.getElementById("");
+var aspectX1 = document.getElementById("aspectX1");
+var aspectX2 = document.getElementById("aspectX2");
+
 var currentAspectContainer = undefined;
 
 var checkBoxes = filterContainer.getElementsByClassName("checkmark");
@@ -40,7 +42,7 @@ aspect1Container.addEventListener("click", function(){
     currentAspectContainer = aspect1Container;
 });
 
-aspect1Container.addEventListener("dblclick", function(){
+aspectX1.addEventListener("click", function(){
     closeAspectNav();
 
     build.hero.aspect1.color = "";
@@ -54,7 +56,7 @@ aspect2Container.addEventListener("click", function(){
     currentAspectContainer = aspect2Container;
 });
 
-aspect2Container.addEventListener("dblclick", function(){
+aspectX2.addEventListener("click", function(){
 
     closeAspectNav();
 
