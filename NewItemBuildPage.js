@@ -476,7 +476,7 @@ function hideCurrentItemData(){
     }
     
     itemView.style.transition = "0s";
-    itemView.style.opacity = "0%";
+    itemView.style.opacity = "0";
 }
 
 function displayCurrentItemData(){
@@ -544,7 +544,7 @@ function displayCurrentItemData(){
             else{
                 incrementor.textContent = "";
                 itemView.style.transition = "0s";
-                itemView.style.opacity = "0%";
+                itemView.style.opacity = "0";
                 
             }
             
