@@ -291,7 +291,7 @@ function setHeroStyling(){
              "1px " + heroColor + " solid";
     }
 
-    abilityName.style.color = heroColor;
+    abilityName.style.borderBottom = "1px " + heroColor + " solid";
 }
 
 function updatePage(){
