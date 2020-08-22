@@ -479,16 +479,27 @@ function displayCurrentItemData(){
     
                 for(var j = 0; j < attributes.length; j++){
                     if(buildValue.id === attributes[j].attributeName){
-    
+                        let attribute = attributes[j];
                         var value = attributes[j].value;
     
                         if(value !== 0){
+
+                            if(isPercentAttribute(attribute.attributeName) && value < 1){
+                                value *= 100;
+                            }
+
                             value *= 100;
                             value = Math.round(value);
                             value /= 100
                             value = Math.abs(value);
+
+                            
     
                             incrementor.textContent = "+" + value;
+
+                            if(isPercentAttribute(attribute.attributeName) || isAttackSpeed(attribute.attributeName)){
+                                incrementor.textContent += "%"
+                            }
                         }
     
                         else{
