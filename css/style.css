@@ -111,15 +111,16 @@ body {
 
   .ability-overlay {
 	height: 130px;
-	width: 625px;
+	width: 0px;
 	position: fixed;
 	z-index: 1;
 	top: 75px;
 	left: 42.5vw;
 	background-color: #0a0a0a;
 	border: 1px rgb(227, 188, 122) solid;
-	overflow-x: hidden;
+	overflow: hidden;
 	transition: 0.5s;
+
   }
   
   .ability-overlay-content {

@@ -791,3 +791,9 @@ function callFilter(){
 
     view.display(theFilter);
 }
+
+function closeAbilityNav(){
+    var abilityOverlay = document.getElementsByClassName("ability-overlay")[0];
+
+    abilityOverlay.style.width = "0%";
+}

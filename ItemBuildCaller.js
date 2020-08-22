@@ -58,6 +58,8 @@ function setHero(hero){
     displayRMB();
     displayPassive();
 
+    closeAbilityNav();
+
     updatePage();
 }
 
@@ -176,6 +178,9 @@ function displayPassive(){
     if(build.hero.name === "") return;
     abilityContainer.style.opacity = "100%"
 
+    var abilityOverlay = document.getElementsByClassName("ability-overlay")[0];
+
+    abilityOverlay.style.width = "625px";
     container = document.getElementById("passive-block");
 
     let image = container.getElementsByTagName("img")[0];
@@ -200,6 +205,9 @@ function displayRMB(){
     if(build.hero.name === "") return;
     abilityContainer.style.opacity = "100%"
 
+    var abilityOverlay = document.getElementsByClassName("ability-overlay")[0];
+
+    abilityOverlay.style.width = "625px";
     container = document.getElementById("rmb-block");
 
     let image = container.getElementsByTagName("img")[0];
@@ -222,6 +230,9 @@ function displayQ(){
     if(build.hero.name === "") return;
     abilityContainer.style.opacity = "100%"
 
+    var abilityOverlay = document.getElementsByClassName("ability-overlay")[0];
+
+    abilityOverlay.style.width = "625px";
     container = document.getElementById("q-block");
 
     let image = container.getElementsByTagName("img")[0];
@@ -244,6 +255,9 @@ function displayE(){
     if(build.hero.name === "") return;
     abilityContainer.style.opacity = "100%"
 
+    var abilityOverlay = document.getElementsByClassName("ability-overlay")[0];
+
+    abilityOverlay.style.width = "625px";
     container = document.getElementById("e-block");
 
     let image = container.getElementsByTagName("img")[0];
@@ -264,6 +278,10 @@ function displayE(){
 }
 function displayUlt(){
     if(build.hero.name === "") return;
+
+    var abilityOverlay = document.getElementsByClassName("ability-overlay")[0];
+
+    abilityOverlay.style.width = "625px";
     abilityContainer.style.opacity = "100%"
 
     container = document.getElementById("r-block");
