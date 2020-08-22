@@ -425,13 +425,19 @@ body {
 	font-size: 11px;
 	line-height: 12px;
 }
+.itemstats-wrapper {
+	height: 90px;
+}
 .itemdesc-text {
 	color: #eeeeee;
 	font-size: 11px;
 	line-height: 12px;
 	margin-top: 15px;
 	padding-bottom: 5px;
-	border-bottom: 1px solid #eeeeee;
+	padding-top: 5px;
+	border-bottom: 1px solid rgb(227, 188, 122);
+	height: 110px;
+	border-top: 1px rgb(227, 188, 122) solid;
 }
 .prereq-heading {
 	margin-top: 15px;
@@ -452,6 +458,7 @@ body {
 .itempop-name {
 	color: #eeeeee;
 	margin-bottom: 5px;
+
 }
 .heroselect-container {
 	display: flex;
