@@ -34,6 +34,9 @@ function getHeroDetails(heroName, callback){
                 }
             }
 
+            let attackSpeedPerLevel = response["lmb"]["attackSpeedPerLevel"];
+            hero.attackSpeedPerLevel = attackSpeedPerLevel;
+
             let name = response["lmb"]["name"];
             let description = response["lmb"]["description"];
             let cooldown = response["lmb"]["cooldown"];

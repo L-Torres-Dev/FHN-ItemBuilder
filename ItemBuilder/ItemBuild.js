@@ -121,7 +121,7 @@ class ItemBuild{
         //Attack Speed
         let heroBasicAttackCD = this.hero.basicAttack.cooldown;
         let heroAttackSpeed = 1 / heroBasicAttackCD;
-        let buildAttackSpeed = attributes[attributeNames.AttackSpeed].value;
+        let buildAttackSpeed = attributes[attributeNames.AttackSpeed].value + (build.hero.attackSpeedPerLevel * build.hero.level);
 
         console.log("HERO AUTO: " + heroAttackSpeed);
 
