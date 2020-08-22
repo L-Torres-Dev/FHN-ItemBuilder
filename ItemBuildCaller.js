@@ -212,8 +212,6 @@ function displayRMB(){
 
     let image = container.getElementsByTagName("img")[0];
 
-    console.log("IMAGE: " + image.src);
-
     
     let url = "https://api.playfault.com/imagecdn/abilities";
     let name = "/" + build.hero.name;

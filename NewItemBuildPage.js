@@ -287,7 +287,8 @@ function setHeroStyling(){
 
     for(var i = 0; i < heroAbilities.length; i++){
         console.log(heroAbilities[i].firstChild);
-        heroAbilities[i].firstChild.nextSibling.style.color = heroColor;
+        heroAbilities[i].firstChild.nextSibling.style.borderBottom =
+             "1px " + heroColor + " solid";
     }
 
     abilityName.style.color = heroColor;
