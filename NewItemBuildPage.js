@@ -147,6 +147,7 @@ levelValue.addEventListener("keyup", function(event) {
             build.inventory.removeItem(index);
             build.updateAttributes();
             updatePage();
+            hideCurrentItemData();
         }
       });
 
@@ -437,6 +438,17 @@ function updatePage(){
     }
 }
 
+function hideCurrentItemData(){
+    var itemView = document.getElementById("itemview-column");
+    for(var i = 0; i < statIncrementors.length; i++){
+        let incrementor = statIncrementors[i];
+        incrementor.textContent = "";
+    }
+    
+    itemView.style.transition = "0s";
+    itemView.style.opacity = "0%";
+}
+
 function displayCurrentItemData(){
 
     var itemView = document.getElementById("itemview-column");
@@ -444,7 +456,7 @@ function displayCurrentItemData(){
     let itemName = item.name
 
     console.log(item.name);
-    if(item.name === "none" /*&& !build.inventory.rulesSatisfied(item)*/){
+    if(item.name === "none"){
         for(var i = 0; i < statIncrementors.length; i++){
             var incrementor = statIncrementors[i];
             incrementor.textContent = "";
@@ -492,7 +504,6 @@ function displayCurrentItemData(){
                 incrementor.textContent = "";
                 itemView.style.transition = "0s";
                 itemView.style.opacity = "0%";
-                console.log("Opacity: " + itemView.style.opacity);
                 
             }
             
@@ -594,7 +605,7 @@ function SetAspect1(){
             image.src = "./images/green-aspect.png";
             break;
         case aspectColors.White:
-            image.src = "./images/red-aspect.png";
+            image.src = "./images/white-aspect.png";
             break;
         case aspectColors.Black:
             image.src = "./images/purple-aspect.png";
@@ -619,7 +630,7 @@ function SetAspect2(){
             image.src = "./images/green-aspect.png";
             break;
         case aspectColors.White:
-            image.src = "./images/red-aspect.png";
+            image.src = "./images/white-aspect.png";
             break;
         case aspectColors.Black:
             image.src = "./images/purple-aspect.png";
