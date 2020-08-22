@@ -516,6 +516,20 @@ function displayCurrentItemData(){
                                 value *= 100;
                             }
 
+                            if(isAttackSpeed(attribute.attributeName)){
+                                console.log("Attack Speed: " + value);
+                                
+                                value /= 100;
+
+                                let baseAttackSpeed = 1 / build.hero.basicAttack.cooldown;
+                                let bonusFromLevel = (build.hero.attackSpeedPerLevel * (build.hero.level - 1)) / 100;
+                                
+                                let attackSpeedGain = (baseAttackSpeed + bonusFromLevel) * value;
+                                value = attackSpeedGain;
+                                console.log(baseAttackSpeed);
+                                
+                            }
+
                             value *= 100;
                             value = Math.round(value);
                             value /= 100
@@ -525,7 +539,7 @@ function displayCurrentItemData(){
     
                             incrementor.textContent = "+" + value;
 
-                            if(isPercentAttribute(attribute.attributeName) || isAttackSpeed(attribute.attributeName)){
+                            if(isPercentAttribute(attribute.attributeName)){
                                 incrementor.textContent += "%"
                             }
                         }
