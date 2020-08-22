@@ -11,6 +11,30 @@ body {
 	background-image: url("https://uploads-ssl.webflow.com/5e4dd70c09d48fd33df2de2f/5e4decb8be89042f1fa054de_y.jpg");
 }
 
+.accordion {
+	background-color: #eee;
+	color: #444;
+	cursor: pointer;
+	padding: 18px;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 15px;
+	transition: 0.4s;
+  }
+  
+  .active, .accordion:hover {
+	background-color: #ccc; 
+  }
+  
+  .panel {
+	padding: 0 18px;
+	display: none;
+	background-color: red;
+	overflow: hidden;
+  }
+
 .sidenav {
 	width: 450px;
 }
@@ -961,7 +985,9 @@ body {
 	-ms-user-select: none;
 	user-select: none;
   }
-  
+  .check-container > span {
+	border: solid 1px rgb(227, 188, 122, 0.55);
+}
   /* Hide the browser's default checkbox */
   .check-container input {
 	position: absolute;
@@ -970,7 +996,17 @@ body {
 	height: 0;
 	width: 0;
   }
-  
+  @supports (-ms-ime-align: auto) {
+	.checkmark {
+		position: absolute;
+		top: 29%;
+		left: 0;
+		height: 15px;
+		width: 15px;
+		background-color: rgb(177. 176. 177);
+		border: solid 1px rgb(227, 188, 122, 0.55);
+	}
+  }
   /* Create a custom checkbox */
   .checkmark {
 	position: absolute;
@@ -979,19 +1015,16 @@ body {
 	height: 15px;
 	width: 15px;
 	background-color: #0a0a0a;
-	border: solid 1px rgb(227, 188, 122, 0.55);
   }
   
   /* On mouse-over, add a #eeeeee background color */
   .check-container:hover input ~ .checkmark {
 	background-color: #eeeeee;
+	
   }
   
   /* When the checkbox is checked, add a blue background */
-  .check-container input:checked ~ .checkmark {
-	background-color: #0a0a0a;
-	border: 1px solid rgb(227, 188, 122, 0.55);
-  }
+ 
   
   /* Create the checkmark/indicator (hidden when not checked) */
   .checkmark:after {
@@ -1006,14 +1039,14 @@ body {
   }
   /*P style */
   .check-container > p {
-	  font-size: 11px;
+	  font-size: 8px;
   }
   /* Style the checkmark/indicator */
   .check-container .checkmark:after {
 	left: 5px;
 	top: 0px;
 	width: 5px;
-	height: 10px;
+	height: 8px;
 	border: solid rgb(227, 188, 122);
 	border-width: 0 1px 1px 0;
 	-webkit-transform: rotate(45deg);
@@ -1027,7 +1060,6 @@ body {
 	display: inline; /* the default for span */
 	color: #eeeeee;
 	font-size: 12px;
-	border: none;
   }
 .plus-minus {
 	display: inline; /* the default for span */
@@ -1039,7 +1071,6 @@ body {
 	
 	cursor: pointer;
 	transition: 1s;
-	margin-bottom: 5px;
 }
 .active, .filter-.stat-wrapper {
 	background-color: transparent; 
@@ -1049,7 +1080,7 @@ body {
 	background-color: #0a0a0a;
 	max-height: 0;
 	overflow: hidden;
-	transition: max-height 0.2s ease-out;
+	transition: 0.2s ease-out;
 }
 .filter-content-column {
 	float: left;
@@ -2909,28 +2940,6 @@ label {
 	cursor: pointer;
 }
 
-.sidebar__subscribe__item form label .checkmark,
-.humberger__menu__subscribe form label .checkmark {
-	position: absolute;
-	left: 0;
-	top: 6px;
-	height: 10px;
-	width: 10px;
-	border: 1px solid #e1e1e1;
-}
-
-.sidebar__subscribe__item form label input,
-.humberger__menu__subscribe form label input {
-	position: absolute;
-	visibility: hidden;
-	display: none;
-}
-
-.sidebar__subscribe__item form label input:checked~span,
-.humberger__menu__subscribe form label input:checked~span {
-	background: #f4952f;
-	border-color: #f4952f;
-}
 
 /*---------------------
     About Section
@@ -4019,30 +4028,6 @@ label {
 	margin-bottom: 20px;
 }
 
-.signin__form__text form label input:checked~.checkmark {
-	color: #f4952f;
-}
-
-.signin__form__text form label .checkmark {
-	position: absolute;
-	left: 0;
-	top: 6px;
-	height: 10px;
-	width: 10px;
-	border: 1px solid #e1e1e1;
-	border-radius: 2px;
-}
-
-.signin__form__text form label input {
-	position: absolute;
-	visibility: hidden;
-	display: none;
-}
-
-.signin__form__text form label input:checked~span {
-	background: #f4952f;
-	border-color: #f4952f;
-}
 
 .signin__form__signup__social {
 	margin-bottom: 20px;
