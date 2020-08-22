@@ -38,10 +38,27 @@ aspect1Container.addEventListener("click", function(){
     currentAspectContainer = aspect1Container;
 });
 
+aspect1Container.addEventListener("dblclick", function(){
+    closeAspectNav();
+
+    build.hero.aspect1.color = "";
+    build.updateAttributes();
+    SetAspect1();
+});
+
 aspect2Container.addEventListener("click", function(){
     openAspectNav();
 
     currentAspectContainer = aspect2Container;
+});
+
+aspect2Container.addEventListener("dblclick", function(){
+
+    closeAspectNav();
+
+    build.hero.aspect2.color = "";
+    build.updateAttributes();
+    SetAspect2();
 });
 
 clearButton.addEventListener("click", function(){
