@@ -89,6 +89,8 @@ body {
 	right: 5px;
 	font-size: 30px;
   }
+
+
   
   @media screen and (max-height: 450px) {
 	.overlay a {font-size: 20px}
@@ -106,6 +108,48 @@ body {
 	  transform: translateX(0);
 	}
   }
+
+  .ability-overlay {
+	height: 130px;
+	width: 625px;
+	position: fixed;
+	z-index: 1;
+	top: 75px;
+	left: 42.5vw;
+	background-color: transparent;
+	border: 1px red solid;
+	overflow-x: hidden;
+	transition: 0.5s;
+  }
+  
+  .ability-overlay-content {
+	position: relative;
+	top: 25%;
+	width: 100%;
+	text-align: center;
+	margin-top: 30px;
+  }
+  
+  .ability-overlay a {
+	padding: 8px;
+	text-decoration: none;
+	font-size: 36px;
+	color: #818181;
+	display: block;
+	transition: 0.3s;
+  }
+  
+  .ability-overlay a:hover, .overlay a:focus {
+	color: #f1f1f1;
+  }
+  
+  .ability-overlay .closebtn {
+	position: absolute;
+	top: -5px;
+	right: 5px;
+	font-size: 30px;
+  }
+
 .expand {
 	text-align: left;
 	font-size: 10px;
@@ -1022,8 +1066,6 @@ body {
 	width: 900px;
 }
 #ability-description {
-	height: 300px;
-	overflow: auto;
 	padding-left: 5px;
 	padding-right: 5px;
 }
