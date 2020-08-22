@@ -50,15 +50,15 @@ body {
 }
 
 .aspect-overlay {
-	height: 150px;
-	width: 0;
+	height: 145px;
+	width: 305px;
 	position: fixed;
 	z-index: 2;
-	top: 70px;
-	left: 25.8%;
+	top: 75px;
+	left: 15px;
 	background-color: #0a0a0a;
 	background-color: #0a0a0a;
-	overflow-x: hidden;
+	overflow: hidden;
 	transition: 0.5s;
   }
   
@@ -115,7 +115,7 @@ body {
 	position: fixed;
 	z-index: 1;
 	top: 75px;
-	left: 42.5vw;
+	left: 335px;
 	background-color: #0a0a0a;
 	border: 1px rgb(227, 188, 122) solid;
 	overflow: hidden;
@@ -762,10 +762,12 @@ body {
   .mid-content {
 	height: 100%;
 	width: 960px;
-	position: fixed;
 	z-index: 1;
-	top: 0;
-	left: 25%;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	/* bring your own prefixes */
+	transform: translate(-50%, -50%);
 	transition: 0.5s;
   }
 .right-content {

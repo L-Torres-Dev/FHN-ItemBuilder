@@ -599,7 +599,7 @@ function displayCurrentItemData(){
 }
 
 function openAspectNav() {
-    document.getElementById("myNav").style.width = "16%";
+    document.getElementById("myNav").style.width = "305px";
   }
 
 function closeAspectNav() {
