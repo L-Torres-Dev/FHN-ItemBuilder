@@ -7,6 +7,8 @@ class Hero{
         this.aspect1 = new Aspect();
         this.aspect2 = new Aspect();
 
+        this.attackSpeedPerLevel = 0;
+
         this.passive = new Ability();
         this.basicAttack = new Ability();
         this.rmb = new Ability();
