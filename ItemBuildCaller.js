@@ -38,7 +38,8 @@ function addItemToBuild(itemName){
     build.updateAttributes();
 
     currentItem = new Item();
-    displayCurrentItemData();
+    hideCurrentItemData();
+    //displayCurrentItemData();
 
     updatePage();
     //console.log(build.inventory.count())
