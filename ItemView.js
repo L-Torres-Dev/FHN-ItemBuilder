@@ -17,7 +17,7 @@ class ItemView{
             var item = itemsToDisplay[i];
 
             itemContainer.setName(item.name);
-            itemContainer.setImage(item.color);
+            itemContainer.setImage(item);
 
             this.append(itemContainer);
         } 

@@ -411,7 +411,13 @@ function updatePage(){
                     image.src = whiteItemImage;
                     break;
                 default:
-                    image.src = baseItemImage;
+                    
+                    if(item.parents.length === 0){
+                        image.src = orangeItemImage;
+                    }
+                    else{
+                        image.src = baseItemImage;
+                    }
                     break;
             }
         }
@@ -561,7 +567,12 @@ function displayCurrentItemData(){
             img.src = whiteItemImage;
             break;
         default:
-            img.src = baseItemImage;
+            if(item.parents.length === 0){
+                img.src = orangeItemImage;
+            }
+            else{
+                img.src = baseItemImage;
+            }    
             break;
     }
 

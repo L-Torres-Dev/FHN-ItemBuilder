@@ -1,9 +1,10 @@
-var baseItemImage = "images/white_item_r.png";
+var baseItemImage = "images/lower_item_r.png";
 var redItemImage = "images/red_item_r.png"
 var blueItemImage = "images/blue_item_r.png";
 var greenItemImage = "images/green_item_r.png";
 var purpleItemImage = "images/purple_item_r.png";
 var whiteItemImage = "images/white_item_r.png";
+var orangeItemImage = "images/neutral_item_r.png"
 
 class ItemContainer{
     constructor(container, itemName, image){
@@ -27,7 +28,9 @@ class ItemContainer{
         this.itemName.textContent = name;
     }
 
-    setImage(color){
+    setImage(item){
+        let color = item.color;
+
         switch(color){
             case aspectColors.Blue:
                 this.image.src = blueItemImage;
@@ -45,7 +48,14 @@ class ItemContainer{
                 this.image.src = whiteItemImage;
                 break;
             default:
-                this.image.src = baseItemImage;
+                
+                if(item.parents.length === 0){
+                    this.image.src = orangeItemImage;
+                }
+                else{
+                    this.image.src = baseItemImage;
+                }
+                
                 break;
         }
     }    
