@@ -443,7 +443,8 @@ function displayCurrentItemData(){
     let item = CurrentItem();
     let itemName = item.name
 
-    if(item.name !== "none" && !build.inventory.rulesSatisfied(item)){
+    console.log(item.name);
+    if(item.name === "none" /*&& !build.inventory.rulesSatisfied(item)*/){
         for(var i = 0; i < statIncrementors.length; i++){
             var incrementor = statIncrementors[i];
             incrementor.textContent = "";
