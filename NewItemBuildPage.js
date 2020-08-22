@@ -537,7 +537,7 @@ function displayCurrentItemData(){
                 }
                 
                 itemView.style.transition = "1s";
-                itemView.style.opacity = "100%";
+                itemView.style.opacity = "100";
                 console.log("Opacity: " + itemView.style.opacity);
             }
     
