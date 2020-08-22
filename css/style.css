@@ -11,25 +11,8 @@ body {
 	background-image: url("https://uploads-ssl.webflow.com/5e4dd70c09d48fd33df2de2f/5e4decb8be89042f1fa054de_y.jpg");
 }
 
-@media screen and (min-width: 500px) {
-    .mid-content {
-		width: 960px;
-		left: -500px;
-	}
-	.sidenav {
-		width: 450px;
-		
-	}
-}
-@media screen and (min-width: 300px) {
-    .mid-content {
-		width: 960px;
-		left: -500px;
-	}
-	.sidenav {
-		width: 450px;
-		
-	}
+.sidenav {
+	width: 450px;
 }
 
 #hero-name {
@@ -51,7 +34,7 @@ body {
 
 .aspect-overlay {
 	height: 145px;
-	width: 305px;
+	width: 0px;
 	position: fixed;
 	z-index: 2;
 	top: 75px;
@@ -117,7 +100,6 @@ body {
 	top: 75px;
 	left: 335px;
 	background-color: #0a0a0a;
-	border: 1px rgb(227, 188, 122) solid;
 	overflow: hidden;
 	transition: 0.5s;
 
@@ -843,7 +825,7 @@ body {
   }
 .hero-button {
 	position: absolute;
-    left: -125px;
+    left: -6.5vw;
 	top: 50vh;
 	z-index: 2;
 	border: solid 1px rgb(227, 188, 122);
@@ -4371,7 +4353,7 @@ label {
 		margin-right: 25px;
 	}
 	.categories__item {
-		height: 330px;
+		height: 145px;
 
 	}
 	.sidebar__item__follow__links a,
