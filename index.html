@@ -11,26 +11,26 @@
     <!--Test-->
 
 
-    <script src="https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERHeroPortrait.js"></script>
-    <script src ="https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERItemBuilder/Utility.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERItemBuilder/APIReader.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERItemBuilder/Aspect.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERItemBuilder/Hero.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERItemBuilder/Item.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERItemBuilder/Inventory.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERItemBuilder/Attribute.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERItemBuilder/ItemBuild.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERItemBuilder/Ability.js"></script>
+    <script src="./HeroPortrait.js"></script>
+    <script src ="./ItemBuilder/Utility.js"></script>
+    <script src="./ItemBuilder/APIReader.js"></script>
+    <script src="./ItemBuilder/Aspect.js"></script>
+    <script src="./ItemBuilder/Hero.js"></script>
+    <script src="./ItemBuilder/Item.js"></script>
+    <script src="./ItemBuilder/Inventory.js"></script>
+    <script src="./ItemBuilder/Attribute.js"></script>
+    <script src="./ItemBuilder/ItemBuild.js"></script>
+    <script src="./ItemBuilder/Ability.js"></script>
 
 
     <!-- NEW SCRIPT TAGS (8/12/2020) -->
-    <script src="https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERItemRowView.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERItemView.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERItemContainer.js"></script>
+    <script src="./ItemRowView.js"></script>
+    <script src="./ItemView.js"></script>
+    <script src="./ItemContainer.js"></script>
 
     <!-- Script Tags for Generate Build-->
     <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.2/dist/FileSaver.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERjs/html2canvas.js"></script>
+    <script src="./js/html2canvas.js"></script>
   
     
 
@@ -40,9 +40,9 @@
     <link href="https://fonts.googleapis.com/css?family=Unna:400,700&display=swap" rel="stylesheet">
 
     <!-- Css Styles -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERcss/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERcss/style.css" type="text/css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERcss/w3.css" type="text/css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <link rel="stylesheet" href="./css/w3.css" type="text/css">
     
 </head>
 
@@ -75,11 +75,11 @@
                                 <a href="javascript:void(0)" class="closebtn" onclick="closeAspectNav()">&times;</a>
                                 <div class="overlay-content">
                                     <div class="aspectsgrid-container">
-                                        <img onclick="setAspectRed()" id ="red-aspect" src="https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERimages/red-aspect.png" alt="Nature" style="object-fit: fill; margin-right: 3px; cursor: pointer;">
-                                        <img onclick="setAspectGreen()" id ="green-aspect"src="https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERimages/green-aspect.png" alt="Nature" style="object-fit: fill; margin-right: 3px; cursor: pointer;">
-                                        <img onclick="setAspectPurple()" id ="purple-aspect" src="https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERimages/purple-aspect.png" alt="Nature" style="object-fit: fill; margin-right: 3px; cursor: pointer;">
-                                        <img onclick="setAspectBlue()" id ="blue-aspect" src="https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERimages/blue-aspect.png" alt="Nature" style="object-fit: fill; margin-right: 3px; cursor: pointer;">
-                                        <img onclick="setAspectWhite()" id ="white-aspect" src="https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERimages/white-aspect.png" alt="Nature" style="object-fit: fill; margin-right: 3px; cursor: pointer;">
+                                        <img onclick="setAspectRed()" id ="red-aspect" src="./images/red-aspect.png" alt="Nature" style="object-fit: fill; margin-right: 3px; cursor: pointer;">
+                                        <img onclick="setAspectGreen()" id ="green-aspect"src="./images/green-aspect.png" alt="Nature" style="object-fit: fill; margin-right: 3px; cursor: pointer;">
+                                        <img onclick="setAspectPurple()" id ="purple-aspect" src="./images/purple-aspect.png" alt="Nature" style="object-fit: fill; margin-right: 3px; cursor: pointer;">
+                                        <img onclick="setAspectBlue()" id ="blue-aspect" src="./images/blue-aspect.png" alt="Nature" style="object-fit: fill; margin-right: 3px; cursor: pointer;">
+                                        <img onclick="setAspectWhite()" id ="white-aspect" src="./images/white-aspect.png" alt="Nature" style="object-fit: fill; margin-right: 3px; cursor: pointer;">
                                     
                                     </div>
                                     
@@ -88,7 +88,7 @@
                               </div>
                                     <div class="column hero-left">
                                         <div class="hero-container">
-                                            <img onclick="openHeroPanel()" src="https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERimages/black-image.png" id="hero-portrait">
+                                            <img onclick="openHeroPanel()" src="./images/black-image.png" id="hero-portrait">
                                             <div class="hero-block">
                                               <h4 id="hero-name">No hero Selected</h4>
                                             </div>
@@ -112,7 +112,7 @@
                                             <div style=" margin-right: 3px;text-align: center; height: 100%;left: 0; position: absolute; bottom: 0; width: 49%; background-color: #0a0a0a; color: rgb(227, 188, 122);">
                                                 <div id="aspectX1" style=" z-index: 1; width: 18%; position: absolute; top: 0; right: 0;font-size: 0.7vw;">X</div>
                                                 <div id="aspect1"> <!--Clicking this div opens, clicking the x above closes-->
-                                                    <img src="https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERimages/black-image.png" style="position:relative; height: 60px;">
+                                                    <img src="./images/black-image.png" style="position:relative; height: 60px;">
                                                 
                                                     <div style="width: 100%; position: absolute; bottom: 0; font-size: 0.7vw;">SELECT</div>
                                                 </div>
@@ -122,7 +122,7 @@
                                             <div style="text-align: center; height: 100%;right: 0; position: absolute; bottom: 0; width: 49%; background-color: #0a0a0a; color: rgb(227, 188, 122);">
                                                 <div id="aspectX2" style=" z-index: 1; width: 18%; position: absolute; top: 0; right: 0;font-size: 0.7vw;">X</div>
                                                 <div id="aspect2"> <!--Clicking this div opens, clicking the x above closes-->
-                                                    <img src="https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERimages/black-image.png" style="position:relative; height: 60px;">
+                                                    <img src="./images/black-image.png" style="position:relative; height: 60px;">
                                                 
                                                     <div style="width: 100%; position: absolute; bottom: 0; font-size: 0.7vw;">SELECT</div>
                                                 </div>
@@ -351,31 +351,31 @@
                                         <div class="heroability-grid">
                                             
                                             <div class="abilityblock-container" id="passive-block" onclick="displayPassive()">
-                                                <img src="https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERimages/black-image.png">
+                                                <img src="./images/black-image.png">
                                                 <div class="heroability-block">
                                                     <p style="color: #eeeeee;">P</p>
                                                 </div>
                                             </div>
                                             <div class="abilityblock-container" id="rmb-block" onclick="displayRMB()">
-                                                <img src="https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERimages/black-image.png">
+                                                <img src="./images/black-image.png">
                                                 <div class="heroability-block">
                                                     <p style="color: #eeeeee;">RMB</p>
                                                 </div>
                                             </div>
                                             <div class="abilityblock-container" id="q-block" onclick="displayQ()">
-                                                <img src="https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERimages/black-image.png">
+                                                <img src="./images/black-image.png">
                                                 <div class="heroability-block">
                                                     <p style="color: #eeeeee;">Q</p>
                                                 </div>
                                             </div>
                                             <div class="abilityblock-container" id="e-block" onclick="displayE()">
-                                                <img src="https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERimages/black-image.png">
+                                                <img src="./images/black-image.png">
                                                 <div class="heroability-block">
                                                     <p style="color: #eeeeee;">E</p>
                                                 </div>
                                             </div>
                                             <div class="abilityblock-container" id="r-block" onclick="displayUlt()">
-                                                <img src="https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERimages/black-image.png">
+                                                <img src="./images/black-image.png">
                                                 <div class="heroability-block">
                                                     <p style="color: #eeeeee;">R</p>
                                                 </div>
@@ -532,7 +532,7 @@
                                 </div>
                                 <div class="column item-left"  style="color: #eeeeee;">
                                     <form autocomplete="off">
-                                        <img style="width: 15px; height: 15px;" src="https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERimages/search.png">
+                                        <img style="width: 15px; height: 15px;" src="./images/search.png">
                                         <input class="itemsearch-animated" placeholder="Search Items" id="item-search" type="text" name="search">
                                     </form>
                                     <div class="scroll-window" data-setbg="">
@@ -545,27 +545,27 @@
                                 <div class="itembuild-container" style="margin-top: 0px;">
                                     <div class="item-container">
                                         <div class="inventory-container" id="item-block 1" itemIndex="0">
-                                            <img src="https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERimages/black-image.png" id="img1"></img>
+                                            <img src="./images/black-image.png" id="img1"></img>
                                             <div class="item-block"><p id="p1"></p></div>
                                         </div>
                                         <div class="inventory-container" id="item-block 2" itemIndex="1">
-                                            <img src="https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERimages/black-image.png" id="img2">
+                                            <img src="./images/black-image.png" id="img2">
                                             <div class="item-block"><p id="p2"></p></div>
                                         </div>
                                         <div class="inventory-container" id="item-block 3" itemIndex="2">
-                                            <img src="https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERimages/black-image.png" id="img3">
+                                            <img src="./images/black-image.png" id="img3">
                                             <div class="item-block"><p id="p3"></p></div>
                                         </div>
                                         <div class="inventory-container" id="item-block 4" itemIndex="3">
-                                            <img src="https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERimages/black-image.png" id="img4">
+                                            <img src="./images/black-image.png" id="img4">
                                             <div class="item-block"><p id="p4"></p></div>
                                         </div>
                                         <div class="inventory-container" id="item-block 5" itemIndex="4">
-                                            <img src="https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERimages/black-image.png" id="img5">
+                                            <img src="./images/black-image.png" id="img5">
                                             <div class="item-block"><p id="p5"></p></div>
                                         </div>
                                         <div class="inventory-container" id="item-block 6" itemIndex="5">
-                                            <img src="https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERimages/black-image.png" id="img6">
+                                            <img src="./images/black-image.png" id="img6">
                                             <div class="item-block"><p id="p6"></p></div>
                                         </div>
                                     </div>
@@ -574,7 +574,7 @@
                                         <div class="cost-heading" style="display: inline-block; color: rgb(227, 188, 122); font-size: 14px;">TOTAL GOLD COST:</div>
                                         <div class="nav" style="padding-left: 20px; padding-right: 20px; text-align: left;">
                                             <div class="gold-image">
-                                                <img src="https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERimages/gold.png">
+                                                <img src="./images/gold.png">
                                             </div>
                                             <div class="gold-bar" style="padding: 3px;">
                                                 <p id="costValue" style="margin-left: 5px; color: #eeeeee;">0</p>
@@ -621,7 +621,7 @@
                                         <div  class="itemdesc-text" id="item-description"></div>
                                         <div class="nav" style="padding-left: 35%; padding-right: 5px;">
                                             <div class="gold-image">
-                                                <img src="https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERimages/gold.png">
+                                                <img src="./images/gold.png">
                                             </div>
                                             <div id="itempop-goldbar" class="gold-bar">
                                                 <p id="popUpCostValue" style="margin-left: 5px; color: rgb(227, 188, 122);">0</p>
@@ -642,12 +642,12 @@
     </div>
     
     <!-- js Files that are NECESSARY to make the webpage load-->
-    <script src="https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERjs/jquery-3.3.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERjs/bootstrap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERjs/main.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERNewItemBuildPage.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERItemBuildCaller.js"></script>
+    <script src="NewItemBuildPage.js"></script>
+    <script src="ItemBuildCaller.js"></script>
     <!--Generate Build Script-->
     <script>
        $(function() { 

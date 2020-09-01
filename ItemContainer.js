@@ -1,10 +1,10 @@
-var baseItemImage = "https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-FINAL-HEROBUILDER/images/lower_item_r.png";
-var redItemImage = "https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERimages/red_item_r.png"
-var blueItemImage = "https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERimages/blue_item_r.png";
-var greenItemImage = "https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERimages/green_item_r.png";
-var purpleItemImage = "https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERimages/purple_item_r.png";
-var whiteItemImage = "https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERimages/white_item_r.png";
-var orangeItemImage = "https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERimages/neutral_item_r.png"
+var baseItemImage = "images/lower_item_r.png";
+var redItemImage = "images/red_item_r.png"
+var blueItemImage = "images/blue_item_r.png";
+var greenItemImage = "images/green_item_r.png";
+var purpleItemImage = "images/purple_item_r.png";
+var whiteItemImage = "images/white_item_r.png";
+var orangeItemImage = "images/neutral_item_r.png"
 
 class ItemContainer{
     constructor(container, itemName, image){

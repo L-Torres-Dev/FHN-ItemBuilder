@@ -639,7 +639,7 @@ function setAspectRed(){
     build.hero[currentAspectContainer.id].color = aspectColors.Red;
 
     let image = currentAspectContainer.getElementsByTagName("img")[0];
-    image.src = "https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERimages/red-aspect.png";
+    image.src = "./images/red-aspect.png";
 
     var selectText = currentAspectContainer.getElementsByTagName("div")[0];
     selectText.style.display = "none";
@@ -656,19 +656,19 @@ function SetAspect1(){
 
     switch (build.hero.aspect1.color){
         case aspectColors.Blue:
-            image.src = "https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERimages/blue-aspect.png";
+            image.src = "./images/blue-aspect.png";
             break;
         case aspectColors.Red:
-            image.src = "https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERimages/red-aspect.png";
+            image.src = "./images/red-aspect.png";
             break;
         case aspectColors.Green:
-            image.src = "https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERimages/green-aspect.png";
+            image.src = "./images/green-aspect.png";
             break;
         case aspectColors.White:
-            image.src = "https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERimages/white-aspect.png";
+            image.src = "./images/white-aspect.png";
             break;
         case aspectColors.Black:
-            image.src = "https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERimages/purple-aspect.png";
+            image.src = "./images/purple-aspect.png";
             break;
         default:
             image.src = "";
@@ -681,19 +681,19 @@ function SetAspect2(){
 
     switch (build.hero.aspect2.color){
         case aspectColors.Blue:
-            image.src = "https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERimages/blue-aspect.png";
+            image.src = "./images/blue-aspect.png";
             break;
         case aspectColors.Red:
-            image.src = "https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERimages/red-aspect.png";
+            image.src = "./images/red-aspect.png";
             break;
         case aspectColors.Green:
-            image.src = "https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERimages/green-aspect.png";
+            image.src = "./images/green-aspect.png";
             break;
         case aspectColors.White:
-            image.src = "https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERimages/white-aspect.png";
+            image.src = "./images/white-aspect.png";
             break;
         case aspectColors.Black:
-            image.src = "https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERimages/purple-aspect.png";
+            image.src = "./images/purple-aspect.png";
             break;
         default:
             image.src = "";
@@ -706,7 +706,7 @@ function setAspectBlue(){
     build.hero[currentAspectContainer.id].color = aspectColors.Blue;
 
     let image = currentAspectContainer.getElementsByTagName("img")[0];
-    image.src = "https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERimages/blue-aspect.png";
+    image.src = "./images/blue-aspect.png";
 
     var selectText = currentAspectContainer.getElementsByTagName("div")[0];
     selectText.style.display = "none";
@@ -720,7 +720,7 @@ function setAspectGreen(){
     build.hero[currentAspectContainer.id].color = aspectColors.Green;
 
     let image = currentAspectContainer.getElementsByTagName("img")[0];
-    image.src = "https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERimages/green-aspect.png";
+    image.src = "./images/green-aspect.png";
 
     var selectText = currentAspectContainer.getElementsByTagName("div")[0];
     selectText.style.display = "none";
@@ -734,7 +734,7 @@ function setAspectPurple(){
     build.hero[currentAspectContainer.id].color = aspectColors.Black;
 
     let image = currentAspectContainer.getElementsByTagName("img")[0];
-    image.src = "https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERimages/purple-aspect.png";
+    image.src = "./images/purple-aspect.png";
 
     var selectText = currentAspectContainer.getElementsByTagName("div")[0];
     selectText.style.display = "none";
@@ -748,7 +748,7 @@ function setAspectWhite(){
     build.hero[currentAspectContainer.id].color = aspectColors.White;
 
     let image = currentAspectContainer.getElementsByTagName("img")[0];
-    image.src = "https://cdn.jsdelivr.net/gh/FHN-Kodiris/FHN-WEBFLOW_HEROBUILDERimages/white-aspect.png";
+    image.src = "./images/white-aspect.png";
 
     var selectText = currentAspectContainer.getElementsByTagName("div")[0];
     selectText.style.display = "none";
