@@ -14,8 +14,6 @@ function searchItems(search, items){
             index++;
         }
     }
-    
-    searchResults.sort(function(a, b){return (a.name.toLowerCase() > b.name.toLowerCase()) ? 1 : -1})
 
     return searchResults;
     
@@ -45,7 +43,7 @@ function filterItems(filters, items){
     }
     
 
-    filteredItems.sort(function(a, b){return (a.name.toLowerCase() > b.name.toLowerCase()) ? 1 : -1})
+    filteredItems.sort(function(a, b){return (a.cost > b.cost) ? 1 : -1})
     
     return filteredItems;
 }

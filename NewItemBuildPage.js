@@ -485,7 +485,6 @@ function displayCurrentItemData(){
     let item = CurrentItem();
     let itemName = item.name
 
-    console.log(item.name);
     if(item.name === "none"){
         for(var i = 0; i < statIncrementors.length; i++){
             var incrementor = statIncrementors[i];

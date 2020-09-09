@@ -11,6 +11,8 @@ class Aspect{
         this.color = "";
         this.favor = 0;
         this.name = "";
+        this.effect1 = "";
+        this.effect2 = "";
 
     }
 }
