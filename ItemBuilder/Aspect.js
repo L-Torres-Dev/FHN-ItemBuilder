@@ -23,7 +23,7 @@ const aspects = {
     "0.5% missing Mana Regen/Sec.",
     "Damaging an enemy with an Ability reduces the Cooldown of your Ultimate by 2 seconds."),
 
-    warlock: new Aspect("Warlock", aspecColors.Blue,
+    warlock: new Aspect("Warlock", aspectColors.Blue,
     "Every 5th Ability does 20% extra damage.",
     "Hero kills increase Movement Speed by 15% for 3 seconds."),
     
