@@ -567,6 +567,7 @@ function displayCurrentItemData(){
 
     var img = itemPopup.getElementsByClassName("item-wrapper")[0];
     
+
     let url = "https://api.playfault.com/imagecdn/items/";
     let id = item.id.toString();
     let extension = ".jpg";
@@ -574,6 +575,7 @@ function displayCurrentItemData(){
     let image = url + id + extension;
 
     img.src = image;
+
 
     var divName = itemPopup.getElementsByClassName("itempop-name")[0];
 
