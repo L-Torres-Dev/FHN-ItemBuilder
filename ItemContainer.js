@@ -31,33 +31,16 @@ class ItemContainer{
     setImage(item){
         let color = item.color;
 
-        switch(color){
-            case aspectColors.Blue:
-                this.image.src = blueItemImage;
-                break;
-            case aspectColors.Black:
-                this.image.src = purpleItemImage;
-                break;
-            case aspectColors.Red:
-                this.image.src = redItemImage;
-                break;
-            case aspectColors.Green:
-                this.image.src = greenItemImage;
-                break;
-            case aspectColors.White:
-                this.image.src = whiteItemImage;
-                break;
-            default:
-                
-                if(item.parents.length === 0){
-                    this.image.src = orangeItemImage;
-                }
-                else{
-                    this.image.src = baseItemImage;
-                }
-                
-                break;
-        }
+        //https://api.playfault.com/imagecdn/items/205.jpg
+
+        let url = "https://api.playfault.com/imagecdn/items/";
+        let id = item.id.toString();
+        let extension = ".jpg";
+
+        let image = url + id + extension;
+
+        this.image.src = image;
+
     }    
 }
 

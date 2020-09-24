@@ -50,5 +50,7 @@ const Heroes = {
     Narbash: [12, "Narbash", "#777940"],
     Steel: [13, "Steel", "#822102"],
     Boris: [14, "Boris", "#6e6b4a"],
-    Sparrow: [15, "Sparrow", "#5e7a57"]
+    Sparrow: [15, "Sparrow", "#5e7a57"],
+    Dekker: [16, "Dekker", "#156569"],
+    Grim: [17, "GRIMexe", "#554d57"]
 }

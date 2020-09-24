@@ -22,6 +22,8 @@ function setItems(items){
     determineMaxValues();
     
     createItemContainers(itemsArray);
+
+    callFilter();
 }
 
 function callSearch(search){
