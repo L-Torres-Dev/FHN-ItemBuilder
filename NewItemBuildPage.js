@@ -397,7 +397,15 @@ function updatePage(){
 
             itemText.textContent = item.name;
 
+            //CHANGE ITEM IMAGE
+            let url = "https://api.playfault.com/imagecdn/items/";
+            let id = item.id.toString();
+            let extension = ".jpg";
 
+            let img = url + id + extension;
+
+            image.src = img;
+            /*
             switch(item.color){
                 case aspectColors.Blue:
                     image.src = blueItemImage;
@@ -423,7 +431,7 @@ function updatePage(){
                         image.src = baseItemImage;
                     }
                     break;
-            }
+            }*/
         }
     }
 
