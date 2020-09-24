@@ -567,14 +567,31 @@ function displayCurrentItemData(){
 
     var img = itemPopup.getElementsByClassName("item-wrapper")[0];
     
-    //SET ITEM IMAGE HERE
-    let url = "https://api.playfault.com/imagecdn/items/";
-    let id = item.id.toString();
-    let extension = ".jpg";
-
-    let image = url + id + extension;
-
-    img.src = image;
+    switch(item.color){
+        case aspectColors.Blue:
+            img.src = blueItemImage;
+            break;
+        case aspectColors.Black:
+            img.src = purpleItemImage;
+            break;
+        case aspectColors.Red:
+            img.src = redItemImage;
+            break;
+        case aspectColors.Green:
+            img.src = greenItemImage;
+            break;
+        case aspectColors.White:
+            img.src = whiteItemImage;
+            break;
+        default:
+            if(item.parents.length === 0){
+                img.src = orangeItemImage;
+            }
+            else{
+                img.src = baseItemImage;
+            }    
+            break;
+    }
 
     var divName = itemPopup.getElementsByClassName("itempop-name")[0];
 
