@@ -435,6 +435,7 @@ body {
 .itemstats-wrapper {
 	height: 90px;
 }
+
 .itemdesc-text {
 	color: #eeeeee;
 	font-size: 11px;
@@ -445,6 +446,7 @@ body {
 	border-bottom: 1px solid rgb(227, 188, 122);
 	height: 110px;
 	border-top: 1px rgb(227, 188, 122) solid;
+	overflow: auto;
 }
 .prereq-heading {
 	margin-top: 15px;
@@ -1107,6 +1109,9 @@ body {
 #ability-description {
 	padding-left: 15px;
 	padding-right: 15px;
+	overflow-x: none;
+	overflow-y: auto;
+	height: 100px;
 }
 .herobutton{
 	width: 50%;
