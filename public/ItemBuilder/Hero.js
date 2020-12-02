@@ -53,5 +53,6 @@ const Heroes = {
     Sparrow: [15, "Sparrow", "#5e7a57"],
     Dekker: [16, "Dekker", "#156569"],
     Grim: [17, "GRIMexe", "#554d57"],
-    Kallari: [18, "Kallari", "#554d57"]
+    Kallari: [18, "Kallari", "#554d57"],
+    Grux: [19, "Grux", "#554D43"]
 }
